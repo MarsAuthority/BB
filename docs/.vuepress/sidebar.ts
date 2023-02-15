@@ -30,6 +30,14 @@ export default sidebar([
     ],
   },
   {
+    text: "🌐 网络安全",
+    icon: "",
+    prefix: "/cybersecurity/",
+    link: "",
+    collapsible: true,
+    children: "structure",
+  },
+  {
     text: "🌐 页面开发",
     icon: "",
     prefix: "/web/",
