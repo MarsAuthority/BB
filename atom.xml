@@ -9,7 +9,7 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-02-15T14:42:51.771Z</updated>
+  <updated>2023-02-15T16:25:39.058Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
@@ -19,6 +19,240 @@
     <name>Mars</name>
     <uri>https://mars.run</uri>
   </contributor>
+  <entry>
+    <title type="text">N-gram在安全领域的应用</title>
+    <id>https://mars.run/cybersecurity/N-gram%E5%9C%A8%E5%AE%89%E5%85%A8%E9%A2%86%E5%9F%9F%E7%9A%84%E5%BA%94%E7%94%A8.html</id>
+    <link href="https://mars.run/cybersecurity/N-gram%E5%9C%A8%E5%AE%89%E5%85%A8%E9%A2%86%E5%9F%9F%E7%9A%84%E5%BA%94%E7%94%A8.html"/>
+    <updated>2023-02-15T16:23:52.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 什么是N-Gram？</h2>
+<p>N-Gram是一种在自然语言处理(NLP)中常用的一种概率语言模型(Probabilistic Language Model)，常用于语音\手写识别、机器翻译、拼写纠错等等领域。</p>
+<p>它的本质就是计算一个句子或者一连串词出现的概率。</p>
+<div class="language-python line-numbers-mode" data-ext="py"><pre class="language-python"><code><span class="token operator">/</span><span class="token operator">*</span>
+T 是由 W1<span class="token punctuation">,</span>W2<span class="token punctuation">,</span>W3<span class="token punctuation">,</span>W4<span class="token punctuation">,</span>W5 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> Wn组成的一个句子。
+<span class="token operator">*</span><span class="token operator">/</span>
+
+P<span class="token punctuation">(</span>T<span class="token punctuation">)</span> <span class="token operator">=</span> P<span class="token punctuation">(</span>W1<span class="token punctuation">,</span>W2<span class="token punctuation">,</span>W3<span class="token punctuation">,</span>W4<span class="token punctuation">,</span>W5 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> Wn<span class="token punctuation">)</span> <span class="token operator">//</span>这个句子出现的概率是里面每一个词出现的概率的叠加。
+
+P<span class="token punctuation">(</span>W5<span class="token operator">|</span>W1<span class="token punctuation">,</span>W2<span class="token punctuation">,</span>W3<span class="token punctuation">,</span>W4<span class="token punctuation">)</span> <span class="token operator">//</span>已经出现第<span class="token number">1</span>个至第<span class="token number">4</span>个的词的情况下，第<span class="token number">5</span>个词出现的概率。
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h2> 什么是N-Gram？</h2>
+<p>N-Gram是一种在自然语言处理(NLP)中常用的一种概率语言模型(Probabilistic Language Model)，常用于语音\手写识别、机器翻译、拼写纠错等等领域。</p>
+<p>它的本质就是计算一个句子或者一连串词出现的概率。</p>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>比如：</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/r9iFeU.jpg" alt="Google" tabindex="0" loading="lazy"><figcaption>Google</figcaption></figure>
+<p>I am working 后面很有可能出现<code>at</code>,&nbsp;<code>in</code>,&nbsp;<code>for</code>&nbsp;，而不是<code>refrigerator</code>,&nbsp;<code>throw</code>,&nbsp;<code>gull</code>。那么如何计算N-Grams呢？我们可以使用链式法则(<a href="https://en.wikipedia.org/wiki/Chain_rule_(probability)" target="_blank" rel="noopener noreferrer">Chain Rule</a>)，求多个关联事件并存时的概率：</p>
+<ul>
+<li>2个事件同时发生的概率：<strong>P(a, b) = P(a | b) * P(b)</strong></li>
+<li>3个事件的概率链式调用：<strong>P(a, b, c) = P(a | b, c) * P(b, c) = P(a | b, c) * P(b | c) * P(c)</strong></li>
+<li>推广到N个事件，概率链式法则为：<strong>P(X1, X2, ... Xn) = P(X1 | X2, X3 ... Xn) * P(X2 | X3, X4 ... Xn) ... P(Xn-1 | Xn) * P(Xn)</strong></li>
+</ul>
+<p>但是这样会有两个问题：</p>
+<ol>
+<li>参数空间过大，不可能实用化。（N越大越难计算）</li>
+<li>数据稀疏严重，语言有各种各样的组合，数据量太大，无法获取这么全的数据。</li>
+</ol>
+<p>所以为了简化这个问题，我们引入马尔科夫假设（Markov Assumption）：”一个词的出现仅仅依赖于它前面出现的一个或者有限的几个词。”</p>
+<ol>
+<li>如果一个词的出现仅仅依赖于它本身，我们称之为 Uni-gram model :&nbsp;<code>P(T) = P(W1)P(W2)...P(Wn)</code></li>
+<li>如果一个词的出现仅仅依赖于它前面出现的一个词，我们称之为 Bi-gram model :&nbsp;<code>P(T) = P(W1)P(W2|W1)P(W3|W2)...P(Wn|Wn-1)</code></li>
+<li>如果一个词的出现仅仅依赖于它前面出现的两个词，我们称之为 Tri-gram model :&nbsp;<code>P(T) = P(W1)P(W3|W1,W2)...P(Wn|Wn-2,Wn-1)</code></li>
+<li>依次类推到仅依赖于它前面出现的N个词，还有4-gram, 5-gram。</li>
+</ol>
+<p>下面用Bi-gram举个例子，语料库来自&nbsp;<a href="http://www1.icsi.berkeley.edu/Speech/berp.html" target="_blank" rel="noopener noreferrer">[Berkeley Restaurant Project]</a>&nbsp;，总词数为 10132。</p>
+<p>词和词频率：</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>want</th>
+<th>to</th>
+<th>eat</th>
+<th>chinese</th>
+<th>food</th>
+<th>lunch</th>
+<th>spend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2533</td>
+<td>927</td>
+<td>2417</td>
+<td>746</td>
+<td>158</td>
+<td>1093</td>
+<td>341</td>
+<td>278</td>
+</tr>
+</tbody>
+</table>
+<p>词序列频率：</p>
+<table>
+<thead>
+<tr>
+<th>*</th>
+<th>i</th>
+<th>want</th>
+<th>to</th>
+<th>eat</th>
+<th>chinese</th>
+<th>food</th>
+<th>lunch</th>
+<th>spend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i</td>
+<td>5</td>
+<td>827</td>
+<td>0</td>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>want</td>
+<td>2</td>
+<td>0</td>
+<td>608</td>
+<td>1</td>
+<td>6</td>
+<td>6</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>to</td>
+<td>2</td>
+<td>0</td>
+<td>4</td>
+<td>686</td>
+<td>2</td>
+<td>0</td>
+<td>6</td>
+<td>211</td>
+</tr>
+<tr>
+<td>eat</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>16</td>
+<td>2</td>
+<td>42</td>
+<td>0</td>
+</tr>
+<tr>
+<td>chinese</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>82</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>food</td>
+<td>15</td>
+<td>0</td>
+<td>15</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>lunch</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>spend</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>根据上表我们可以直观的看出，在这八个词的组合中，概率最高的句子是： i want to eat lunch 。它的概率是 P(i want to eat lunch) = P(i)P(want|i)P(to|want)P(eat|to)P(lunch|eat) = 2533/10132&nbsp;* <em>827/2533</em>&nbsp;* 608/927&nbsp;* <em>686/2417</em>&nbsp;* 42/746 = 0.25&nbsp;* <em>0.326</em>&nbsp;* 0.656&nbsp;* <em>0.284</em>&nbsp;* 0.056 = 0.00085</p>
+<h3> Smoothing</h3>
+<p>随着N-Grams的N的增大，N-Grams的数量对越来越多。如果词表中有10000个词，Bi-Gram模型可能产生100000000个N-Gram，Tri-Gram模型则可能产生1000000000000个N-Gram，那么会出现(unseen events)，词库中的某些词在训练样本中没有的情况（比如<code>in</code>在训练样本中没有出现在<code>turn</code>
+后面）。为了避免在这种情况下概率为0，我们使用Smoothing来解决。</p>
+<ol>
+<li>
+<p>add-1 smoothing : 很简单，给所有统计的counts加 1 。</p>
+</li>
+<li>
+<p>add-k smoothing : 将高概率分到unseen events，在计算概率的时候，选择一个合适的k值。</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/MEKSo5.jpg" alt="add-k" tabindex="0" loading="lazy"><figcaption>add-k</figcaption></figure>
+</li>
+<li>
+<p>backoff ： 如果Tri-gram统计为0，就去看Bi-gram，以此类推。</p>
+</li>
+<li>
+<p>interpolation : 以权重，将Tri-gram，Bi-gram，Uni-gram综合起来。（举例）</p>
+</li>
+<li>
+<p>kneser-ney smoothing : 以地位向高位，或者高位向地位的方向，传递高频。</p>
+</li>
+</ol>
+<h2> 使用Python生成N-grams</h2>
+<p>简单的实现：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> NIDS中的应用</h2>
+<h3> 案例一</h3>
+<p>Ke Wang 和 Salvatore J. Stolfo 在《Anomalous Payload-based Network Intrusion Detection 》中提出了一种基于1-Gram的方法，将数据包以端口分类，相同端口的数据包再以不同的长度分类，然后计算出ASCII字符0-255的平均分布频率，作为一个特征，加上平均分布频率的平均值，方差，标准差作为另一个特征。有了这两个特征，就可以在异常检测中建立模型，完成任务。如下图：</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/qvrUtF.jpg" alt="案例一" tabindex="0" loading="lazy"><figcaption>案例一</figcaption></figure>
+<p>整个思路是：是训练阶段，算出不同端口/长度数据包的平均字节概率分布模型(平均值，方差，标准差)，预测阶段，算出新数据包的字节概率分布模型，使用马氏距离(Mahalanobis distance)，比较两个模型的差异，当差异超过某个阈值的时候，则检测出异常。还加上了增量学习(Incremental learning)使整个模型随着新数据的到来，不断的更新自己的参数(平均值，方差，标准差)，”淘汰”旧数据，”更新”新数据。</p>
+<p>文中还提到了一种实现签名检测的方法：将字节的平均概率分布图，把频率从高到低进行重排序。这样得出的分布图很像Zipf-like分布(指数函数/幂函数少数值频繁出现，多数值偶尔出现。通俗地讲，就是二八原则：80%的财富集中在20%的人手中……80%的用户只使用20%的功能……20%的用户贡献了80%的访问量……)，这样用很小的长度就表示了整个ASCII范围的平均概率分布。比如下图，重排序后只用83个unique 的字符就表示了整个平均概率分布。</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/frPmAf.jpg" alt="案例一" tabindex="0" loading="lazy"><figcaption>案例一</figcaption></figure>
+<p>通过这种方法将已识别/确认的异常数据包做成签名(signature)，可以快速准确地检测其他地方可能出现的相同异常数据包。</p>
+<h3> 案例二</h3>
+<p>前面说到的方法是1-Gram的应用，然而1-Gram的简单性(平均字节概率分布)很容易受到拟态攻击(mimicry attacks)，攻击者可以通过填充无用字符的方法来伪造出正常的概率分布，从而绕过检测。于是他们又提出了基于N-gram N大于1 的方法。见《Anagram: A Content Anomaly Detector Resistant to Mimicry Attack》</p>
+<p>N-gram的本质和1-Gram是一样的，只不过特征空间变大大，在计算的时间/内存开销也很大。比如一个TCP 数据包，长度是256，那么他的N-garm就有256^n。作者通过选取几个N值，比如3-Gram, 4-Gram, 5-Gram等等，然后用Bloom filter(原理相当于哈希表)进行存储。最后在ROC曲线中比较这些N-gram的召回率与准确率，选取合适的模型。如图：</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/JsmuVT.jpg" alt="案例二" tabindex="0" loading="lazy"><figcaption>案例二</figcaption></figure>
+<p>其他细节就略过，感兴趣可以自己查阅。</p>
+<h2> 其他应用</h2>
+<p>N-gram在安全领域还有很多其他的应用，比如HIDS(通过系统调用做异常检测)、恶意软件分类/识别、敏感词识别/屏蔽等等。但是效果却不好，误报、漏报严重。原因之前也提过，比如：测试还在用DARPA1999, KDD99等老样本、模型存在偏差样本性、缺乏实践等等问题。</p>
+<p>开源项目参考：</p>
+<p><a href="https://github.com/chwress/salad" target="_blank" rel="noopener noreferrer">https://github.com/chwress/salad</a></p>
+<h2> 参考资料</h2>
+<ol>
+<li><a href="http://academiccommons.columbia.edu/catalog/ac%3A125704" target="_blank" rel="noopener noreferrer">Anomalous Payload-based Network Intrusion Detection</a></li>
+<li><a href="http://ids.cs.columbia.edu/sites/default/files/anagram-camera-fixed.pdf" target="_blank" rel="noopener noreferrer">Anagram: A Content Anomaly Detector Resistant to Mimicry Attack</a></li>
+<li><a href="https://lagunita.stanford.edu/c4x/Engineering/CS-224N/asset/slp4.pdf" target="_blank" rel="noopener noreferrer">N-Grams tutorial</a></li>
+<li><a href="https://en.wikipedia.org/wiki/N-gram" target="_blank" rel="noopener noreferrer">N-Grams wikipedia</a></li>
+</ol>
+]]></content>
+    <author>
+      <name>Mars</name>
+      <uri>https://mars.run</uri>
+    </author>
+    <category term="网络安全"/>
+    <contributor>
+      <name>Mars</name>
+      <uri>https://mars.run</uri>
+    </contributor>
+    <published>2016-06-19T22:00:10.000Z</published>
+    <rights>Copyright by Mars</rights>
+  </entry>
   <entry>
     <title type="text">入侵检测系统如何降低误报率？</title>
     <id>https://mars.run/cybersecurity/%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E8%AF%AF%E6%8A%A5%E7%8E%87%EF%BC%9F.html</id>
@@ -762,71 +996,6 @@
 <figure><img src="http://tc.seoipo.com/2023-01-07-23-19-50.png" alt="" tabindex="0" loading="lazy"><figcaption>人像背景移除</figcaption></figure>
 </li>
 </ul>
-]]></content>
-    <author>
-      <name>Mars</name>
-      <uri>https://mars.run</uri>
-    </author>
-    <category term="工具"/>
-    <contributor>
-      <name>Mars</name>
-      <uri>https://mars.run</uri>
-    </contributor>
-    <published>2023-01-12T16:55:27.000Z</published>
-    <rights>Copyright by Mars</rights>
-  </entry>
-  <entry>
-    <title type="text">直播入门攻略三 | 插件篇：OBS 进阶插件</title>
-    <id>https://mars.run/apps/livestreaming/3_obs_plugins.html</id>
-    <link href="https://mars.run/apps/livestreaming/3_obs_plugins.html"/>
-    <updated>2023-01-23T14:11:29.000Z</updated>
-    <summary type="html"><![CDATA[<p>OBS 与其他直播/录制应用最大的区别在于 OBS 社区，它给 OBS 带来了强大的扩展性。下文中我会介绍除 StreamFX 外的 15 款流行插件。（本文未完成，待填充）</p>
-<h2> 插件安装与卸载</h2>
-<p>OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）两种。便携模式的插件配置可以复制到其他电脑上使用。</p>
-<p>若要卸载 Windows 下的 OBS 便携模式插件，可以进入 <code>%ProgramFiles%\obs-studio\data\obs-plugins</code> 和 <code>%ProgramFiles%\obs-studio\obs-plugins\64bit</code>，搜索插件名，然后删除相关文件。</p>]]></summary>
-    <content type="html"><![CDATA[<p>OBS 与其他直播/录制应用最大的区别在于 OBS 社区，它给 OBS 带来了强大的扩展性。下文中我会介绍除 StreamFX 外的 15 款流行插件。（本文未完成，待填充）</p>
-<h2> 插件安装与卸载</h2>
-<p>OBS 插件的安装模式有 Install（注册配置）和 Protable（便携）两种。便携模式的插件配置可以复制到其他电脑上使用。</p>
-<p>若要卸载 Windows 下的 OBS 便携模式插件，可以进入 <code>%ProgramFiles%\obs-studio\data\obs-plugins</code> 和 <code>%ProgramFiles%\obs-studio\obs-plugins\64bit</code>，搜索插件名，然后删除相关文件。</p>
-<h2> 多平台直播：multi-rtmp</h2>
-<p><a href="https://github.com/sorayuki/obs-multi-rtmp" target="_blank" rel="noopener noreferrer">multi-rtmp</a> 使得 OBS 支持多地址推流，以为着同时在多个平台上进行直播。</p>
-<p>开启多地址推流前，你需要点击控制按钮「开始直播」，然后再点「停止直播」。</p>
-<h2> 自动切换场景</h2>
-<p><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/" target="_blank" rel="noopener noreferrer">Advanced Scene Switcher</a>：使用「宏」来自动完成各种任务，按条件切换场景、来源。比如，电脑闲置 10 分钟后，让摄像头来源变为不可见。</p>
-<h2> Move transition</h2>
-<p><a href="https://obsproject.com/forum/resources/move-transition.913/" target="_blank" rel="noopener noreferrer">Move transition</a>：记录来源的位置变化，生成元素移动的动画效果。比如，视频演讲时，将摄像头位置从屏幕右下移动到中央。</p>
-<h2> Transition Table</h2>
-<p><a href="https://obsproject.com/forum/resources/transition-table.1174/" target="_blank" rel="noopener noreferrer">Transition Table</a>：场景切换效果，设定不同场景间的切换规则。</p>
-<h2> Source Dock</h2>
-<p><a href="https://obsproject.com/forum/resources/source-dock.1317/" target="_blank" rel="noopener noreferrer">Source Dock</a>：为单独场景或来源建立控制栏，使用小窗口预览场景。</p>
-<h2> Source Copy</h2>
-<p><a href="https://obsproject.com/forum/resources/source-copy.1261/" target="_blank" rel="noopener noreferrer">Source Copy</a>：更方便地复制、保存场景设置。</p>
-<h2> 其他</h2>
-<ul>
-<li><a href="https://obsproject.com/forum/resources/scene-collection-manager.1434/" target="_blank" rel="noopener noreferrer">Scene Collection Manager</a>：自动备份场景，防止误操作。</li>
-<li><a href="https://obsproject.com/forum/resources/audio-monitor.1186/" target="_blank" rel="noopener noreferrer">Audio Monitor</a>：将来源声音输出给指定设备播放，方便单独调节音量，能让主播与观众听到不同的音频效果。</li>
-<li><a href="https://obsproject.com/forum/resources/downstream-keyer.1254/" target="_blank" rel="noopener noreferrer">Downstream Keyer</a>：切换场景时，置顶指定场景。</li>
-<li><a href="https://github.com/norihiro/obs-multisource-effect" target="_blank" rel="noopener noreferrer">Multi Source Effect</a>：滤镜效果</li>
-<li><a href="https://github.com/fzwoch/obs-teleport" target="_blank" rel="noopener noreferrer">Teleport</a>：NDI 替代品，局域网设备推流到直播。</li>
-<li><a href="https://github.com/univrsal/spectralizer" target="_blank" rel="noopener noreferrer">spectralizer</a>：音频频谱，用滤镜「图像掩码」的「混合图层」给频谱遮罩滤镜。</li>
-<li><a href="https://obsproject.com/forum/resources/obs-ndi-newtek-ndi%E2%84%A2-integration-into-obs-studio.528/" target="_blank" rel="noopener noreferrer">NDI</a>: 局域网视频无线传输技术 NDI 插件。</li>
-<li><a href="https://obsproject.com/forum/resources/scrab.845/" target="_blank" rel="noopener noreferrer">scrab</a>：屏幕截图。添加了一个可配置的热键快速选择一个屏幕区域，并添加它作为一个图像源到当前场景。有人反馈 OBS 28 后有 bug，暂未修复。</li>
-<li><a href="https://obsproject.com/forum/resources/lower-thirds-in-html-css.928/" target="_blank" rel="noopener noreferrer">Lower thirds in HTML/CSS</a>：文字运动特效，适合展示 logo 和标题。</li>
-<li><a href="https://obsproject.com/forum/resources/input-overlay.552/" target="_blank" rel="noopener noreferrer">Input Overlay</a>：同步显示键盘、鼠标和游戏板上的输入。</li>
-</ul>
-<h2> 美化插件</h2>
-<p>第三方的直播美化插件提供了时钟、榜单、弹幕、游戏等互动来源，用于美化直播间，新手可参考使用。美化插件免费版一般足够用了，比如 <a href="https://yun.miebo.cn/" target="_blank" rel="noopener noreferrer">咩播</a>、<a href="http://zbmate.com/" target="_blank" rel="noopener noreferrer">智播</a>。</p>
-<h2> 弃用插件</h2>
-<p>以下插件已弃用，仅作记录：</p>
-<ul>
-<li><a href="https://obsproject.com/forum/resources/virtual-cam-filter.1142/" target="_blank" rel="noopener noreferrer">Virtual Cam Filter</a>：能让来源单独输出虚拟摄像头，OBS 28 已内置此功能。</li>
-<li><a href="https://obsproject.com/forum/resources/obs-websocket-remote-control-obs-studio-from-websockets.466/" target="_blank" rel="noopener noreferrer">obs-websocket</a>：远程控制插件，OBS 28 已内置此功能。</li>
-<li><a href="https://obsproject.com/forum/resources/animated-captions-with-obs-controller-and-a-preview-function.1407/" target="_blank" rel="noopener noreferrer">Animated captions</a>：自定义弹幕功能，无漂浮弹幕，适用较少，仅用于 OBS 27。</li>
-<li><a href="https://obsproject.com/forum/threads/shaderfilter-went-away.155555/#post-571174" target="_blank" rel="noopener noreferrer">OBS Shaderfilter</a>：文字图片特效滤镜。此插件已被从社区删除，下载使用 <a href="https://github.com/Oncorporation/obs-shaderfilter/releases/" target="_blank" rel="noopener noreferrer">GitHub 备份</a>，其功能已被 StreamFX 取代。</li>
-<li><a href="https://obsproject.com/forum/resources/asynchronous-source-duplication.1483/" target="_blank" rel="noopener noreferrer">Asynchronous Source Duplication</a>：复制来源可以同时展示在多个场景，复制源会有延迟。其功能已被 StreamFX 的来源镜像取代。</li>
-</ul>
-<h2> 更多</h2>
-<p>如果你在上文中没有找到你需要的功能功能，可以访问 <a href="https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/" target="_blank" rel="noopener noreferrer">OBS 插件库</a>进行搜索。</p>
 ]]></content>
     <author>
       <name>Mars</name>
