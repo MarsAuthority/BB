@@ -6,8 +6,8 @@
     <link>https://mars.run/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 15 Feb 2023 14:21:04 GMT</pubDate>
-    <lastBuildDate>Wed, 15 Feb 2023 14:21:04 GMT</lastBuildDate>
+    <pubDate>Wed, 15 Feb 2023 14:25:05 GMT</pubDate>
+    <lastBuildDate>Wed, 15 Feb 2023 14:25:05 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Mars</copyright>
@@ -18,6 +18,28 @@
     </image>
     <category>网络安全</category>
     <category>工具</category>
+    <item>
+      <title>PHP Challenge 2015</title>
+      <link>https://mars.run/cybersecurity/PHP_Challenge_2015.html</link>
+      <guid>https://mars.run/cybersecurity/PHP_Challenge_2015.html</guid>
+      <source url="https://mars.run/rss.xml">PHP Challenge 2015</source>
+      <description>背景 在乌云上看到PHP Challenge 2015，深感兴趣，但并无思路，直到看了@Ryat大牛的微博才知道答案。 PHP bug 先贴出代码吧</description>
+      <category>网络安全</category>
+      <pubDate>Tue, 10 Feb 2015 12:19:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 背景</h2>
+<p>在乌云上看到<a href="http://zone.wooyun.org/content/22100" target="_blank" rel="noopener noreferrer">PHP Challenge 2015</a>，深感兴趣，但并无思路，直到看了<a href="https://weibo.com/3202054374/CtNpv1ov8?type=comment" target="_blank" rel="noopener noreferrer">@Ryat</a>大牛的微博才知道答案。</p>
+<h2> PHP bug</h2>
+<p>先贴出代码吧</p>
+<div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>按照Ryat的提示，找到(<a href="https://bugs.php.net/bug.php?id=69892" target="_blank" rel="noopener noreferrer">https://bugs.php.net/bug.php?id=69892</a>)</p>
+<div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>integer类型的key截断导致不同的数组比较结果相同。我们去看看PHP源码中的相关片段，在<code>Zend/zend_hash.c</code>：</p>
+<div class="language-c line-numbers-mode" data-ext="c"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>关键在34行:</p>
+<div class="language-c line-numbers-mode" data-ext="c"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>当数组的key为integer进到这里，比较他们的key是否相同，p1和p2是PHP的bucket结构体，其中h保存着数组的key。bucket结构如下：</p>
+<div class="language-c line-numbers-mode" data-ext="c"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以看出h是ulong，ulong是一个unsigned long，如下：</p>
+<div class="language-c line-numbers-mode" data-ext="c"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>看到这里不知道大家有没有看出问题？注意喔，保存p1和p2差值的变量是result，而result是int型变量，这就导致了在64位系统中，unsigned long是64位整型，而int是32位整型，类型的不同出现问题。程序会将<code>p1-&gt;h - p2-&gt;h</code>的结果强制转换为int，我们都知道unsigned long转int会截取低4个字节。所以只需要让unsigned long的低4字节为0，它转换后的int就为0。比如我们将二进制<code>10000000000000000000000000000000000000</code>转换为十进制<code>137438953472</code>，那么<code>137438953472</code>转为int就为0。</p>
+<h2> 分析</h2>
+<p>现在再来看看这个php代码吧，前面的那个bug利用前提是数组的value相同，key不同，所以首先需要匹配一个md5出来，我在cmd5试了这10个md5，只有第五个<code>06e2b745f3124f7d670f78eabaa94809</code>能解出，原文是<code>hund</code>。于是首先写入cookie：<code>Cookie: user[0]=5;user[1]=hund;</code>&nbsp;程序会进入58行，验证通过，$valid_user被改为true，这个时候输出为<code>Welcome back user</code>。到了这一步答案已经很接近了，只需要将$uid改为0即可。现在试试前面提到的漏洞，我们写入cookie：<code>Cookie: user[137438953472]=5;user[1]=hund;</code>&nbsp;这个时候因为之前提到的漏洞，程序还是会进入58行，因为$input[0]未赋值，所以为NULL，在PHP中<code>0+NULL=0</code>,故成功将$uid改为0。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>WordPress 3.8.2 cookie伪造漏洞及Python使用urllib2出现30x跳转的问题</title>
       <link>https://mars.run/cybersecurity/%E8%B0%88%E8%B0%88%E5%AF%B9WordPress%203.8.2%20cookie%E4%BC%AA%E9%80%A0%E6%BC%8F%E6%B4%9E%E4%BB%A5%E5%8F%8APython%E4%BD%BF%E7%94%A8urllib2%E5%87%BA%E7%8E%B030x%E8%B7%B3%E8%BD%AC%E7%9A%84%E9%97%AE%E9%A2%98.html</link>
@@ -647,121 +669,6 @@
 <p>开播前把脸部肌肉活动开。嘴张到最大，舌顶上颚 60 秒；嘴张到最大，尽量伸舌 30 秒。说话时，让嘴唇用力。</p>
 <h2> 总结</h2>
 <p>经过两年的直播，我深知直播的硬件、软件和技巧只是锦上添花。若要体验直播，不想深入研究，只需拿出手机开播即可。开始直播时，可能会有很多疑问和顾虑，效果也不一定很好。但只有勇敢尝试新事物，不断开拓，我们的人生才会有更多可能性。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>找不到字幕？Whisper 让不懂外语的你也能看懂日剧</title>
-      <link>https://mars.run/posts/2022-11-18-whisper_ai_subtitles.html</link>
-      <guid>https://mars.run/posts/2022-11-18-whisper_ai_subtitles.html</guid>
-      <source url="https://mars.run/rss.xml">找不到字幕？Whisper 让不懂外语的你也能看懂日剧</source>
-      <description>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。 Whisper 是今年 9 月被 OpenAI 开源的自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。「语言识别」「转录」听起来特别唬人，但 transcribe（转录）指将语音转为文字，Whisper 会为音视频生成带时间轴的字幕文件，是支持 99 种语言 AI 字幕工具。</description>
-      <category>工具</category>
-      <pubDate>Fri, 18 Nov 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。</p>
-<p>Whisper 是今年 9 月被 OpenAI 开源的自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。「语言识别」「转录」听起来特别唬人，但 transcribe（转录）指将语音转为文字，Whisper 会为音视频生成带时间轴的字幕文件，是<strong>支持 99 种语言 AI 字幕工具</strong>。</p>
-<p>虽然与 Stable Diffusion 同样归属 AI 工具，但 Whisper 安装非常简单，终端执行两行代码安装 Whisper 和 FFmpeg 即可使用。如果你不清楚如何安装 FFmpeg，可参考<a href="https://newzone.top/posts/2022-11-03-ffmpeg_screen_recording.html#%E9%85%8D%E7%BD%AE-ffmpeg" target="_blank" rel="noopener noreferrer">FFmpeg 配置步骤</a>。这部分我不多做赘述，具体可以看<a href="https://github.com/openai/whisper" target="_blank" rel="noopener noreferrer">Whisper 官方文档</a>。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>接下来，我会分享如何使用 Whisper 为外语视频自动生成字幕，以日本综艺节目「中森明菜デビュー 40 周年 女神の熱唱！喝采は今も」为例。</p>
-<h2> 音视频转录</h2>
-<p>在文件所在目录下打开终端，运行 <code>whisper jp.mp4</code> 即可执行音视频转录。测试视频名原本为日语，我改为「jp.mp4」，原因是我系统中只装了中英语言包，使用其他语言作为命令会出现 Invalid argument 报错，从而导致转录失败。Whisper 的媒体分析环节调用了 FFmpeg，所以主流音视频格式均被支持。</p>
-<figure><img src="http://tc.seoipo.com/2022-11-18-09-25-29.png" alt="" tabindex="0" loading="lazy"><figcaption>whisper 命令</figcaption></figure>
-<p>视频时长 90 分钟，我使用 3080Ti 显卡转录，用时 10 分钟。转录过程中不要玩游戏，也不要进行直播等吃显存的行为，否则容易显存不足无法继续。Whisper 对设备要求不高，不过设备会决定转录时长和你能使用的转录模型。如果你使用 CPU 转录，时间会增加 5-10 倍。</p>
-<p>转录完成后，Whisper 将生成原生字幕文件，日语视频会被转录为日语字幕，西班牙语视频会得到西班牙语字幕。</p>
-<h2> 字幕翻译</h2>
-<p>通过 Whisper 获得原生字幕后，接着要将其翻译为中文。这一步需借助 SubtitleEdit Online，它支持免费在线翻译字幕，可使用 Google 和 Yandex 两种翻译引擎。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1">
-</a><ol><a class="footnote-anchor" id="footnote-ref1">
-</a><li><a class="footnote-anchor" id="footnote-ref1">打开 </a><a href="https://www.nikse.dk/subtitleedit/online" target="_blank" rel="noopener noreferrer">SubtitleEdit Online</a>，点击「Subtitle」&gt;「Open...」，选择要导入的字幕文件。</li>
-<li>点击「Auto-translate」，选择翻译引擎，然后在弹出窗口中选择字幕要翻译的语言，并<strong>将页面拖动到最下方</strong>（非常重要），确定所有文字都被翻译后点击 OK 按钮。</li>
-<li>点击「Subtitle」&gt;「Save/download...」，即可保存翻译好的字幕文件。</li>
-</ol>
-<p>除了网页翻译字幕，本地端的神经机器翻译也是种好选择。macOS 用户推荐使用 <a href="https://github.com/argosopentech/argos-translate" target="_blank" rel="noopener noreferrer">Argos Translate</a>，这是基于 OpenNMT 的开源神经机器翻译。如果你的动手能力较强，可以尝试 <a href="https://github.com/Helsinki-NLP/Opus-MT" target="_blank" rel="noopener noreferrer">Opus-MT</a>。不管用哪种方式，都是将字幕以文本方式导出，复制到翻译引擎中翻译，即可得到不同于 Google Translate 的翻译结果。</p>
-<h2> Whisper 进阶命令</h2>
-<h3> task</h3>
-<p><code>--task</code> 分为 transcribe（语音转录）和 translate。Whisper 默认使用 <code>--task transcribe</code> 模式，将语音转录为对应的语言字幕。<code>--task translate</code> 是所有语言翻译为英文，目前尚未支持翻译为其他语言。</p>
-<h3> language</h3>
-<p><code>--language</code> 是设置语音转录的语种，支持语种范围查看 <a href="https://github.com/openai/whisper/blob/main/whisper/tokenizer.py" target="_blank" rel="noopener noreferrer">tokenizer.py</a>，比如指定日语 <code>--language japanese</code>。如果你没指定语种，Whisper 会截取音频的前 30 秒来判断语种。</p>
-<p>如果指定语种与文件中的语种并不相同，Whisper 会强制翻译，但 10 分钟以上的音视频会出现大量的重复无意义字幕。<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2"> 假设你把日语视频的转录语言设为汉语，前 8 分钟 Whisper 会正确转录到中文，但 8 分钟后的转录字幕会一直重复，并与实际片段无关。</a></p><a class="footnote-anchor" id="footnote-ref2">
-</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> model</h3>
-<p><code>--model</code> 指 Whisper 的转录模型，转录效果为 tiny &lt; base &lt; small &lt; medium &lt; large，默认使用 small。添加参数 <code>--model medium</code> 或 <code>--model large</code> 可以切换到更大的模型，但转录时间也会变长。如果你是对英文视频进行转录，则在模型参数上添加后缀 <code>.en</code>，能提升转录速度。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">模型</th>
-<th style="text-align:center">大小</th>
-<th style="text-align:center">单英语模型</th>
-<th style="text-align:center">多语言模型</th>
-<th style="text-align:center">最低显存</th>
-<th style="text-align:center">转录速率</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">tiny</td>
-<td style="text-align:center">39 M</td>
-<td style="text-align:center"><code>tiny.en</code></td>
-<td style="text-align:center"><code>tiny</code></td>
-<td style="text-align:center">~1 GB</td>
-<td style="text-align:center">~32x</td>
-</tr>
-<tr>
-<td style="text-align:center">base</td>
-<td style="text-align:center">74 M</td>
-<td style="text-align:center"><code>base.en</code></td>
-<td style="text-align:center"><code>base</code></td>
-<td style="text-align:center">~1 GB</td>
-<td style="text-align:center">~16x</td>
-</tr>
-<tr>
-<td style="text-align:center">small</td>
-<td style="text-align:center">244 M</td>
-<td style="text-align:center"><code>small.en</code></td>
-<td style="text-align:center"><code>small</code></td>
-<td style="text-align:center">~2 GB</td>
-<td style="text-align:center">~6x</td>
-</tr>
-<tr>
-<td style="text-align:center">medium</td>
-<td style="text-align:center">769 M</td>
-<td style="text-align:center"><code>medium.en</code></td>
-<td style="text-align:center"><code>medium</code></td>
-<td style="text-align:center">~5 GB</td>
-<td style="text-align:center">~2x</td>
-</tr>
-<tr>
-<td style="text-align:center">large</td>
-<td style="text-align:center">1550 M</td>
-<td style="text-align:center">N/A</td>
-<td style="text-align:center"><code>large</code></td>
-<td style="text-align:center">~10 GB</td>
-<td style="text-align:center">1x</td>
-</tr>
-</tbody>
-</table>
-<p>上方表格是 Whisper 官方提供信息，但目前模型实际增大 50%-100%，要求也增加了，仅作参考。</p>
-<h3> 辅助参数</h3>
-<ul>
-<li><code>--device</code> 指 whisper 运行算法所用的硬件，默认为 cuda 即显存，或者指定 <code>--device cpu</code> 。特别当你显存不够，又想使用较大模型时，推荐指定 CPU 转录。</li>
-<li><code>--temperature</code> temperature 决定了生成模型的贪婪程度，默认为 0。如果 temperature 低，概率最高的词将远高于其他低概率，模型将可能输出最正确的文本，变化很小。如果 temperature 较高，该模型会输出概率较高的其他单词，而不是概率最高的单词，生成的文本将更加多样化，但有更高的可能性出现语法错误和生成无意义的文本。</li>
-<li><code>--temperature_increment_on_fallback</code> 当解码失败时，回推时要增加的 temperature，默认为 0.2。</li>
-<li><code>--best_of</code> temperature 不为零时的侯选个数，默认为 5。</li>
-<li><code>--beam_size</code> temperature 为零时，number of beams in beam search，默认为 5。beam 直译是光束，但没理解具体意思，我简单理解其为侯选数。</li>
-<li><code>--patience</code> 用于 beam decoding 的 patience value, as in <a href="https://arxiv.org/abs/2204.05424" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2204.05424</a>, the default (1.0) is equivalent to conventional beam search (default: None) simple length normalization by default (default: None)</li>
-<li><code>--length_penalty</code> optional token length penalty coefficient (alpha) as in <a href="https://arxiv.org/abs/1609.08144" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/1609.08144</a>, uses simple length normalization by default (default: None)</li>
-<li><code>--suppress_tokens</code> 逗号分隔的标记 ID 列表，以便在采样过程中进行抑制; 默认为 -1，这会抑制除常见标点符号外的大多数特殊字符的出现。</li>
-<li><code>--initial_prompt</code> 可选的文本提示，在命令首行出现，默认为空。</li>
-<li><code>--condition_on_previous_text</code> 默认为 True，为下一个窗口提供模型之前的输出作为提示；禁用可能会使不同窗口的文本不一致，但模型变得不容易陷入失败循环。</li>
-<li><code>--fp16</code> 是否启用半精度 fp16 进行推理运算，默认为 True，否则为单精度 fp32，运行时间延长。</li>
-<li><code>--threads</code> 指定 CPU 运算的线程数，会取代 MKL_NUM_THREADS/OMP_NUM_THREADS (默认：0)</li>
-</ul>
-<h3> 幻听参数</h3>
-<p>非英语视频的转录有时会出现幻听，即静默片段被识别出语音，或是转录结果与该片段无关。这些问题是由语气停顿参数引起的。幻听的解决方案是引入 <a href="https://github.com/snakers4/silero-vad" target="_blank" rel="noopener noreferrer">VAD</a>，但 VAD 对动手能力要求较高。如果你的视频转录出现了严重幻听，建议先尝试调节参数阈值。</p>
-<ul>
-<li><code>--no_speech_threshold</code> 无声识别的阈值，默认为 0.6。当 no_speech_threshold 高于阈值且 logprob_threshold 低于预设时，该片段将被标记为静默。对于非英语长视频来说，建议将其调低，否则经常出现大段的重复识别。</li>
-<li><code>--logprob_threshold</code> 转录频次的阈值，默认为 -1.0。当 logprob_threshold 低于预设时，将不对该片段进行转录。建议修改为 None 或更低的值。</li>
-<li><code>--compression_ratio_threshold</code> 压缩比的阈值，默认为 2.4。当 compression_ratio_threshold 高于预设时，将不对该片段进行转录。</li>
-</ul>
-<p><code>--no_speech_threshold 0.5 --logprob_threshold None --compression_ratio_threshold 2.2</code> 是我常用的参数，你可以按视频情况来调节，幻听参数放在转录命令后面。</p>
-<h2> 转录成果</h2>
-<p>「夜のヒットスタジオ・スペシャル」：</p>
 ]]></content:encoded>
     </item>
   </channel>
