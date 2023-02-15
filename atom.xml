@@ -9,7 +9,7 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-02-15T14:28:07.750Z</updated>
+  <updated>2023-02-15T14:32:53.852Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
@@ -20,10 +20,73 @@
     <uri>https://mars.run</uri>
   </contributor>
   <entry>
-    <title type="text">PHP Challenge 2015</title>
+    <title type="text">Joomla 3.4.7 修复的反序列化与SQL注入</title>
+    <id>https://mars.run/cybersecurity/Joomla%203.4.7%20%E4%BF%AE%E5%A4%8D%E7%9A%84%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8ESQL%E6%B3%A8%E5%85%A5.html</id>
+    <link href="https://mars.run/cybersecurity/Joomla%203.4.7%20%E4%BF%AE%E5%A4%8D%E7%9A%84%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8ESQL%E6%B3%A8%E5%85%A5.html"/>
+    <updated>2023-02-15T14:31:15.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 反序列化漏洞修复分析</h2>
+<p>前一阵子 Joomla 的对象注入很火，而官方3.4.6的修复仅仅是严格过滤了X_FORWARDED_FOR、注释了USER_AGENT存入SESSION那一句，见：<a href="https://github.com/joomla/joomla-cms/commit/995db72ff4eaa544e38b4da3630b7a1ac0146264#diff-aba80b5850bf0435954b29dece250cbfL1021" target="_blank" rel="noopener noreferrer">https://github.com/joomla/joomla-cms/commit/995db72ff4eaa544e38b4da3630b7a1ac0146264#diff-aba80b5850bf0435954b29dece250cbfL1021</a>这样只是指哪补哪，治标不治本。看来官方上次的修复只是临时解决方案，这次的更新(3.4.7)算是彻底解决了此问题。</p>]]></summary>
+    <content type="html"><![CDATA[<h2> 反序列化漏洞修复分析</h2>
+<p>前一阵子 Joomla 的对象注入很火，而官方3.4.6的修复仅仅是严格过滤了X_FORWARDED_FOR、注释了USER_AGENT存入SESSION那一句，见：<a href="https://github.com/joomla/joomla-cms/commit/995db72ff4eaa544e38b4da3630b7a1ac0146264#diff-aba80b5850bf0435954b29dece250cbfL1021" target="_blank" rel="noopener noreferrer">https://github.com/joomla/joomla-cms/commit/995db72ff4eaa544e38b4da3630b7a1ac0146264#diff-aba80b5850bf0435954b29dece250cbfL1021</a>这样只是指哪补哪，治标不治本。看来官方上次的修复只是临时解决方案，这次的更新(3.4.7)算是彻底解决了此问题。</p>
+<p>上次的对象注入，需要满足三个条件：</p>
+<ol>
+<li>自己实现session的处理方式，重新实现了 session 存储的read()和write()方法，但是并没有对 session 的值进行安全处理。</li>
+<li>Mysql非strict mode下，使用utf8mb4字符&nbsp;<code>\xF0\x9D\x8C\x86</code>&nbsp;来截断。</li>
+<li>PHP &lt;= 5.6.13 session中反序列化解析的BUG。</li>
+</ol>
+<p>Joomla 官方也只能解决第一个，也就是改进session的处理方式。这次更新，在 libraries/cms/version/version.php 中，将SESSION存储在内部的Registry类对象中，弃用了以前使用 $_SESSION[$namespace][$name] 的方式：</p>
+<div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>并且，在写SESSION的时候会先做base64_encode：</p>
+<div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样，$_SESSION 就只剩下了$_SESSION[‘joomla’]，而且$_SESSION[‘joomla’] 只存储了Registry的对象$data，在执行read()和write()时候，SESSION是经过base64_encode后的数据，就不会存在read()之后自动反序列化而导致对象注入了。</p>
+<p>在反序列化的时候也不存在unserialize参数可控的情况。（可控的只是$data的成员变量）</p>
+<div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Joomla官方这次的解决方案比较好，不像上次那样治标不治本，这样的态度值得称赞。反观Apache对struts2 漏洞的修复…就不说了。</p>
+<h2> SQL注入漏洞分析</h2>
+<h3> 漏洞分析</h3>
+<p>代码位于，administrator/components/com_categories/models/category.php，save()函数内：</p>
+<div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其中的 $associations 未经过适当处理、我们跟着流程来看看。</p>
+<p>首先，<code>$assoc = $this-&gt;getAssoc();</code>&nbsp;为 True 的时候整个逻辑才能进来，这个<code>getAssoc()</code>是什么呢？跟进getAssoc()的实现(文件的 1234 行)，发现关键是在：</p>
+<div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>搜索一下，发现 JLanguageAssociations 是 Joomla 的一个多语言插件&nbsp;<a href="http://www.slideshare.net/erictiggeler/creating-a-multilingual-site-in-joomla-joomla-3-beginners-guide-eric-tiggeler" target="_blank" rel="noopener noreferrer">http://www.slideshare.net/erictiggeler/creating-a-multilingual-site-in-joomla-joomla-3-beginners-guide-eric-tiggeler</a>, 这个插件是 Joomla 自带的，默认没有开启，我们在后台将他开启。</p>
+<p>然后，继续看代码，<code>$associations = $data['associations'];</code>, $data是post过来的数据，$associations没有经过过滤就传到了：</p>
+<div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>导致SQL注入。</p>
+<p>那 Joomla 有没有全局过滤呢？我们看看 Joomla 是如何处理POST数据的。</p>
+<p>在 libraries/legacy/controller/form.php , save() 函数，</p>
+<div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>validate() 函数在 libraries/legacy/model/form.php 302行, 他又调用了libraries/joomla/form/form.php 的filter() 函数，具体实现就不继续了，总之这里的POST参数只是处理了 ‘ XSS and specified bad code. ‘。</p>
+<p>最后，构造POC。在修改分类，保存的时候，修改POST数据:</p>
+<div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>jform[associations][en-GB] 这个参数就是 $associations，成功注入。</p>
+<figure><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/84aa5a9c-9196-4131-b313-8edcada92287/Untitled.png" alt="Untitled" tabindex="0" loading="lazy"><figcaption>Untitled</figcaption></figure>
+<blockquote>
+<p>这里打一波广告，我们的Skywolf是可以轻松检测出来的，如下图</p>
+</blockquote>
+<figure><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/69b58f0c-b651-43c7-b1c7-19f0d2febb3b/Untitled.png" alt="Untitled" tabindex="0" loading="lazy"><figcaption>Untitled</figcaption></figure>
+<p>另外，libraries/legacy/model/admin.php 这里也存在着同样的问题。</p>
+<h3> 修复方案</h3>
+<p>官方增加了：</p>
+<div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>将 $associations 中的所有值转换为int型。还有将 $id 强制转换为int。</p>
+<h2> 参考资料</h2>
+<ol>
+<li><a href="http://drops.wooyun.org/papers/11330" target="_blank" rel="noopener noreferrer">http://drops.wooyun.org/papers/11330</a></li>
+<li><a href="http://drops.wooyun.org/papers/11371" target="_blank" rel="noopener noreferrer">http://drops.wooyun.org/papers/11371</a></li>
+<li><a href="http://bobao.360.cn/learning/detail/2501.html" target="_blank" rel="noopener noreferrer">http://bobao.360.cn/learning/detail/2501.html</a></li>
+<li><a href="https://github.com/joomla/joomla-cms/commit/2cd4ef682f0cab6ff03200b79007a25f19c6690e" target="_blank" rel="noopener noreferrer">https://github.com/joomla/joomla-cms/commit/2cd4ef682f0cab6ff03200b79007a25f19c6690e</a></li>
+<li><a href="https://www.joomla.org/announcements/release-news/5643-joomla-3-4-7.html" target="_blank" rel="noopener noreferrer">https://www.joomla.org/announcements/release-news/5643-joomla-3-4-7.html</a></li>
+</ol>
+]]></content>
+    <author>
+      <name>Mars</name>
+      <uri>https://mars.run</uri>
+    </author>
+    <category term="网络安全"/>
+    <contributor>
+      <name>Mars</name>
+      <uri>https://mars.run</uri>
+    </contributor>
+    <published>2015-10-20T08:08:11.000Z</published>
+    <rights>Copyright by Mars</rights>
+  </entry>
+  <entry>
+    <title type="text">读懂PHP opcode及其在webshell检测中的应用</title>
     <id>https://mars.run/cybersecurity/%E8%AF%BB%E6%87%82PHP%20opcode%E5%8F%8A%E5%85%B6%E5%9C%A8webshell%E6%A3%80%E6%B5%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.html</id>
     <link href="https://mars.run/cybersecurity/%E8%AF%BB%E6%87%82PHP%20opcode%E5%8F%8A%E5%85%B6%E5%9C%A8webshell%E6%A3%80%E6%B5%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.html"/>
-    <updated>2023-02-15T14:26:27.000Z</updated>
+    <updated>2023-02-15T14:31:15.000Z</updated>
     <summary type="html"><![CDATA[<h2> 什么是opcode</h2>
 <p>当Zend Engine解析PHP脚本的时候，会对脚本进行词法、语法分析，然后编译成opcode来执行，类似JVM中的字节码(byte codes)，只不过opcode不会像class文件那种存在磁盘，而是在内存中直到PHP的生命周期结束。</p>
 <p>盗一张图：</p>
@@ -759,86 +822,6 @@
 <p><a href="https://zs.xiaohulu.com/danmu/" target="_blank" rel="noopener noreferrer">小葫芦弹幕助手</a>可实时显示网友的互动和打赏，尤其适合游戏直播。但是，由于弹幕答谢、自动定时弹幕、手动弹幕等功能已暂停，不建议新手充值会员。</p>
 <p>如果不需要在直播界面中显示弹幕，不要安装小葫芦弹幕插件。安装后，会影响 OBS 窗口捕获功能，无法抓取基于 Electron 的应用界面，从而导致窗口捕捉黑屏。解决方法是删除 <code>C:\Program Files\obs-studio\obs-plugins\64bit</code> 目录内的 <code>CalabashDanmuPlugin.dll</code>、<code>CalabashWinCapture.dll</code>、<code>ObssDanmuInfo.dll</code>，重启 OBS 即可恢复，但下次使用弹幕助手时，这三个文件会自动安装，黑屏问题复现，只能重新删除指定文件。</p>
 <p>小葫芦直播助手集成了 OBS 和弹幕助手的功能，但为了直播的扩展性，仍然建议从 OBS 入门。</p>
-]]></content>
-    <author>
-      <name>Mars</name>
-      <uri>https://mars.run</uri>
-    </author>
-    <category term="工具"/>
-    <contributor>
-      <name>Mars</name>
-      <uri>https://mars.run</uri>
-    </contributor>
-    <published>2023-01-12T16:55:27.000Z</published>
-    <rights>Copyright by Mars</rights>
-  </entry>
-  <entry>
-    <title type="text">直播入门攻略五 | 平台篇：主流直播平台介绍</title>
-    <id>https://mars.run/apps/livestreaming/5_live_platforms.html</id>
-    <link href="https://mars.run/apps/livestreaming/5_live_platforms.html"/>
-    <updated>2023-01-23T14:11:29.000Z</updated>
-    <summary type="html"><![CDATA[<p>主流直播平台有淘宝、京东、抖音、快手、视频号、哔哩哔哩、小红书、微博直播、斗鱼、虎牙和 YouTube。接下来，我将逐一介绍如何使用 PC 端的 OBS 在这些平台上进行直播。</p>
-<h2> 淘宝直播</h2>
-<ol>
-<li>
-<p>下载<a href="https://market.m.taobao.com/app/mtb/live-portal/download/index.html" target="_blank" rel="noopener noreferrer">淘宝直播客户端</a>，打开后点击「我要开播」，进入直播间界面。</p>
-<figure><img src="http://tc.seoipo.com/2022-06-29-22-23-26.png" alt="" tabindex="0" loading="lazy"><figcaption>淘宝直播设置</figcaption></figure>
-</li>
-<li>
-<p>在左侧点击「添加元素」&gt;「摄像头」，选择「OBS-Camera」，即可同步 OBS 直播画面。淘宝直播客户端也是基于 OBS，但不支持推流直播，只能通过虚拟摄像头同步画面。</p>
-</li>
-</ol>]]></summary>
-    <content type="html"><![CDATA[<p>主流直播平台有淘宝、京东、抖音、快手、视频号、哔哩哔哩、小红书、微博直播、斗鱼、虎牙和 YouTube。接下来，我将逐一介绍如何使用 PC 端的 OBS 在这些平台上进行直播。</p>
-<h2> 淘宝直播</h2>
-<ol>
-<li>
-<p>下载<a href="https://market.m.taobao.com/app/mtb/live-portal/download/index.html" target="_blank" rel="noopener noreferrer">淘宝直播客户端</a>，打开后点击「我要开播」，进入直播间界面。</p>
-<figure><img src="http://tc.seoipo.com/2022-06-29-22-23-26.png" alt="" tabindex="0" loading="lazy"><figcaption>淘宝直播设置</figcaption></figure>
-</li>
-<li>
-<p>在左侧点击「添加元素」&gt;「摄像头」，选择「OBS-Camera」，即可同步 OBS 直播画面。淘宝直播客户端也是基于 OBS，但不支持推流直播，只能通过虚拟摄像头同步画面。</p>
-</li>
-</ol>
-<p>除了客户端，还可以通过<a href="https://liveplatform.taobao.com/restful/index/home/" target="_blank" rel="noopener noreferrer">直播中控台</a>来设置淘宝直播间。</p>
-<h2> 抖音直播</h2>
-<ol>
-<li>
-<p>下载<a href="https://www.douyin.com/falcon/webcast_openpc/pages/streamingtool_download/index.html" target="_blank" rel="noopener noreferrer">直播伴侣电脑端</a>，它可以适配西瓜视频、抖音、抖音火山版的直播。</p>
-</li>
-<li>
-<p>在左侧点击「添加元素」&gt;「采集」，选择「OBS-Camera」(摄像头较多时，可下滑选择)，设置采集自定义音频设备为「OBS-Audio」，声音改为单声道。</p>
-<figure><img src="http://tc.seoipo.com/2022-06-29-23-59-02.png" alt="" tabindex="0" loading="lazy"><figcaption>抖音直播设置</figcaption></figure>
-</li>
-</ol>
-<p>以上为抖音新手的电脑直播步骤，如果你的抖音粉丝在一万以上，可以使用 <a href="http://streamingtool.douyin.com/docs/guide/96319/" target="_blank" rel="noopener noreferrer">OBS 模式推流</a>。</p>
-<h2> 快手直播</h2>
-<p>快手直播无需 PC 客户端，可在<a href="https://studio.kuaishou.com/profile" target="_blank" rel="noopener noreferrer">快手云直播</a>页面配置直播间，支持 OBS 模式推流直播。若直播断流超过 2 分钟或直播超过 7 天，则会自动下播。</p>
-<h2> 视频号直播</h2>
-<p>要使用电脑直播视频号，需要先完成<a href="https://channels.weixin.qq.com/platform/live/apply" target="_blank" rel="noopener noreferrer">视频号认证</a>。</p>
-<p>视频号认证最重要的一环是<strong>有效关注数 1000 人以上</strong>，可疑和外挂用户都不包含在有效人数内。达到 1000 有效粉丝后，就可以在视频号助手网页端发起直播推流了。</p>
-<h2> B 站直播</h2>
-<p>哔哩哔哩可以在<a href="https://link.bilibili.com/p/eden/download#/web" target="_blank" rel="noopener noreferrer">直播姬客户端</a>或<a href="https://link.bilibili.com/p/center/index#/my-room/start-live" target="_blank" rel="noopener noreferrer">B 站直播间网页端</a>上进行在线直播。直播封面必须包含图像，不支持纯文本封面。</p>
-<p>如果你主做 B 站直播，可以试试哔哩哔哩直播机器人<a href="https://github.com/iwxyi/Bilibili-MagicalDanmaku" target="_blank" rel="noopener noreferrer">神奇弹幕</a>，它集成了弹幕姬、答谢姬、点歌姬、回复姬和工作流 (workflow)，支持弹幕聊天、观众互动、自动点歌、数据统计、私信处理等功能。这个应用看起来很有趣，我还没有使用过。</p>
-<h2> 知乎直播</h2>
-<p>在<a href="https://www.zhihu.com/creator/streaming/push" target="_blank" rel="noopener noreferrer">知乎推流直播</a>页面开启直播后，就可以使用知乎的电脑直播。</p>
-<p>知乎直播注意：</p>
-<ul>
-<li>推流直播不能与第三方连接谈话；手机直播不支持绿幕抠图。</li>
-<li>当你在电脑直播时，用手机进入知乎客户端，会提示「是否继续直播」，选择「继续」可进入直播界面与观众互动，选「忽略」则停止直播。</li>
-<li>如果直播时间超过一个月，小葫芦直播码会失效，无法继续使用小葫芦直播助手和弹幕助手。</li>
-</ul>
-<h2> 小红书直播</h2>
-<p>小红书使用<a href="http://www.xiaohongshu.com/zhibo/robs" target="_blank" rel="noopener noreferrer">直播助手</a>来设置推流，可以查看<a href="ttps://fe-video-qc.xhscdn.com/fe-platform/f03ae58e50e6d53580fa16a58e9dffbbbabbb5f0.pdf">官方文档</a> 了解开播步骤。</p>
-<p>当我登录直播助手时，提示「暂无直播权限，请联系运营及客服开通」，但手机却可以直播，这说明提示中的直播权限专指电脑端直播。因此，我在应用中提交了问题，但一直未收到客服回复。</p>
-<h2> 微博直播</h2>
-<p>微博直播需先完成实名认证，然后在<a href="https://weibo.com/manage/frame?furl=https%3A%2F%2Fweibo.com%2Fl%2Fwblive%2Fadmin%2Fhome%2Fauthentication" target="_blank" rel="noopener noreferrer">微博管理中心</a>创建直播。详细的开播步骤，可以参考官方的<a href="https://weibo.com/l/wblive/act/k2mw80kz3kw0" target="_blank" rel="noopener noreferrer">微博 PC 开播教程</a>。</p>
-<h2> Youtube 直播</h2>
-<p>如果您在过去 90 天内没有进行 YouTube 直播，平台会要求验证您的频道。首次启用直播功能可能需要最长等待 24 小时。</p>
-<ol>
-<li>打开 <a href="http://youtube.com/livestreaming" target="_blank" rel="noopener noreferrer">YouTube 直播控制室</a>。</li>
-<li>点击直播标签页或为新直播安排时间。</li>
-<li>从直播控制室复制直播网址和直播码，然后将其粘贴到编码器中。</li>
-</ol>
 ]]></content>
     <author>
       <name>Mars</name>
