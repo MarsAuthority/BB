@@ -41,5 +41,5 @@ export default navbar([
     prefix: "/family/",
     children: ["Diet", "Shoppinglist", "Coupon"],
   },
-  { text: "工具收藏", icon: "tool", link: "https://nav.newzone.top/" },
+  { text: "RSS信息流", icon: "rss", link: "https://mars0run.notion.site/5ccdf71345c2440da2ccd385e98dd71d?v=edfc490b781d435ba1e066a4d1b2dd48" },
 ]);
