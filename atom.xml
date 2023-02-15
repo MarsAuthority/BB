@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://newzone.top/atom.xsl"?>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://mars.run/atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
-  <id>https://newzone.top/</id>
+  <id>https://mars.run/</id>
   <title>Mars’ Blog | 记录·分享·回顾</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <author>
     <name>Mars</name>
-    <uri>https://newzone.top</uri>
+    <uri>https://mars.run</uri>
   </author>
-  <logo>https://newzone.top/logo.svg</logo>
+  <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-02-15T11:15:57.186Z</updated>
+  <updated>2023-02-15T11:19:55.097Z</updated>
   <generator>vuepress-plugin-feed2</generator>
-  <link rel="self" href="https://newzone.top/atom.xml"/>
-  <link rel="alternate" href="https://newzone.top/"/>
+  <link rel="self" href="https://mars.run/atom.xml"/>
+  <link rel="alternate" href="https://mars.run/"/>
   <category term="网络安全"/>
   <category term="工具"/>
   <contributor>
     <name>Mars</name>
-    <uri>https://newzone.top</uri>
+    <uri>https://mars.run</uri>
   </contributor>
   <entry>
     <title type="text">谈谈对WordPress 3.8.2 cookie伪造漏洞以及Python使用urllib2出现30x跳转的问题</title>
-    <id>https://newzone.top/cybersecurity/%E8%B0%88%E8%B0%88%E5%AF%B9WordPress%203.8.2%20cookie%E4%BC%AA%E9%80%A0%E6%BC%8F%E6%B4%9E%E4%BB%A5%E5%8F%8APython%E4%BD%BF%E7%94%A8urllib2%E5%87%BA%E7%8E%B030x%E8%B7%B3%E8%BD%AC%E7%9A%84%E9%97%AE%E9%A2%98.html</id>
-    <link href="https://newzone.top/cybersecurity/%E8%B0%88%E8%B0%88%E5%AF%B9WordPress%203.8.2%20cookie%E4%BC%AA%E9%80%A0%E6%BC%8F%E6%B4%9E%E4%BB%A5%E5%8F%8APython%E4%BD%BF%E7%94%A8urllib2%E5%87%BA%E7%8E%B030x%E8%B7%B3%E8%BD%AC%E7%9A%84%E9%97%AE%E9%A2%98.html"/>
+    <id>https://mars.run/cybersecurity/%E8%B0%88%E8%B0%88%E5%AF%B9WordPress%203.8.2%20cookie%E4%BC%AA%E9%80%A0%E6%BC%8F%E6%B4%9E%E4%BB%A5%E5%8F%8APython%E4%BD%BF%E7%94%A8urllib2%E5%87%BA%E7%8E%B030x%E8%B7%B3%E8%BD%AC%E7%9A%84%E9%97%AE%E9%A2%98.html</id>
+    <link href="https://mars.run/cybersecurity/%E8%B0%88%E8%B0%88%E5%AF%B9WordPress%203.8.2%20cookie%E4%BC%AA%E9%80%A0%E6%BC%8F%E6%B4%9E%E4%BB%A5%E5%8F%8APython%E4%BD%BF%E7%94%A8urllib2%E5%87%BA%E7%8E%B030x%E8%B7%B3%E8%BD%AC%E7%9A%84%E9%97%AE%E9%A2%98.html"/>
     <updated>2023-02-15T11:03:18.000Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>首先看这篇文章：WordPress 3.8.2 cookie伪造漏洞再分析 <a href="http://drops.wooyun.org/papers/1409" target="_blank" rel="noopener noreferrer">http://drops.wooyun.org/papers/1409</a></p>
@@ -55,20 +55,20 @@
 ]]></content>
     <author>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </author>
     <category term="网络安全"/>
     <contributor>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </contributor>
     <published>2014-04-10T15:19:00.000Z</published>
     <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">我用白板墙贴，记录日常生活</title>
-    <id>https://newzone.top/posts/2023-01-26-whiteboard_gtd.html</id>
-    <link href="https://newzone.top/posts/2023-01-26-whiteboard_gtd.html"/>
+    <id>https://mars.run/posts/2023-01-26-whiteboard_gtd.html</id>
+    <link href="https://mars.run/posts/2023-01-26-whiteboard_gtd.html"/>
     <updated>2023-02-03T23:01:57.000Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>摆脱数字性遗忘：白板墙贴的生活/工作清单，适用于居家办公的 GTD 补充记录方案。</p>
@@ -130,20 +130,20 @@
 ]]></content>
     <author>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </author>
     <category term="工具"/>
     <contributor>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </contributor>
     <published>2023-01-22T00:00:00.000Z</published>
     <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略零 | 硬件篇：直播设备</title>
-    <id>https://newzone.top/apps/livestreaming/0_live_equipments.html</id>
-    <link href="https://newzone.top/apps/livestreaming/0_live_equipments.html"/>
+    <id>https://mars.run/apps/livestreaming/0_live_equipments.html</id>
+    <link href="https://mars.run/apps/livestreaming/0_live_equipments.html"/>
     <updated>2023-01-23T14:11:29.000Z</updated>
     <summary type="html"><![CDATA[<p>直播已经成为一种主流的传播方式，几乎所有的行业都会使用它。经过两年的持续直播，我总结出了一套直播入门攻略，从设备、软件和技巧三个方面，帮助你快速入门直播，开始自己的直播之旅。</p>
 <p>本文是直播入门攻略的前置篇，主要介绍直播所需的设备，以及如何避免购买不必要的高价设备。直播设备可分为电脑、补光灯、稳定器（三脚架）、音频采集（收音器）和视频采集（摄像头）。</p>
@@ -195,20 +195,20 @@
 ]]></content>
     <author>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </author>
     <category term="工具"/>
     <contributor>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
     <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略一 | OBS 篇：OBS 29 新手指南</title>
-    <id>https://newzone.top/apps/livestreaming/1_obs_basic.html</id>
-    <link href="https://newzone.top/apps/livestreaming/1_obs_basic.html"/>
+    <id>https://mars.run/apps/livestreaming/1_obs_basic.html</id>
+    <link href="https://mars.run/apps/livestreaming/1_obs_basic.html"/>
     <updated>2023-01-12T16:55:27.000Z</updated>
     <summary type="html"><![CDATA[<p><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">Open Broadcaster Software</a>（OBS）是一款免费开源的视频录制和直播应用，支持 Windows、Mac 和 Linux 平台。大部分直播软件都是基于 OBS 内核开发的。无论你准备在哪个平台直播，OBS 都是最推荐的直播入门软件。本文将从基础开始，为新手介绍 OBS 的界面、设置和直播使用方法。</p>
 <h2> 主界面</h2>
@@ -325,20 +325,20 @@
 ]]></content>
     <author>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </author>
     <category term="工具"/>
     <contributor>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
     <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略二 | StreamFX 篇：最强大的 OBS 插件</title>
-    <id>https://newzone.top/apps/livestreaming/2_obs_streamfx.html</id>
-    <link href="https://newzone.top/apps/livestreaming/2_obs_streamfx.html"/>
+    <id>https://mars.run/apps/livestreaming/2_obs_streamfx.html</id>
+    <link href="https://mars.run/apps/livestreaming/2_obs_streamfx.html"/>
     <updated>2023-01-23T14:11:29.000Z</updated>
     <summary type="html"><![CDATA[<p>StreamFX 提供了来源镜像、模糊滤镜、着色器滤镜等多种效果，是 OBS 必装的效果插件。本文将介绍 StreamFX 的 28 种滤镜效果。</p>
 <h2> 安装 StreamFX</h2>
@@ -472,20 +472,20 @@
 ]]></content>
     <author>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </author>
     <category term="工具"/>
     <contributor>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
     <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略三 | 插件篇：OBS 进阶插件</title>
-    <id>https://newzone.top/apps/livestreaming/3_obs_plugins.html</id>
-    <link href="https://newzone.top/apps/livestreaming/3_obs_plugins.html"/>
+    <id>https://mars.run/apps/livestreaming/3_obs_plugins.html</id>
+    <link href="https://mars.run/apps/livestreaming/3_obs_plugins.html"/>
     <updated>2023-01-23T14:11:29.000Z</updated>
     <summary type="html"><![CDATA[<p>OBS 与其他直播/录制应用最大的区别在于 OBS 社区，它给 OBS 带来了强大的扩展性。下文中我会介绍除 StreamFX 外的 15 款流行插件。（本文未完成，待填充）</p>
 <h2> 插件安装与卸载</h2>
@@ -537,20 +537,20 @@
 ]]></content>
     <author>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </author>
     <category term="工具"/>
     <contributor>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
     <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略四 | 特效篇：美颜、变声、多开、虚拟主播</title>
-    <id>https://newzone.top/apps/livestreaming/4_live_effects.html</id>
-    <link href="https://newzone.top/apps/livestreaming/4_live_effects.html"/>
+    <id>https://mars.run/apps/livestreaming/4_live_effects.html</id>
+    <link href="https://mars.run/apps/livestreaming/4_live_effects.html"/>
     <updated>2023-01-23T14:11:29.000Z</updated>
     <summary type="html"><![CDATA[<p>虽然 OBS 的功能已经非常强大，但通过第三方软件可以更简单地给我们带来美颜、变声、虚拟主播等特效。</p>
 <h2> 美颜</h2>
@@ -600,20 +600,20 @@
 ]]></content>
     <author>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </author>
     <category term="工具"/>
     <contributor>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
     <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略五 | 平台篇：主流直播平台介绍</title>
-    <id>https://newzone.top/apps/livestreaming/5_live_platforms.html</id>
-    <link href="https://newzone.top/apps/livestreaming/5_live_platforms.html"/>
+    <id>https://mars.run/apps/livestreaming/5_live_platforms.html</id>
+    <link href="https://mars.run/apps/livestreaming/5_live_platforms.html"/>
     <updated>2023-01-23T14:11:29.000Z</updated>
     <summary type="html"><![CDATA[<p>主流直播平台有淘宝、京东、抖音、快手、视频号、哔哩哔哩、小红书、微博直播、斗鱼、虎牙和 YouTube。接下来，我将逐一介绍如何使用 PC 端的 OBS 在这些平台上进行直播。</p>
 <h2> 淘宝直播</h2>
@@ -680,20 +680,20 @@
 ]]></content>
     <author>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </author>
     <category term="工具"/>
     <contributor>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
     <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略六 | 技巧篇：直播定位与策划</title>
-    <id>https://newzone.top/apps/livestreaming/6_live_positioning.html</id>
-    <link href="https://newzone.top/apps/livestreaming/6_live_positioning.html"/>
+    <id>https://mars.run/apps/livestreaming/6_live_positioning.html</id>
+    <link href="https://mars.run/apps/livestreaming/6_live_positioning.html"/>
     <updated>2023-01-12T21:27:08.000Z</updated>
     <summary type="html"><![CDATA[<p>直播过几次了，但是你的直播间总是没有人看，偶尔来了人也不知道说什么。作为直播新手，遇到这种情况是很正常的。建议按照本文的章节，逐一比对，对你的直播进行定位和策划。</p>
 <h2> 直播定位</h2>
@@ -762,20 +762,20 @@
 ]]></content>
     <author>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </author>
     <category term="工具"/>
     <contributor>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
     <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">找不到字幕？Whisper 让不懂外语的你也能看懂日剧</title>
-    <id>https://newzone.top/posts/2022-11-18-whisper_ai_subtitles.html</id>
-    <link href="https://newzone.top/posts/2022-11-18-whisper_ai_subtitles.html"/>
+    <id>https://mars.run/posts/2022-11-18-whisper_ai_subtitles.html</id>
+    <link href="https://mars.run/posts/2022-11-18-whisper_ai_subtitles.html"/>
     <updated>2023-01-23T14:11:29.000Z</updated>
     <summary type="html"><![CDATA[<p>从大学开始，我看日剧十几年了，但日语毫无进步，只能听懂几句耳熟能详的句子，看国外电影全靠字幕组。曾经我想过学日语，报了暑期班，但成绩被七岁的小妹妹同学吊打。然后，我就被自己的语言能力说服了，想着这辈子都离不开字幕组。这种情况一直持续着，直到我测试视频剪辑工具 AutoCut 时遇到了 Whisper。</p>
 <p>Whisper 是今年 9 月被 OpenAI 开源的自动语音识别系统，除了可以用于语音识别，Whisper 还能实现多种语言的转录，以及将这些语言翻译成英语。「语言识别」「转录」听起来特别唬人，但 transcribe（转录）指将语音转为文字，Whisper 会为音视频生成带时间轴的字幕文件，是<strong>支持 99 种语言 AI 字幕工具</strong>。</p>]]></summary>
@@ -887,12 +887,12 @@
 ]]></content>
     <author>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </author>
     <category term="工具"/>
     <contributor>
       <name>Mars</name>
-      <uri>https://newzone.top</uri>
+      <uri>https://mars.run</uri>
     </contributor>
     <published>2022-11-18T00:00:00.000Z</published>
     <rights>Copyright by Mars</rights>
