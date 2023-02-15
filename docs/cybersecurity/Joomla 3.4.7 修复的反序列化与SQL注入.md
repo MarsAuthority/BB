@@ -177,14 +177,13 @@ jform[title]=Joomla!&jform[alias]=joomla&jform[description]=&jform[parent_id]=14
 
 jform[associations][en-GB] 这个参数就是 $associations，成功注入。
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/84aa5a9c-9196-4131-b313-8edcada92287/Untitled.png)
+![Jommla](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/dWuY7g.jpg)
 
 > 这里打一波广告，我们的Skywolf是可以轻松检测出来的，如下图
-> 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/69b58f0c-b651-43c7-b1c7-19f0d2febb3b/Untitled.png)
+![Skywolf](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/vwJyVt.jpg)
 
-另外，libraries/legacy/model/admin.php 这里也存在着同样的问题。
+另外，`libraries/legacy/model/admin.php` 这里也存在着同样的问题。
 
 ### 修复方案
 

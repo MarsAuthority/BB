@@ -15,7 +15,7 @@ order: 1
 
 盗一张图：
 
-![DlYw5G](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/DlYw5G.jpg)
+![opcode](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/DlYw5G.jpg)
 
 > opcode在PHP内核中是如何生成的可以参考 : [http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode](http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode)
 > 
