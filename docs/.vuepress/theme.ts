@@ -70,7 +70,7 @@ export default hopeTheme({
     articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
     name: "Mars",
     avatar: "/avatar_self.png",
-    description: "迷信新工具，热衷于研究开源软件、心理学理论，定期分享探索成果",
+    description: "探索->理解->回顾->反思",
     intro: "/intro.html",
     roundAvatar: true,
   },
