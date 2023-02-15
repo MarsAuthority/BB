@@ -1,5 +1,5 @@
 ---
-title: 谈谈对WordPress 3.8.2 cookie伪造漏洞以及Python使用urllib2出现30x跳转的问题
+title: WordPress 3.8.2 cookie伪造漏洞及Python使用urllib2出现30x跳转的问题
 date: 2014-04-10 15:19:00
 category:
   - 网络安全
