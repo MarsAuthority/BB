@@ -3,10 +3,10 @@
 home: true
 layout: BlogHome
 icon: home
-title: 博客
+title: Hello
 #heroImage: /logo.svg
-heroText: 博客
-tagline: 盛年不重来，一日难再晨
+heroText: Hello
+tagline: 学习学习再学习
 bgImage: https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3013&q=80
 heroFullScreen: false
 #projects:
