@@ -9,7 +9,7 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-02-15T17:16:56.396Z</updated>
+  <updated>2023-02-15T17:17:57.014Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
@@ -460,15 +460,11 @@ P<span class="token punctuation">(</span>W5<span class="token operator">|</span>
     <title type="text">Joomla 3.4.7 修复的反序列化与SQL注入</title>
     <id>https://mars.run/cybersecurity/Joomla%203.4.7%20%E4%BF%AE%E5%A4%8D%E7%9A%84%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8ESQL%E6%B3%A8%E5%85%A5.html</id>
     <link href="https://mars.run/cybersecurity/Joomla%203.4.7%20%E4%BF%AE%E5%A4%8D%E7%9A%84%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8ESQL%E6%B3%A8%E5%85%A5.html"/>
-    <updated>2023-02-15T14:41:21.000Z</updated>
+    <updated>2023-02-15T17:16:29.000Z</updated>
     <summary type="html"><![CDATA[<h2> 反序列化漏洞修复分析</h2>
-<p>前一阵子 Joomla 的对象注入很火，而官方3.4.6的修复仅仅是严格过滤了X_FORWARDED_FOR、注释了USER_AGENT存入SESSION那一句，见：
-<a href="https://github.com/joomla/joomla-cms/commit/995db72ff4eaa544e38b4da3630b7a1ac0146264#diff-aba80b5850bf0435954b29dece250cbfL1021" target="_blank" rel="noopener noreferrer">https://github.com/joomla/joomla-cms/commit/995db72ff4eaa544e38b4da3630b7a1ac0146264#diff-aba80b5850bf0435954b29dece250cbfL1021</a>
-这样只是指哪补哪，治标不治本。看来官方上次的修复只是临时解决方案，这次的更新(3.4.7)算是彻底解决了此问题。</p>]]></summary>
+<p>前一阵子 Joomla 的对象注入很火，而官方3.4.6的修复仅仅是严格过滤了X_FORWARDED_FOR、注释了USER_AGENT存入SESSION那一句，见<a href="https://github.com/joomla/joomla-cms/commit/995db72ff4eaa544e38b4da3630b7a1ac0146264#diff-aba80b5850bf0435954b29dece250cbfL1021" target="_blank" rel="noopener noreferrer">这里</a>,这样只是指哪补哪，治标不治本。看来官方上次的修复只是临时解决方案，这次的更新(3.4.7)算是彻底解决了此问题。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 反序列化漏洞修复分析</h2>
-<p>前一阵子 Joomla 的对象注入很火，而官方3.4.6的修复仅仅是严格过滤了X_FORWARDED_FOR、注释了USER_AGENT存入SESSION那一句，见：
-<a href="https://github.com/joomla/joomla-cms/commit/995db72ff4eaa544e38b4da3630b7a1ac0146264#diff-aba80b5850bf0435954b29dece250cbfL1021" target="_blank" rel="noopener noreferrer">https://github.com/joomla/joomla-cms/commit/995db72ff4eaa544e38b4da3630b7a1ac0146264#diff-aba80b5850bf0435954b29dece250cbfL1021</a>
-这样只是指哪补哪，治标不治本。看来官方上次的修复只是临时解决方案，这次的更新(3.4.7)算是彻底解决了此问题。</p>
+<p>前一阵子 Joomla 的对象注入很火，而官方3.4.6的修复仅仅是严格过滤了X_FORWARDED_FOR、注释了USER_AGENT存入SESSION那一句，见<a href="https://github.com/joomla/joomla-cms/commit/995db72ff4eaa544e38b4da3630b7a1ac0146264#diff-aba80b5850bf0435954b29dece250cbfL1021" target="_blank" rel="noopener noreferrer">这里</a>,这样只是指哪补哪，治标不治本。看来官方上次的修复只是临时解决方案，这次的更新(3.4.7)算是彻底解决了此问题。</p>
 <p>上次的对象注入，需要满足三个条件：</p>
 <ol>
 <li>自己实现session的处理方式，重新实现了 session 存储的read()和write()方法，但是并没有对 session 的值进行安全处理。</li>
