@@ -9,7 +9,7 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-02-15T14:19:11.033Z</updated>
+  <updated>2023-02-15T14:21:04.464Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
@@ -20,10 +20,10 @@
     <uri>https://mars.run</uri>
   </contributor>
   <entry>
-    <title type="text">谈谈对WordPress 3.8.2 cookie伪造漏洞以及Python使用urllib2出现30x跳转的问题</title>
+    <title type="text">WordPress 3.8.2 cookie伪造漏洞及Python使用urllib2出现30x跳转的问题</title>
     <id>https://mars.run/cybersecurity/%E8%B0%88%E8%B0%88%E5%AF%B9WordPress%203.8.2%20cookie%E4%BC%AA%E9%80%A0%E6%BC%8F%E6%B4%9E%E4%BB%A5%E5%8F%8APython%E4%BD%BF%E7%94%A8urllib2%E5%87%BA%E7%8E%B030x%E8%B7%B3%E8%BD%AC%E7%9A%84%E9%97%AE%E9%A2%98.html</id>
     <link href="https://mars.run/cybersecurity/%E8%B0%88%E8%B0%88%E5%AF%B9WordPress%203.8.2%20cookie%E4%BC%AA%E9%80%A0%E6%BC%8F%E6%B4%9E%E4%BB%A5%E5%8F%8APython%E4%BD%BF%E7%94%A8urllib2%E5%87%BA%E7%8E%B030x%E8%B7%B3%E8%BD%AC%E7%9A%84%E9%97%AE%E9%A2%98.html"/>
-    <updated>2023-02-15T11:03:18.000Z</updated>
+    <updated>2023-02-15T14:19:38.000Z</updated>
     <summary type="html"><![CDATA[<h2> 背景</h2>
 <p>首先看这篇文章：WordPress 3.8.2 cookie伪造漏洞再分析 <a href="http://drops.wooyun.org/papers/1409" target="_blank" rel="noopener noreferrer">http://drops.wooyun.org/papers/1409</a></p>
 <p>推荐阅读：</p>
