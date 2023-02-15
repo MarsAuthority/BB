@@ -3,11 +3,11 @@
 home: true
 layout: BlogHome
 icon: home
-title: 互联网小白
+title: 博客
 #heroImage: /logo.svg
-heroText: 互联网小白
+heroText: 博客
 tagline: 盛年不重来，一日难再晨
-bgImage: http://tc.seoipo.com/home-bg-1.jpg
+bgImage: https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3013&q=80
 heroFullScreen: false
 #projects:
 #  - icon: project
