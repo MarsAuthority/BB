@@ -9,7 +9,7 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-02-15T14:32:53.852Z</updated>
+  <updated>2023-02-15T14:35:14.473Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
@@ -23,7 +23,7 @@
     <title type="text">Joomla 3.4.7 修复的反序列化与SQL注入</title>
     <id>https://mars.run/cybersecurity/Joomla%203.4.7%20%E4%BF%AE%E5%A4%8D%E7%9A%84%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8ESQL%E6%B3%A8%E5%85%A5.html</id>
     <link href="https://mars.run/cybersecurity/Joomla%203.4.7%20%E4%BF%AE%E5%A4%8D%E7%9A%84%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8ESQL%E6%B3%A8%E5%85%A5.html"/>
-    <updated>2023-02-15T14:31:15.000Z</updated>
+    <updated>2023-02-15T14:33:12.000Z</updated>
     <summary type="html"><![CDATA[<h2> 反序列化漏洞修复分析</h2>
 <p>前一阵子 Joomla 的对象注入很火，而官方3.4.6的修复仅仅是严格过滤了X_FORWARDED_FOR、注释了USER_AGENT存入SESSION那一句，见：<a href="https://github.com/joomla/joomla-cms/commit/995db72ff4eaa544e38b4da3630b7a1ac0146264#diff-aba80b5850bf0435954b29dece250cbfL1021" target="_blank" rel="noopener noreferrer">https://github.com/joomla/joomla-cms/commit/995db72ff4eaa544e38b4da3630b7a1ac0146264#diff-aba80b5850bf0435954b29dece250cbfL1021</a>这样只是指哪补哪，治标不治本。看来官方上次的修复只是临时解决方案，这次的更新(3.4.7)算是彻底解决了此问题。</p>]]></summary>
     <content type="html"><![CDATA[<h2> 反序列化漏洞修复分析</h2>
@@ -52,12 +52,12 @@
 <div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>validate() 函数在 libraries/legacy/model/form.php 302行, 他又调用了libraries/joomla/form/form.php 的filter() 函数，具体实现就不继续了，总之这里的POST参数只是处理了 ‘ XSS and specified bad code. ‘。</p>
 <p>最后，构造POC。在修改分类，保存的时候，修改POST数据:</p>
 <div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>jform[associations][en-GB] 这个参数就是 $associations，成功注入。</p>
-<figure><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/84aa5a9c-9196-4131-b313-8edcada92287/Untitled.png" alt="Untitled" tabindex="0" loading="lazy"><figcaption>Untitled</figcaption></figure>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/dWuY7g.jpg" alt="Jommla" tabindex="0" loading="lazy"><figcaption>Jommla</figcaption></figure>
 <blockquote>
 <p>这里打一波广告，我们的Skywolf是可以轻松检测出来的，如下图</p>
 </blockquote>
-<figure><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/69b58f0c-b651-43c7-b1c7-19f0d2febb3b/Untitled.png" alt="Untitled" tabindex="0" loading="lazy"><figcaption>Untitled</figcaption></figure>
-<p>另外，libraries/legacy/model/admin.php 这里也存在着同样的问题。</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/vwJyVt.jpg" alt="Skywolf" tabindex="0" loading="lazy"><figcaption>Skywolf</figcaption></figure>
+<p>另外，<code>libraries/legacy/model/admin.php</code> 这里也存在着同样的问题。</p>
 <h3> 修复方案</h3>
 <p>官方增加了：</p>
 <div class="language-php line-numbers-mode" data-ext="php"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>将 $associations 中的所有值转换为int型。还有将 $id 强制转换为int。</p>
@@ -86,15 +86,15 @@
     <title type="text">读懂PHP opcode及其在webshell检测中的应用</title>
     <id>https://mars.run/cybersecurity/%E8%AF%BB%E6%87%82PHP%20opcode%E5%8F%8A%E5%85%B6%E5%9C%A8webshell%E6%A3%80%E6%B5%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.html</id>
     <link href="https://mars.run/cybersecurity/%E8%AF%BB%E6%87%82PHP%20opcode%E5%8F%8A%E5%85%B6%E5%9C%A8webshell%E6%A3%80%E6%B5%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.html"/>
-    <updated>2023-02-15T14:31:15.000Z</updated>
+    <updated>2023-02-15T14:33:12.000Z</updated>
     <summary type="html"><![CDATA[<h2> 什么是opcode</h2>
 <p>当Zend Engine解析PHP脚本的时候，会对脚本进行词法、语法分析，然后编译成opcode来执行，类似JVM中的字节码(byte codes)，只不过opcode不会像class文件那种存在磁盘，而是在内存中直到PHP的生命周期结束。</p>
 <p>盗一张图：</p>
-<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/DlYw5G.jpg" alt="DlYw5G" tabindex="0" loading="lazy"><figcaption>DlYw5G</figcaption></figure>]]></summary>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/DlYw5G.jpg" alt="opcode" tabindex="0" loading="lazy"><figcaption>opcode</figcaption></figure>]]></summary>
     <content type="html"><![CDATA[<h2> 什么是opcode</h2>
 <p>当Zend Engine解析PHP脚本的时候，会对脚本进行词法、语法分析，然后编译成opcode来执行，类似JVM中的字节码(byte codes)，只不过opcode不会像class文件那种存在磁盘，而是在内存中直到PHP的生命周期结束。</p>
 <p>盗一张图：</p>
-<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/DlYw5G.jpg" alt="DlYw5G" tabindex="0" loading="lazy"><figcaption>DlYw5G</figcaption></figure>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/DlYw5G.jpg" alt="opcode" tabindex="0" loading="lazy"><figcaption>opcode</figcaption></figure>
 <blockquote>
 <p>opcode在PHP内核中是如何生成的可以参考 :&nbsp;<a href="http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode" target="_blank" rel="noopener noreferrer">http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode</a></p>
 </blockquote>
