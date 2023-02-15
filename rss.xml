@@ -6,8 +6,8 @@
     <link>https://mars.run/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 15 Feb 2023 17:25:40 GMT</pubDate>
-    <lastBuildDate>Wed, 15 Feb 2023 17:25:40 GMT</lastBuildDate>
+    <pubDate>Wed, 15 Feb 2023 17:29:22 GMT</pubDate>
+    <lastBuildDate>Wed, 15 Feb 2023 17:29:22 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Mars</copyright>
@@ -18,6 +18,40 @@
     </image>
     <category>网络安全</category>
     <category>工具</category>
+    <item>
+      <title>WordPress 3.8.2 cookie伪造漏洞及Python使用urllib2出现30x跳转的问题</title>
+      <link>https://mars.run/cybersecurity/WordPress%203.8.2%20cookie%E4%BC%AA%E9%80%A0%E6%BC%8F%E6%B4%9E%E5%8F%8APython%E4%BD%BF%E7%94%A8urllib2%E5%87%BA%E7%8E%B030x%E8%B7%B3%E8%BD%AC%E7%9A%84%E9%97%AE%E9%A2%98.html</link>
+      <guid>https://mars.run/cybersecurity/WordPress%203.8.2%20cookie%E4%BC%AA%E9%80%A0%E6%BC%8F%E6%B4%9E%E5%8F%8APython%E4%BD%BF%E7%94%A8urllib2%E5%87%BA%E7%8E%B030x%E8%B7%B3%E8%BD%AC%E7%9A%84%E9%97%AE%E9%A2%98.html</guid>
+      <source url="https://mars.run/rss.xml">WordPress 3.8.2 cookie伪造漏洞及Python使用urllib2出现30x跳转的问题</source>
+      <description>背景 首先看这篇文章：WordPress 3.8.2 cookie伪造漏洞再分析 http://drops.wooyun.org/papers/1409 推荐阅读： The dangers of type coercion and remote management plugins</description>
+      <category>网络安全</category>
+      <pubDate>Sat, 10 May 2014 15:19:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 背景</h2>
+<p>首先看这篇文章：WordPress 3.8.2 cookie伪造漏洞再分析 <a href="http://drops.wooyun.org/papers/1409" target="_blank" rel="noopener noreferrer">http://drops.wooyun.org/papers/1409</a></p>
+<p>推荐阅读：</p>
+<p><a href="http://joncave.co.uk/2013/03/dangers-of-type-coercion-and-remote-management/" target="_blank" rel="noopener noreferrer">The dangers of type coercion and remote management plugins</a></p>
+<p>WordPress 3.8.2修复的一个重要漏洞是cookie伪造漏洞&nbsp;<a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0166" target="_blank" rel="noopener noreferrer">(CVE-2014-0166)</a>。该漏洞可以被攻击者利用通过伪造身份验证Cookie，登陆网站。</p>
+<h2> 利用</h2>
+<p>具体的原理请看上面这篇文章，这里就不多重复了。</p>
+<p>也就是说，我们只要把cookies设置成 “admin|$expiration|0”,就可以登陆后台了。</p>
+<p>思路是：</p>
+<ul>
+<li>1.尝试$expiration构造Cookie</li>
+<li>2.GET请求到<a href="http://www.example.com/wp-admin/profile.php" target="_blank" rel="noopener noreferrer">http://www.example.com/wp-admin/profile.php</a>,根据返回的http header判断是否跳转,如为200则成功</li>
+<li>3.多线程,有条件使用多机器</li>
+</ul>
+<h2> 题外话</h2>
+<p>在写利用脚本的时候发现，python的urllib2.urlopen会遇到301/302自动跳转的问题，这样无法判断出http状态码是否是302。来分析看看为什么吧。😃</p>
+<p>打开urllib2源码，刚开头就看到了相关文档：</p>
+<p><code>The HTTPRedirectHandler automatically deals with HTTP 301, 302, 303 and 307 redirect errors.</code></p>
+<p>仔细阅读源码看一下调用过程：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>到这里我想已经够清楚了(执行到了我们之前在文档看到的HTTPRedirectHandler)，最后的redirect_request：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>所以GET遇到状态码（301, 302, 303, 307）时会Request跳转到新的地址，所以我们无法获取这些状态码(没有保存下来)。</p>
+<p>我们需要自己写一个hander来重写30x方法处理这种情况，保存状态码。代码如下：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样，就可以正常返回301/302状态码。</p>
+<p>另外，WordPress 3.8.2补丁分析 HMAC timing attack&nbsp;<a href="http://drops.wooyun.org/papers/1404" target="_blank" rel="noopener noreferrer">http://drops.wooyun.org/papers/1404</a>&nbsp;思路确实很赞。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>安全数据可视化</title>
       <link>https://mars.run/cybersecurity/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E6%B1%87%E6%80%BB.html</link>
@@ -611,40 +645,6 @@
 <div class="language-c line-numbers-mode" data-ext="c"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>看到这里不知道大家有没有看出问题？注意喔，保存p1和p2差值的变量是result，而result是int型变量，这就导致了在64位系统中，unsigned long是64位整型，而int是32位整型，类型的不同出现问题。程序会将<code>p1-&gt;h - p2-&gt;h</code>的结果强制转换为int，我们都知道unsigned long转int会截取低4个字节。所以只需要让unsigned long的低4字节为0，它转换后的int就为0。比如我们将二进制<code>10000000000000000000000000000000000000</code>转换为十进制<code>137438953472</code>，那么<code>137438953472</code>转为int就为0。</p>
 <h2> 分析</h2>
 <p>现在再来看看这个php代码吧，前面的那个bug利用前提是数组的value相同，key不同，所以首先需要匹配一个md5出来，我在cmd5试了这10个md5，只有第五个<code>06e2b745f3124f7d670f78eabaa94809</code>能解出，原文是<code>hund</code>。于是首先写入cookie：<code>Cookie: user[0]=5;user[1]=hund;</code>&nbsp;程序会进入58行，验证通过，$valid_user被改为true，这个时候输出为<code>Welcome back user</code>。到了这一步答案已经很接近了，只需要将$uid改为0即可。现在试试前面提到的漏洞，我们写入cookie：<code>Cookie: user[137438953472]=5;user[1]=hund;</code>&nbsp;这个时候因为之前提到的漏洞，程序还是会进入58行，因为$input[0]未赋值，所以为NULL，在PHP中<code>0+NULL=0</code>,故成功将$uid改为0。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>WordPress 3.8.2 cookie伪造漏洞及Python使用urllib2出现30x跳转的问题</title>
-      <link>https://mars.run/cybersecurity/%E8%B0%88%E8%B0%88%E5%AF%B9WordPress%203.8.2%20cookie%E4%BC%AA%E9%80%A0%E6%BC%8F%E6%B4%9E%E4%BB%A5%E5%8F%8APython%E4%BD%BF%E7%94%A8urllib2%E5%87%BA%E7%8E%B030x%E8%B7%B3%E8%BD%AC%E7%9A%84%E9%97%AE%E9%A2%98.html</link>
-      <guid>https://mars.run/cybersecurity/%E8%B0%88%E8%B0%88%E5%AF%B9WordPress%203.8.2%20cookie%E4%BC%AA%E9%80%A0%E6%BC%8F%E6%B4%9E%E4%BB%A5%E5%8F%8APython%E4%BD%BF%E7%94%A8urllib2%E5%87%BA%E7%8E%B030x%E8%B7%B3%E8%BD%AC%E7%9A%84%E9%97%AE%E9%A2%98.html</guid>
-      <source url="https://mars.run/rss.xml">WordPress 3.8.2 cookie伪造漏洞及Python使用urllib2出现30x跳转的问题</source>
-      <description>背景 首先看这篇文章：WordPress 3.8.2 cookie伪造漏洞再分析 http://drops.wooyun.org/papers/1409 推荐阅读： The dangers of type coercion and remote management plugins</description>
-      <category>网络安全</category>
-      <pubDate>Sat, 10 May 2014 15:19:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 背景</h2>
-<p>首先看这篇文章：WordPress 3.8.2 cookie伪造漏洞再分析 <a href="http://drops.wooyun.org/papers/1409" target="_blank" rel="noopener noreferrer">http://drops.wooyun.org/papers/1409</a></p>
-<p>推荐阅读：</p>
-<p><a href="http://joncave.co.uk/2013/03/dangers-of-type-coercion-and-remote-management/" target="_blank" rel="noopener noreferrer">The dangers of type coercion and remote management plugins</a></p>
-<p>WordPress 3.8.2修复的一个重要漏洞是cookie伪造漏洞&nbsp;<a href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0166" target="_blank" rel="noopener noreferrer">(CVE-2014-0166)</a>。该漏洞可以被攻击者利用通过伪造身份验证Cookie，登陆网站。</p>
-<h2> 利用</h2>
-<p>具体的原理请看上面这篇文章，这里就不多重复了。</p>
-<p>也就是说，我们只要把cookies设置成 “admin|$expiration|0”,就可以登陆后台了。</p>
-<p>思路是：</p>
-<ul>
-<li>1.尝试$expiration构造Cookie</li>
-<li>2.GET请求到<a href="http://www.example.com/wp-admin/profile.php" target="_blank" rel="noopener noreferrer">http://www.example.com/wp-admin/profile.php</a>,根据返回的http header判断是否跳转,如为200则成功</li>
-<li>3.多线程,有条件使用多机器</li>
-</ul>
-<h2> 题外话</h2>
-<p>在写利用脚本的时候发现，python的urllib2.urlopen会遇到301/302自动跳转的问题，这样无法判断出http状态码是否是302。来分析看看为什么吧。😃</p>
-<p>打开urllib2源码，刚开头就看到了相关文档：</p>
-<p><code>The HTTPRedirectHandler automatically deals with HTTP 301, 302, 303 and 307 redirect errors.</code></p>
-<p>仔细阅读源码看一下调用过程：</p>
-<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>到这里我想已经够清楚了(执行到了我们之前在文档看到的HTTPRedirectHandler)，最后的redirect_request：</p>
-<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>所以GET遇到状态码（301, 302, 303, 307）时会Request跳转到新的地址，所以我们无法获取这些状态码(没有保存下来)。</p>
-<p>我们需要自己写一个hander来重写30x方法处理这种情况，保存状态码。代码如下：</p>
-<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样，就可以正常返回301/302状态码。</p>
-<p>另外，WordPress 3.8.2补丁分析 HMAC timing attack&nbsp;<a href="http://drops.wooyun.org/papers/1404" target="_blank" rel="noopener noreferrer">http://drops.wooyun.org/papers/1404</a>&nbsp;思路确实很赞。</p>
 ]]></content:encoded>
     </item>
     <item>
