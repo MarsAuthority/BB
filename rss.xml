@@ -6,8 +6,8 @@
     <link>https://mars.run/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 15 Feb 2023 17:44:58 GMT</pubDate>
-    <lastBuildDate>Wed, 15 Feb 2023 17:44:58 GMT</lastBuildDate>
+    <pubDate>Wed, 15 Feb 2023 17:54:35 GMT</pubDate>
+    <lastBuildDate>Wed, 15 Feb 2023 17:54:35 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Mars</copyright>
@@ -53,10 +53,10 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>安全数据可视化</title>
+      <title>网络安全事件汇总</title>
       <link>https://mars.run/cybersecurity/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E6%B1%87%E6%80%BB.html</link>
       <guid>https://mars.run/cybersecurity/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E6%B1%87%E6%80%BB.html</guid>
-      <source url="https://mars.run/rss.xml">安全数据可视化</source>
+      <source url="https://mars.run/rss.xml">网络安全事件汇总</source>
       <description>tbc</description>
       <category>网络安全</category>
       <pubDate>Wed, 18 May 2022 00:00:10 GMT</pubDate>
