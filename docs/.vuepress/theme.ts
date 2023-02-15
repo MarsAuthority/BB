@@ -60,7 +60,7 @@ export default hopeTheme({
   // sidebarSorter: ['readme', 'order', 'title'],
 
   // footer: "默认页脚",
-  // displayFooter: true,
+  displayFooter: true,
 
   // 页面布局 Frontmatter 配置：https://theme-hope.vuejs.press/zh/config/frontmatter/layout.html#pageinfo
   pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
