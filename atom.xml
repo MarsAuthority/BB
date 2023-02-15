@@ -4,18 +4,18 @@
   <title>Mars’ Blog | 记录·分享·回顾</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <author>
-    <name>清顺</name>
+    <name>Mars</name>
     <uri>https://newzone.top</uri>
   </author>
   <logo>https://newzone.top/logo.svg</logo>
-  <rights>Copyright by 清顺</rights>
-  <updated>2023-02-15T10:55:02.443Z</updated>
+  <rights>Copyright by Mars</rights>
+  <updated>2023-02-15T10:55:21.957Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
   <category term="工具"/>
   <contributor>
-    <name>清顺</name>
+    <name>Mars</name>
     <uri>https://newzone.top</uri>
   </contributor>
   <entry>
@@ -82,16 +82,16 @@
 <p>通过使用白板墙贴记录 GTD，我发现它不仅可以帮助我更好地管理时间和任务，还可以提高工作效率。因为白板墙贴是实体物品，我可以随时随地看到它，而且它是直观的，使我一目了然地了解自己的任务和进度。此外，白板墙贴可以随时更新和修改，让我可以随时调整计划和任务。白板工具填补了笔记/清单应用和个人定制需求之间的空隙。</p>
 ]]></content>
     <author>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </author>
     <category term="工具"/>
     <contributor>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </contributor>
     <published>2023-01-22T00:00:00.000Z</published>
-    <rights>Copyright by 清顺</rights>
+    <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略零 | 硬件篇：直播设备</title>
@@ -147,16 +147,16 @@
 <p>不推荐使用无他伴侣，尽管国内有大量教程介绍它，但使用中会出现很多问题，例如：摄影角度很难控制；无法使用 FaceRig 等变脸应用；直播 10 分钟后，摄像头经常自动与 OBS 断开连接；直播 2 小时后，OBS 无法检测到无他伴侣。</p>
 ]]></content>
     <author>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </author>
     <category term="工具"/>
     <contributor>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
-    <rights>Copyright by 清顺</rights>
+    <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略一 | OBS 篇：OBS 29 新手指南</title>
@@ -277,16 +277,16 @@
 <p>我原本想一篇写完 OBS 的入门，但基础使用已经占据了较长篇幅。为了避免重蹈上一篇的覆辙，OBS 插件的介绍会放在篇二更新。</p>
 ]]></content>
     <author>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </author>
     <category term="工具"/>
     <contributor>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
-    <rights>Copyright by 清顺</rights>
+    <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略二 | StreamFX 篇：最强大的 OBS 插件</title>
@@ -424,16 +424,16 @@
 </ul>
 ]]></content>
     <author>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </author>
     <category term="工具"/>
     <contributor>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
-    <rights>Copyright by 清顺</rights>
+    <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略三 | 插件篇：OBS 进阶插件</title>
@@ -489,16 +489,16 @@
 <p>如果你在上文中没有找到你需要的功能功能，可以访问 <a href="https://obsproject.com/forum/resources/categories/obs-studio-plugins.6/" target="_blank" rel="noopener noreferrer">OBS 插件库</a>进行搜索。</p>
 ]]></content>
     <author>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </author>
     <category term="工具"/>
     <contributor>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
-    <rights>Copyright by 清顺</rights>
+    <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略四 | 特效篇：美颜、变声、多开、虚拟主播</title>
@@ -552,16 +552,16 @@
 <p>小葫芦直播助手集成了 OBS 和弹幕助手的功能，但为了直播的扩展性，仍然建议从 OBS 入门。</p>
 ]]></content>
     <author>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </author>
     <category term="工具"/>
     <contributor>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
-    <rights>Copyright by 清顺</rights>
+    <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略五 | 平台篇：主流直播平台介绍</title>
@@ -632,16 +632,16 @@
 </ol>
 ]]></content>
     <author>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </author>
     <category term="工具"/>
     <contributor>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
-    <rights>Copyright by 清顺</rights>
+    <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">直播入门攻略六 | 技巧篇：直播定位与策划</title>
@@ -714,16 +714,16 @@
 <p>经过两年的直播，我深知直播的硬件、软件和技巧只是锦上添花。若要体验直播，不想深入研究，只需拿出手机开播即可。开始直播时，可能会有很多疑问和顾虑，效果也不一定很好。但只有勇敢尝试新事物，不断开拓，我们的人生才会有更多可能性。</p>
 ]]></content>
     <author>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </author>
     <category term="工具"/>
     <contributor>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </contributor>
     <published>2023-01-12T16:55:27.000Z</published>
-    <rights>Copyright by 清顺</rights>
+    <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">找不到字幕？Whisper 让不懂外语的你也能看懂日剧</title>
@@ -839,16 +839,16 @@
 <p>「夜のヒットスタジオ・スペシャル」：</p>
 ]]></content>
     <author>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </author>
     <category term="工具"/>
     <contributor>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </contributor>
     <published>2022-11-18T00:00:00.000Z</published>
-    <rights>Copyright by 清顺</rights>
+    <rights>Copyright by Mars</rights>
   </entry>
   <entry>
     <title type="text">抛弃又贵又难用的录屏软件，3 分钟入门 FFmpeg</title>
@@ -970,15 +970,15 @@
 </section>
 ]]></content>
     <author>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </author>
     <category term="工具"/>
     <contributor>
-      <name>清顺</name>
+      <name>Mars</name>
       <uri>https://newzone.top</uri>
     </contributor>
     <published>2022-11-03T00:00:00.000Z</published>
-    <rights>Copyright by 清顺</rights>
+    <rights>Copyright by Mars</rights>
   </entry>
 </feed>
