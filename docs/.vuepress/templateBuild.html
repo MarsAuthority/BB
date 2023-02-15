@@ -18,6 +18,27 @@
       body {
         background: var(--bg-color);
       }
+
+      html[data-theme=light] #app table th{
+          border-collapse: collapse;
+          border-right:1px solid #c6c6c6 !important;
+          border-bottom:1px solid #c6c6c6 !important;
+          background-color:#ddeeff !important; 
+          text-align:center;
+      }
+      html[data-theme=light] #app table td{
+          border-collapse: collapse;
+          border-right:1px solid #c6c6c6 !important;
+          border-bottom:1px solid #c6c6c6 !important; 
+          text-align:center;
+          word-break: break-all;
+      }
+      html[data-theme=light] #app table tr:nth-child(even){
+          background-color: #f8f8f8 !important;
+      }
+      table tr:nhtml[data-theme=light] #app th-child(odd){
+          background-color:#fff !important; 
+      }
     </style>
     <script>
       const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
