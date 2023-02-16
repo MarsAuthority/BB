@@ -6,8 +6,8 @@
     <link>https://mars.run/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 16 Feb 2023 16:37:13 GMT</pubDate>
-    <lastBuildDate>Thu, 16 Feb 2023 16:37:13 GMT</lastBuildDate>
+    <pubDate>Thu, 16 Feb 2023 16:38:47 GMT</pubDate>
+    <lastBuildDate>Thu, 16 Feb 2023 16:38:47 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Mars</copyright>
@@ -53,8 +53,10 @@
 <figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/KmYDsZ.jpg" alt="KmYDsZ" tabindex="0" loading="lazy"><figcaption>KmYDsZ</figcaption></figure>
 <p>最后推荐一些写好的Recipe：</p>
 <blockquote>
-<p><a href="https://github.com/ericzhang-cn/kindle-open-books" target="_blank" rel="noopener noreferrer">@ericzhang-cn</a>
-<a href="https://github.com/mine260309/calibre_recipes" target="_blank" rel="noopener noreferrer">@mine260309</a></p>
+<p><a href="https://github.com/ericzhang-cn/kindle-open-books" target="_blank" rel="noopener noreferrer">@ericzhang-cn</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://github.com/mine260309/calibre_recipes" target="_blank" rel="noopener noreferrer">@mine260309</a></p>
 </blockquote>
 ]]></content:encoded>
       <enclosure url="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/KmYDsZ.jpg" type="image/jpeg"/>
