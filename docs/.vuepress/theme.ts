@@ -160,7 +160,7 @@ export default hopeTheme({
     // rss 属性
     feed: {
       rss: true,
-      count: 10,
+      count: 100,
     },
   },
 });
