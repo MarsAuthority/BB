@@ -615,6 +615,7 @@ plt.show()
 ```
 
 我们得到：
+
 ![nwobWe](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/nwobWe.jpg)
 
 我们可以把后两个不重要的特征删掉：
