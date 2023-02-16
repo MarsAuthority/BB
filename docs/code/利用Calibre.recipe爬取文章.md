@@ -69,4 +69,5 @@ class LouisChaPoem(BasicNewsRecipe):
 最后推荐一些写好的Recipe：
 
 > [@ericzhang-cn](https://github.com/ericzhang-cn/kindle-open-books)
+
 > [@mine260309](https://github.com/mine260309/calibre_recipes)
