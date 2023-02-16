@@ -37,6 +37,15 @@ export default sidebar([
     prefix: "/code/",
     link: "",
     collapsible: true,
+    children: "structure",
+  },
+  /*
+  {
+    text: "🚀 代码学习",
+    icon: "",
+    prefix: "/code/",
+    link: "",
+    collapsible: true,
     children: [
       "README.md",
       {
@@ -53,6 +62,7 @@ export default sidebar([
       },
     ],
   },
+  */
   {
     text: "🛖 日常折腾",
     icon: "",
