@@ -30,6 +30,14 @@ export default sidebar([
     ],
   },
   {
+    text: "📰 安全通讯 Newsletter",
+    icon: "",
+    prefix: "/newsletter/",
+    link: "",
+    collapsible: true,
+    children: "structure",
+  },
+  {
     text: "⭐ 网络安全",
     icon: "",
     prefix: "/cybersecurity/",
