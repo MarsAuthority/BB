@@ -6,8 +6,8 @@
     <link>https://mars.run/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 17 Feb 2023 06:14:23 GMT</pubDate>
-    <lastBuildDate>Fri, 17 Feb 2023 06:14:23 GMT</lastBuildDate>
+    <pubDate>Fri, 17 Feb 2023 06:39:19 GMT</pubDate>
+    <lastBuildDate>Fri, 17 Feb 2023 06:39:19 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Mars</copyright>
@@ -31,10 +31,10 @@
     <category>自动化</category>
     <category>健康</category>
     <item>
-      <title>Security.News#202205</title>
-      <link>https://mars.run/newsletter/Security.News_202205.html</link>
-      <guid>https://mars.run/newsletter/Security.News_202205.html</guid>
-      <source url="https://mars.run/rss.xml">Security.News#202205</source>
+      <title>Security.News@202205</title>
+      <link>https://mars.run/newsletter/Security.News@202205.html</link>
+      <guid>https://mars.run/newsletter/Security.News@202205.html</guid>
+      <source url="https://mars.run/rss.xml">Security.News@202205</source>
       <description>供应链/开源软件安全 开源安全基金会和 Linux 基金会呼吁1.5亿美元来改善开源安全 亚马逊、爱立信、谷歌、英特尔、微软和 VMWare 已经承诺提供3000万美元。更多资金已经在路上了，亚马逊AWS已经承诺额外提供1000万美元。 以下是开源行业致力于实现的十个目标。 安全教育: 向所有人提供基线安全软件开发教育和认证。 风险评估: 为前10,000(或更多) OSS 组件建立一个公开的、供应商中立的、基于客观度量的风险评估仪表板。 数字签名: 加快采用软件版本的数字签名。 内存安全: 通过替换非内存安全语言来消除许多漏洞的根本原因。 事件响应: 建立 OpenSSF 开源安全事件响应小组，安全专家可以在关键时刻协助开源项目响应漏洞。 更好的扫描: 通过先进的安全工具和专家指导，加速维护人员和专家发现新的漏洞。 代码审计: 每年对多达200个最关键的开放源码软件组件进行一次第三方代码审查(以及任何必要的补救工作)。 数据共享: 协调整个行业的数据共享，以改进有助于确定最关键 OSS 组件的研究。 软件物料清单(SBOMs) : 到处改进 SBOM 的工具和培训，以推动采用。 改进的供应链: 通过更好的供应链安全工具和最佳实践，加强10个最关键的供应链/开源软件构建系统、包管理器和分销系统。</description>
       <category>安全通讯 Newsletter</category>
       <pubDate>Thu, 05 May 2022 16:23:41 GMT</pubDate>

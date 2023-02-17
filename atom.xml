@@ -9,7 +9,7 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-02-17T06:14:23.132Z</updated>
+  <updated>2023-02-17T06:39:19.899Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
@@ -32,10 +32,10 @@
     <uri>https://mars.run</uri>
   </contributor>
   <entry>
-    <title type="text">Security.News#202205</title>
-    <id>https://mars.run/newsletter/Security.News_202205.html</id>
-    <link href="https://mars.run/newsletter/Security.News_202205.html"/>
-    <updated>2023-02-17T06:10:04.000Z</updated>
+    <title type="text">Security.News@202205</title>
+    <id>https://mars.run/newsletter/Security.News@202205.html</id>
+    <link href="https://mars.run/newsletter/Security.News@202205.html"/>
+    <updated>2023-02-17T06:37:55.000Z</updated>
     <summary type="html"><![CDATA[<h2> 供应链/开源软件安全</h2>
 <h3> <strong>开源安全基金会和 Linux 基金会呼吁1.5亿美元来改善开源安全</strong></h3>
 <p>亚马逊、爱立信、谷歌、英特尔、微软和 VMWare 已经承诺提供3000万美元。更多资金已经在路上了，亚马逊AWS已经承诺额外提供1000万美元。</p>
