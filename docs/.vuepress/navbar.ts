@@ -9,7 +9,7 @@ export default navbar([
     prefix: "/",
     children: [
       "newsletter",
-      "code/AutoHotkey",
+      "cybersecurity/安全工具库",
       "code/Electron",
       {
         text: "页面开发",
@@ -42,4 +42,5 @@ export default navbar([
     children: ["Diet", "Shoppinglist", "Coupon"],
   },
   { text: "RSS信息流", icon: "rss", link: "https://mars0run.notion.site/5ccdf71345c2440da2ccd385e98dd71d?v=edfc490b781d435ba1e066a4d1b2dd48" },
+  { text: "RedBlue Wiki", icon: "icon-light", link: "http://redblue.wiki/" },
 ]);
