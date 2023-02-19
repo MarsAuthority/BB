@@ -6,8 +6,8 @@
     <link>https://mars.run/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 17 Feb 2023 06:39:19 GMT</pubDate>
-    <lastBuildDate>Fri, 17 Feb 2023 06:39:19 GMT</lastBuildDate>
+    <pubDate>Sun, 19 Feb 2023 08:40:32 GMT</pubDate>
+    <lastBuildDate>Sun, 19 Feb 2023 08:40:32 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Mars</copyright>
@@ -16,10 +16,10 @@
       <url>https://mars.run/logo.svg</url>
       <link>https://mars.run/</link>
     </image>
+    <category>网络安全</category>
     <category>安全通讯 Newsletter</category>
     <category>代码学习</category>
     <category>知识管理</category>
-    <category>网络安全</category>
     <category>工具</category>
     <category>观察随笔</category>
     <category>博客</category>
@@ -30,6 +30,17 @@
     <category>服务器</category>
     <category>自动化</category>
     <category>健康</category>
+    <item>
+      <title>安全工具库</title>
+      <link>https://mars.run/cybersecurity/%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7%E5%BA%93.html</link>
+      <guid>https://mars.run/cybersecurity/%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7%E5%BA%93.html</guid>
+      <source url="https://mars.run/rss.xml">安全工具库</source>
+      <description>...</description>
+      <category>网络安全</category>
+      <pubDate>Mon, 19 Dec 2022 23:10:10 GMT</pubDate>
+      <content:encoded><![CDATA[<p>...</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Security.News@202205</title>
       <link>https://mars.run/newsletter/Security.News@202205.html</link>
