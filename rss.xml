@@ -6,8 +6,8 @@
     <link>https://mars.run/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 20 Feb 2023 07:07:37 GMT</pubDate>
-    <lastBuildDate>Mon, 20 Feb 2023 07:07:37 GMT</lastBuildDate>
+    <pubDate>Mon, 20 Feb 2023 07:41:17 GMT</pubDate>
+    <lastBuildDate>Mon, 20 Feb 2023 07:41:17 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Mars</copyright>
@@ -1224,7 +1224,7 @@ RSAC 2020的主题是：“人是安全要素”，RSAC在发布本次大会主�
 <blockquote>
 <p>opcode在PHP内核中是如何生成的可以参考 :&nbsp;<a href="http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode" target="_blank" rel="noopener noreferrer">http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode</a></p>
 </blockquote>
-<p>我们可以通过PHP扩展vld来查看PHP脚本的opcode，可以参考(<a href="http://blog.csdn.net/21aspnet/article/details/7002644" target="_blank" rel="noopener noreferrer">http://blog.csdn.net/21aspnet/article/details/7002644)。</a>%E3%80%82)</p>
+<p>我们可以通过PHP扩展vld来查看PHP脚本的opcode，可以参考：(<a href="http://blog.csdn.net/21aspnet/article/details/7002644" target="_blank" rel="noopener noreferrer">http://blog.csdn.net/21aspnet/article/details/7002644)</a>)</p>
 <p>Zend Engine中编译和执行PHP脚本的关键函数是：</p>
 <div class="language-c line-numbers-mode" data-ext="c"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>VLD就是通过HOOK Zend Engine中的这两个函数来实现dump opcode，来看看它的代码：</p>
 <div class="language-c line-numbers-mode" data-ext="c"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在vld_compile_file中完成HOOK:</p>

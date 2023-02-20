@@ -9,7 +9,7 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-02-20T07:07:37.009Z</updated>
+  <updated>2023-02-20T07:41:17.465Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
@@ -1379,7 +1379,7 @@ P<span class="token punctuation">(</span>W5<span class="token operator">|</span>
     <title type="text">读懂PHP opcode及其在webshell检测中的应用</title>
     <id>https://mars.run/cybersecurity/%E8%AF%BB%E6%87%82PHP%20opcode%E5%8F%8A%E5%85%B6%E5%9C%A8webshell%E6%A3%80%E6%B5%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.html</id>
     <link href="https://mars.run/cybersecurity/%E8%AF%BB%E6%87%82PHP%20opcode%E5%8F%8A%E5%85%B6%E5%9C%A8webshell%E6%A3%80%E6%B5%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.html"/>
-    <updated>2023-02-15T17:27:54.000Z</updated>
+    <updated>2023-02-20T07:39:38.000Z</updated>
     <summary type="html"><![CDATA[<h2> 什么是opcode</h2>
 <p>当Zend Engine解析PHP脚本的时候，会对脚本进行词法、语法分析，然后编译成opcode来执行，类似JVM中的字节码(byte codes)，只不过opcode不会像class文件那种存在磁盘，而是在内存中直到PHP的生命周期结束。</p>
 <p>盗一张图：</p>
@@ -1391,7 +1391,7 @@ P<span class="token punctuation">(</span>W5<span class="token operator">|</span>
 <blockquote>
 <p>opcode在PHP内核中是如何生成的可以参考 :&nbsp;<a href="http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode" target="_blank" rel="noopener noreferrer">http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode</a></p>
 </blockquote>
-<p>我们可以通过PHP扩展vld来查看PHP脚本的opcode，可以参考(<a href="http://blog.csdn.net/21aspnet/article/details/7002644" target="_blank" rel="noopener noreferrer">http://blog.csdn.net/21aspnet/article/details/7002644)。</a>%E3%80%82)</p>
+<p>我们可以通过PHP扩展vld来查看PHP脚本的opcode，可以参考：(<a href="http://blog.csdn.net/21aspnet/article/details/7002644" target="_blank" rel="noopener noreferrer">http://blog.csdn.net/21aspnet/article/details/7002644)</a>)</p>
 <p>Zend Engine中编译和执行PHP脚本的关键函数是：</p>
 <div class="language-c line-numbers-mode" data-ext="c"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>VLD就是通过HOOK Zend Engine中的这两个函数来实现dump opcode，来看看它的代码：</p>
 <div class="language-c line-numbers-mode" data-ext="c"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在vld_compile_file中完成HOOK:</p>
