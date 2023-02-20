@@ -20,7 +20,7 @@ order: 9998
 > opcode在PHP内核中是如何生成的可以参考 : [http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode](http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode)
 > 
 
-我们可以通过PHP扩展vld来查看PHP脚本的opcode，可以参考([http://blog.csdn.net/21aspnet/article/details/7002644)。](http://blog.csdn.net/21aspnet/article/details/7002644)%E3%80%82)
+我们可以通过PHP扩展vld来查看PHP脚本的opcode，可以参考：([http://blog.csdn.net/21aspnet/article/details/7002644)](http://blog.csdn.net/21aspnet/article/details/7002644))
 
 Zend Engine中编译和执行PHP脚本的关键函数是：
 
