@@ -1,1 +1,0 @@
-import{ac as e,H as t,I as _,F as c}from"./framework-fca3d3a7.js";const s={},o=c("iframe",{src:"https://airtable.com/shrcBBDiOqnxKuTlt/tblx19NLH6JFpLJbI",width:"100%",height:"100%"},null,-1),r=[o];function a(n,l){return t(),_("div",null,r)}const h=e(s,[["render",a],["__file","网络安全事件汇总.html.vue"]]);export{h as default};
