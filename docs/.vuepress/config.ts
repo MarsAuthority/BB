@@ -50,7 +50,7 @@ export default defineUserConfig({
     //}),
     // 谷歌分析 ID
     googleAnalyticsPlugin({
-      id: "G-RWKZTY2P9R",
+      id: "G-W0X4TZ1NJ7",
     }),
   ],
 });
