@@ -43,7 +43,7 @@ export default defineUserConfig({
       appId: "I2JZ4WA8D8",
       apiKey: "e25acd85f89b8f16cb1220e0bf111b1e",
      }),
-    // 本地搜索，删除上方 docsearchPlugin 区块后生效
+    // 本地搜索，删除上方 docsearchPlugin 区块后生效。
     //searchProPlugin({
     // 索引全部内容
     //  indexContent: true,
