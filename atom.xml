@@ -9,7 +9,7 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-02-21T06:56:25.821Z</updated>
+  <updated>2023-02-21T08:03:12.840Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
@@ -26,7 +26,7 @@
     <title type="text">Security.News@202206</title>
     <id>https://mars.run/newsletter/Security.News@202206.html</id>
     <link href="https://mars.run/newsletter/Security.News@202206.html"/>
-    <updated>2023-02-21T06:49:41.000Z</updated>
+    <updated>2023-02-21T08:01:51.000Z</updated>
     <summary type="html"><![CDATA[<h2> 安全事件</h2>
 <h3> LockBit 勒索软件的团伙声称已经入侵了网络安全公司 Mandiant，该公司正在调查所谓的安全事件</h3>
 <p>本月早些时候，Mandiant 公司发布了一份报告，称网络犯罪团伙“邪恶公司”(Evil Corp) 转用 LockBit 2.0勒索软件来逃避制裁；之后，LockBit 勒索软件团伙将网络安全公司 Mandiant 列入其黑网泄露网站公布的受害者名单。Mandiant 正在调查勒索软件团伙的说法，这个网络犯罪团伙宣称从该公司盗取了356841文件，并计划在网上泄露这些文件。
@@ -804,7 +804,7 @@ RSAC 2020的主题是：“人是安全要素”，RSAC在发布本次大会主�
     <title type="text">阅读学习工作流</title>
     <id>https://mars.run/km/%E9%98%85%E8%AF%BB%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E6%B5%81.html</id>
     <link href="https://mars.run/km/%E9%98%85%E8%AF%BB%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E6%B5%81.html"/>
-    <updated>2023-02-16T16:29:21.000Z</updated>
+    <updated>2023-02-21T08:01:51.000Z</updated>
     <summary type="html"><![CDATA[<h2> 前言</h2>
 <blockquote>
 <p>大多数人会对自己的记忆力过分高估。这个幻觉来自每时每刻都有一些确实可以记得住的东西，而记不住的东西恰恰则因为没有被记住所以看上去“并不存在”。换言之，每时每刻都有“我记得住”的证据，而“我记不住”的证据基本上难觅其踪。这也就是为什么总有那么多人真诚地相信自己考试成绩差是因为“没发挥好”。
@@ -998,7 +998,7 @@ RSAC 2020的主题是：“人是安全要素”，RSAC在发布本次大会主�
     <title type="text">网络安全事件汇总</title>
     <id>https://mars.run/cybersecurity/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E6%B1%87%E6%80%BB.html</id>
     <link href="https://mars.run/cybersecurity/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E6%B1%87%E6%80%BB.html"/>
-    <updated>2023-02-20T07:06:20.000Z</updated>
+    <updated>2023-02-21T08:01:51.000Z</updated>
     <summary type="html"><![CDATA[<iframe class="airtable-embed" src="https://airtable.com/embed/shrcBBDiOqnxKuTlt?backgroundColor=blue&amp;viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>]]></summary>
     <content type="html"><![CDATA[<iframe class="airtable-embed" src="https://airtable.com/embed/shrcBBDiOqnxKuTlt?backgroundColor=blue&amp;viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>]]></content>
     <author>
