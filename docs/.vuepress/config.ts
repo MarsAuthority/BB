@@ -38,16 +38,16 @@ export default defineUserConfig({
 
   plugins: [
     // algolia 全文搜索：没设置爬虫的话，需删除 docsearchPlugin 区块以使用节点搜索
-    //docsearchPlugin({
-    //  indexName: "newzone",
-    //  appId: "M4EXXEZIEG",
-    //  apiKey: "fd8891a9c4cc21e0ef4f11bf44f7a11e",
-    // }),
+    docsearchPlugin({
+      indexName: "mars.run",
+      appId: "I2JZ4WA8D8",
+      apiKey: "e25acd85f89b8f16cb1220e0bf111b1e",
+     }),
     // 本地搜索，删除上方 docsearchPlugin 区块后生效
-    searchProPlugin({
-      // 索引全部内容
-      indexContent: true,
-    }),
+    //searchProPlugin({
+    // 索引全部内容
+    //  indexContent: true,
+    //}),
     // 谷歌分析 ID
     googleAnalyticsPlugin({
       id: "G-RWKZTY2P9R",
