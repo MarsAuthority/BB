@@ -40,7 +40,7 @@ export default defineUserConfig({
     // algolia 全文搜索：没设置爬虫的话，需删除 docsearchPlugin 区块以使用节点搜索
 
     docsearchPlugin({
-      indexName: "mars.run",
+      indexName: "marsrun",
       appId: "I2JZ4WA8D8",
       apiKey: "e25acd85f89b8f16cb1220e0bf111b1e",
     }),
