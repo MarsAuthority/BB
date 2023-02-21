@@ -16,6 +16,7 @@ tag:
   - AMD
   - TTPs
   - 学习资源
+star: true
 order: 9999
 ---
 
