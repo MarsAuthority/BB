@@ -1,6 +1,7 @@
 {
   "index_name": "marsrun",
   "start_urls": ["https://mars.run"],
+  "sitemap_urls": ["https://mars.run/sitemap.xml"],
   "rateLimit": 8,
   "maxDepth": 10,
   "selectors": {
