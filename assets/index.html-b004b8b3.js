@@ -1,0 +1,1 @@
+import{ad as e,H as t,I as n,F as c}from"./framework-d186cff1.js";const o={},s=c("p",null,"123",-1),_=[s];function a(r,l){return t(),n("div",null,_)}const i=e(o,[["render",a],["__file","index.html.vue"]]);export{i as default};
