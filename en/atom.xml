@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://mars.run/en/atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+  <id>https://mars.run/en/</id>
+  <title>Mars’ Blog | 记录·分享·回顾</title>
+  <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
+  <updated>2023-02-21T08:06:10.503Z</updated>
+  <generator>vuepress-plugin-feed2</generator>
+  <link rel="self" href="https://mars.run/en/atom.xml"/>
+  <link rel="alternate" href="https://mars.run/en/"/>
+</feed>
