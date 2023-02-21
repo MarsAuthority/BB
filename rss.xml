@@ -6,8 +6,8 @@
     <link>https://mars.run/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 21 Feb 2023 06:50:52 GMT</pubDate>
-    <lastBuildDate>Tue, 21 Feb 2023 06:50:52 GMT</lastBuildDate>
+    <pubDate>Tue, 21 Feb 2023 06:56:25 GMT</pubDate>
+    <lastBuildDate>Tue, 21 Feb 2023 06:56:25 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Mars</copyright>
@@ -269,10 +269,24 @@ so actually there is same ZEND_MM_NUMBER_BUCKET buckets stored in the free_bucke
       <link>https://mars.run/cybersecurity/%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7%E5%BA%93.html</link>
       <guid>https://mars.run/cybersecurity/%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7%E5%BA%93.html</guid>
       <source url="https://mars.run/rss.xml">安全工具库</source>
-      <description>...</description>
+      <description>Red Team Bypass LOLBAS GTFOBins PoC Same Origin Method Execution Generator</description>
       <category>网络安全</category>
       <pubDate>Mon, 19 Dec 2022 23:10:10 GMT</pubDate>
-      <content:encoded><![CDATA[<p>...</p>
+      <content:encoded><![CDATA[<h2> Red Team</h2>
+<h3> Bypass</h3>
+<ul>
+<li><a href="https://lolbas-project.github.io/" target="_blank" rel="noopener noreferrer">LOLBAS</a></li>
+<li><a href="https://gtfobins.github.io/" target="_blank" rel="noopener noreferrer">GTFOBins</a></li>
+</ul>
+<h3> PoC</h3>
+<ul>
+<li><a href="https://www.someattack.com/Playground/SOMEGenerator" target="_blank" rel="noopener noreferrer">Same Origin Method Execution Generator</a></li>
+</ul>
+<h2> Blue Team</h2>
+<h3> 日常运营</h3>
+<ul>
+<li><a href="https://cyberchef.org/" target="_blank" rel="noopener noreferrer">cyberchef</a></li>
+</ul>
 ]]></content:encoded>
     </item>
     <item>

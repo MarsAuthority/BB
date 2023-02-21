@@ -9,7 +9,7 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-02-21T06:50:52.295Z</updated>
+  <updated>2023-02-21T06:56:25.821Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
@@ -291,10 +291,32 @@ so actually there is same ZEND_MM_NUMBER_BUCKET buckets stored in the free_bucke
     <title type="text">安全工具库</title>
     <id>https://mars.run/cybersecurity/%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7%E5%BA%93.html</id>
     <link href="https://mars.run/cybersecurity/%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7%E5%BA%93.html"/>
-    <updated>2023-02-19T08:39:06.000Z</updated>
-    <summary type="html"><![CDATA[<p>...</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>...</p>
+    <updated>2023-02-21T06:55:16.000Z</updated>
+    <summary type="html"><![CDATA[<h2> Red Team</h2>
+<h3> Bypass</h3>
+<ul>
+<li><a href="https://lolbas-project.github.io/" target="_blank" rel="noopener noreferrer">LOLBAS</a></li>
+<li><a href="https://gtfobins.github.io/" target="_blank" rel="noopener noreferrer">GTFOBins</a></li>
+</ul>
+<h3> PoC</h3>
+<ul>
+<li><a href="https://www.someattack.com/Playground/SOMEGenerator" target="_blank" rel="noopener noreferrer">Same Origin Method Execution Generator</a></li>
+</ul>]]></summary>
+    <content type="html"><![CDATA[<h2> Red Team</h2>
+<h3> Bypass</h3>
+<ul>
+<li><a href="https://lolbas-project.github.io/" target="_blank" rel="noopener noreferrer">LOLBAS</a></li>
+<li><a href="https://gtfobins.github.io/" target="_blank" rel="noopener noreferrer">GTFOBins</a></li>
+</ul>
+<h3> PoC</h3>
+<ul>
+<li><a href="https://www.someattack.com/Playground/SOMEGenerator" target="_blank" rel="noopener noreferrer">Same Origin Method Execution Generator</a></li>
+</ul>
+<h2> Blue Team</h2>
+<h3> 日常运营</h3>
+<ul>
+<li><a href="https://cyberchef.org/" target="_blank" rel="noopener noreferrer">cyberchef</a></li>
+</ul>
 ]]></content>
     <author>
       <name>Mars</name>
