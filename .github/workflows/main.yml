@@ -69,5 +69,5 @@ jobs:
         run: |
           docker run \
           -e APPLICATION_ID -e API_KEY \
-          -e CONFIG="$(cat .github/scrapeConfig/docusaurus-v2.json)" \
+          -e CONFIG="$(cat .github/workflows/scrapeConfig/docusaurus-v2.json)" \
           algolia/docsearch-scraper
