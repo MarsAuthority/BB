@@ -9,17 +9,7 @@ import theme from "./theme";
 
 export default defineUserConfig({
   // 网站语言，默认为中文
-  //lang: "zh-CN",
-  locales: {
-    "/": {
-      // 设置正在使用的语言
-      lang: "zh-CN",
-    },
-    "/en/": {
-      // 设置正在使用的语言
-      lang: "en-US",
-    },
-  },
+  lang: "zh-CN",
   // 网站标题
   title: "Mars’ Blog | 记录·分享·回顾",
   // 网站描述
