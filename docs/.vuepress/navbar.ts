@@ -16,9 +16,7 @@ export default navbar([
     text: "知识管理",
     icon: "book",
     prefix: "/km/",
-    children: [
-      "km/阅读学习工作流",
-    ],
+    
   },
   {
     text: "日常折腾",
