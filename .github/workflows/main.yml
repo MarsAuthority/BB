@@ -1,4 +1,4 @@
-name: docs build
+name: deploy
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  LearnData-build:
+  deploy-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
