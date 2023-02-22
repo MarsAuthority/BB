@@ -16,10 +16,10 @@ export default hopeTheme({
   logo: "/logo.svg",
 
   // 是否全局启用路径导航
-  breadcrumb: false,
+  breadcrumb: true,
 
   // 页面元数据：贡献者，最后修改时间，编辑链接
-  contributors: false,
+  contributors: true,
   lastUpdated: true,
   editLink: true,
 
@@ -71,7 +71,7 @@ export default hopeTheme({
     name: "Mars",
     avatar: "/avatar_self.png",
     description: "探索->理解->回顾->反思",
-    intro: "/intro.html",
+    intro: "",
     roundAvatar: true,
   },
   // 开发模式下是否启动热更新，显示所有更改并重新渲染
