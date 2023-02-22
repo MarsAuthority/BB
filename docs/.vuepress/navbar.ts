@@ -16,12 +16,17 @@ export default navbar([
     text: "知识管理",
     icon: "book",
     prefix: "/km/",
-    
+    children: [
+      "km/阅读学习工作流",
+    ],
   },
   {
     text: "日常折腾",
     icon: "emmet",
     prefix: "/family/",
+    children: [
+      "km/阅读学习工作流",
+    ],
   },
   { text: "RSS信息流", icon: "rss", link: "https://mars0run.notion.site/5ccdf71345c2440da2ccd385e98dd71d?v=edfc490b781d435ba1e066a4d1b2dd48" },
   { text: "RedBlue Wiki", icon: "icon-light", link: "http://redblue.wiki/" },
