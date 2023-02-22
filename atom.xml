@@ -9,7 +9,7 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-02-22T06:31:21.031Z</updated>
+  <updated>2023-02-22T06:37:14.096Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
@@ -109,7 +109,7 @@ GitHub 上用户活动的一个重要衡量标准是在用户个人资料页面�
     <title type="text">Security.News@202208</title>
     <id>https://mars.run/newsletter/Security.News@202208.html</id>
     <link href="https://mars.run/newsletter/Security.News@202208.html"/>
-    <updated>2023-02-22T06:30:05.000Z</updated>
+    <updated>2023-02-22T06:35:49.000Z</updated>
     <summary type="html"><![CDATA[<h2> 行业动态</h2>
 <h3> CNCERT发布《<strong>勒索软件防范指南</strong>》</h3>
 <p>感概CNCERT终于不土了，做出来这么互联网范儿的指南
