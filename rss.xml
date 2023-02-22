@@ -6,8 +6,8 @@
     <link>https://mars.run/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 22 Feb 2023 09:31:38 GMT</pubDate>
-    <lastBuildDate>Wed, 22 Feb 2023 09:31:38 GMT</lastBuildDate>
+    <pubDate>Wed, 22 Feb 2023 11:33:32 GMT</pubDate>
+    <lastBuildDate>Wed, 22 Feb 2023 11:33:32 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Mars</copyright>
@@ -22,6 +22,217 @@
     <category>网络安全</category>
     <category>知识管理</category>
     <category>工具</category>
+    <item>
+      <title>Security.News@202209</title>
+      <link>https://mars.run/newsletter/Security.News@202209.html</link>
+      <guid>https://mars.run/newsletter/Security.News@202209.html</guid>
+      <source url="https://mars.run/rss.xml">Security.News@202209</source>
+      <description>安全事件 REvil 宣布对 Midea美的集团勒索攻击事件负责，并在暗网公开了被盗的数据 8月11日，全网都在疯传Midea美的集团被勒索攻击的事件；就在事件发生20天后，9月1日，REvil 勒索软件组织正式公布，对美的集团的勒索攻击事件负责，并在暗网公开了美的集团被盗的数据。这表明美的集团与REvil谈判破裂，并未支付1000万美元勒索赎金。 MkMY9o</description>
+      <category>安全通讯 Newsletter</category>
+      <pubDate>Mon, 05 Sep 2022 16:23:41 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 安全事件</h2>
+<h3> REvil 宣布对 Midea美的集团勒索攻击事件负责，并在暗网公开了被盗的数据</h3>
+<p>8月11日，全网都在疯传Midea美的集团被勒索攻击的事件；就在事件发生20天后，9月1日，REvil 勒索软件组织正式公布，对美的集团的勒索攻击事件负责，并在暗网公开了美的集团被盗的数据。这表明美的集团与REvil谈判破裂，并未支付1000万美元勒索赎金。</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/MkMY9o.jpg" alt="MkMY9o" tabindex="0" loading="lazy"><figcaption>MkMY9o</figcaption></figure>
+<h4> 一些感悟</h4>
+<blockquote>
+<p>整个事件发生的原因、过程、影响面都还未披露。在勒索团队肆虐的时代，我们应该做些什么？我们还能幸存多久？</p>
+</blockquote>
+<h3> Uber被黑客入侵至内部网络</h3>
+<p>2022年9月16日，网传uber被黑客入侵，并爆出了更多细节，攻击者还获得了对Uber云服务的管理访问权限，包括在亚马逊网络服务（AWS）和谷歌云（GCP）上，Uber在其中存储其源代码和客户数据，以及该公司的HackerOne漏洞赏金计划。
+有趣的是，攻击者是一名18岁的年轻人，也和Lapsus$一样，有人戏称到：APT=Advanced Persistent Teenagers。
+官方申明如下：</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/cMuDaZ.png" alt="Uber官方申明" tabindex="0" loading="lazy"><figcaption>Uber官方申明</figcaption></figure>
+<h4> 攻击路径分析</h4>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/GcunMN.jpg" alt="GcunMN" tabindex="0" loading="lazy"><figcaption>GcunMN</figcaption></figure>
+<ol>
+<li>攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus入侵微软是一样的。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/epLMva.jpg" alt="epLMva" loading="lazy">
+2. 攻击者进入内网后，发现内网存在一个网络共享文件（powershell），包含Thycotic（PAM系统）的管理员账号密码，而从Thycotic中，可以找到DA, DUO, Onelogin, AWS, GSuite之类系统的凭据。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/gbZ0JV.jpg" alt="gbZ0JV" loading="lazy">
+3. 攻击者通过冒充Uber IT工作人员，并不停骚扰那名员工，最终使得员工点击通过了2FA认证，从而绕过2FA。</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/6sn9BQ.jpg" alt="6sn9BQ" tabindex="0" loading="lazy"><figcaption>6sn9BQ</figcaption></figure>
+<h4> Uber回应（09/27）</h4>
+<ol>
+<li>敏感数据未泄漏</li>
+<li>服务正常运转</li>
+<li>正在调查中</li>
+</ol>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/Uq4aQF.jpg" alt="Uber回应" tabindex="0" loading="lazy"><figcaption>Uber回应</figcaption></figure>
+<h4> 附：相关截图</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/SlN5N9.jpg" alt="SlN5N9" loading="lazy">
+<img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/RK8OrT.jpg" alt="RK8OrT" loading="lazy">
+<img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/qIZVJ8.jpg" alt="qIZVJ8" loading="lazy">
+<img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/NrsSWm.jpg" alt="NrsSWm" loading="lazy">
+<img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/hLWMGn.jpg" alt="hLWMGn" loading="lazy"></p>
+<h4> 一些感悟</h4>
+<blockquote>
+<p>通过钓鱼拿到合法凭据突破网络边界的攻击手法越来越普遍和成熟，传统的2FA策略仍无法有效阻止攻击，“人”还是最容易突破的脆弱点。
+Twitter、Cloudflare、Google等越来越多的公司开始使用YubiKey这种硬件密钥的方式作为MFA来避免钓鱼攻击，但这种方式成本较高，普及还是有一定难度；还是要从人、流程、技术这三个方面来加固并持续改进，尽可能避免被钓鱼攻击利用成果。</p>
+</blockquote>
+<h4> 参考资料</h4>
+<ul>
+<li><a href="https://blog.cloudflare.com/2022-07-sms-phishing-attacks/" target="_blank" rel="noopener noreferrer">https://blog.cloudflare.com/2022-07-sms-phishing-attacks/</a></li>
+<li><a href="https://blog.twitter.com/engineering/en_us/topics/insights/2021/how-we-rolled-out-security-keys-at-twitter" target="_blank" rel="noopener noreferrer">https://blog.twitter.com/engineering/en_us/topics/insights/2021/how-we-rolled-out-security-keys-at-twitter</a></li>
+<li><a href="https://krebsonsecurity.com/2018/07/google-security-keys-neutralized-employee-phishing/" target="_blank" rel="noopener noreferrer">https://krebsonsecurity.com/2018/07/google-security-keys-neutralized-employee-phishing/</a></li>
+</ul>
+<h3> Optus遭泄露1120W+用户个人敏感数据</h3>
+<p>澳大利亚第二大电信公司Optus宣布它遭受了一次重大数据泄露，该事件涉及1120W+客户的敏感信息。</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/IUPaux.png" alt="IUPaux" tabindex="0" loading="lazy"><figcaption>IUPaux</figcaption></figure>
+<h4> 发生了什么？</h4>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/JUKB5e.jpg" alt="JUKB5e" tabindex="0" loading="lazy"><figcaption>JUKB5e</figcaption></figure>
+<h4> 攻击路径分析</h4>
+<ol>
+<li>信息表明，数据是在&nbsp;<a href="http://api.www.optus.com.au/" target="_blank" rel="noopener noreferrer">http://api.www.optus.com.au</a>&nbsp;时通过未经身份验证的 REST&nbsp;API 接口泄露的</li>
+<li>参数<code>contactid=XXXXXXXXX</code>存在IDOR漏洞，导致可被遍历拉取敏感数据，且该参数是一个可预测的数字序列</li>
+</ol>
+<h4> 一些感悟</h4>
+<blockquote>
+<p>如此简单、低级的问题依然存在……
+评价安全工作的好坏不要有没有解决高大上的问题，而是能把某一个场景做精做细做好，解决实际问题；很多公司其实连基础工作都没有做好，这里想引用赵武在<a href="https://mp.weixin.qq.com/s?__biz=MjM5NDQ5NjM5NQ==&amp;mid=2651626352&amp;idx=1&amp;sn=80690a89bea1be4ffe21f35bf5ee431d&amp;chksm=bd7ed1948a0958824e5aa50ac5827c978cf1d8a144c02d1a1918319446fc0e3f8604d71846a6&amp;mpshare=1&amp;scene=1&amp;srcid=0123NNRIkGqmZq8ehsuOBJQr&amp;sharer_sharetime=1674449535175&amp;sharer_shareid=28de93b23e4052396c8ecdf9aafa26d0#rd" target="_blank" rel="noopener noreferrer">网络安全行业的机会：固化最佳实践</a>里面写到的
+最近我老是拿我们公司的安全部门和产品部门举例，比如安全从业人员都会做资产梳理工作，输入的是企业名称，输出的是互联网暴露面清单；还比如说做IP情报画像（溯源反制），输入的是IP列表，输出的是IP对应的价值情报信息。这是基础的不能再基础的工作内容，我相信这不仅仅是我们公司的工作，而几乎是所以安全行业甲乙方都必须具备的基础技能。一方面它们实在太简单了，没有人没做过也没有人不会，另一方面它们实在太难了，同一个工作不同的人来做，效果天地之别。为什么呢？是因为似乎做了就算有交付，除非你有行之有效的对比方法，否则很有可能一个实习生在几次忐忑交付没人提出反对意见之后，都敢于提出老子天下无敌的口号。</p>
+</blockquote>
+<h4> 参考资料</h4>
+<ul>
+<li><a href="https://www.optus.com.au/about/media-centre/media-releases/2022/09/optus-notifies-customers-of-cyberattack" target="_blank" rel="noopener noreferrer">https://www.optus.com.au/about/media-centre/media-releases/2022/09/optus-notifies-customers-of-cyberattack</a></li>
+</ul>
+<h3> Fast Comany被黑，导致cms被控</h3>
+<p>9月28日，Fast Comany被搞，黑客通过Apple news推送不当言论。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/75Lv2w.jpg" alt="75Lv2w" loading="lazy">
+导致被黑的原因有两个：</p>
+<ol>
+<li>系统使用默认口令</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/ZN7mty.jpg" alt="ZN7mty" loading="lazy">
+2. 系统的凭据在外部已泄漏，和Uber被黑原因差不多</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/d9XTwn.jpg" alt="d9XTwn" tabindex="0" loading="lazy"><figcaption>d9XTwn</figcaption></figure>
+<h4> 参考资料</h4>
+<ul>
+<li><a href="https://twitter.com/RachelTobac/status/1574948916855914497" target="_blank" rel="noopener noreferrer">https://twitter.com/RachelTobac/status/1574948916855914497</a></li>
+</ul>
+<h2> 行业动态</h2>
+<h3> 网络犯罪情报公司HudsonRock提供网络犯罪数据库查询能力</h3>
+<p>HudsonRock的产品 - Cavalier和Bayonet - 由我们不断增强的网络犯罪数据库提供支持，该数据库由数百万台在全球恶意软件传播活动中受到损害的机器组成。</p>
+<blockquote>
+<p>我们的高保真数据直接来自威胁主体(threat actor)，而不是来自数据库泄漏。</p>
+</blockquote>
+<p>不确定他们数据来源是不是黑市，类似Uber入侵事件中提到的：</p>
+<h4> 产品截图</h4>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/uiytKZ.jpg" alt="uiytKZ" tabindex="0" loading="lazy"><figcaption>uiytKZ</figcaption></figure>
+<p>地址：<a href="https://www.hudsonrock.com/search?domain=apple.com" target="_blank" rel="noopener noreferrer">https://www.hudsonrock.com/search?domain=apple.com</a></p>
+<h3> PolySwarm：一个去中心化的威胁情报市场</h3>
+<p>PolySwarm 是第一个由以太坊 (Ethereum) 智能合约和区块链技术实现的去中心化威胁情报市场。</p>
+<p>PolySwarm 定义了一个实时威胁情报生态系统，其中涵盖企业用户（如银行、科技公司等）及个人用户、威胁检测引擎供应商（如赛门铁克、奇虎360、卡巴斯基等）、分布在世界各处的信息安全专家的专家竞相开发能检测最新威胁的“微型威胁检测引擎”，在平台上竞相提供更精确的威胁检测判定，提供威胁情报。想像 Airbnb, PolySwarm 提供了杀毒引擎（出租房主）和需要对文档进行威胁扫描（租客）的媒合平台。</p>
+<p>PolySwarm 的“工作量证明”(Proof of Work) 即是微引擎对威胁检测的准确性: 以NCT 花蜜令牌奖励奖励市场中最能够保护企业和最终用户的威胁检测引擎（即其开发专家）。</p>
+<h3> 美国管理和预算办公室 （OMB） 要求各机构NIST关于软件供应链安全的指南</h3>
+<p>NIST为软件供应链制定了最佳实践指南，NIST安全软件开发框架（SSDF），SP 800-218和NIST软件供应链安全指南。</p>
+<h4> 一些感悟</h4>
+<blockquote>
+<p>看来供应链安全也是目前美帝最迫切的安全需求之一了。</p>
+</blockquote>
+<h4> 参考资料</h4>
+<ul>
+<li><a href="https://www.whitehouse.gov/wp-content/uploads/2022/09/M-22-18.pdf" target="_blank" rel="noopener noreferrer">https://www.whitehouse.gov/wp-content/uploads/2022/09/M-22-18.pdf</a></li>
+<li><a href="https://csrc.nist.gov/publications/detail/sp/800-218/final" target="_blank" rel="noopener noreferrer">https://csrc.nist.gov/publications/detail/sp/800-218/final</a></li>
+<li><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1.pdf" target="_blank" rel="noopener noreferrer">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1.pdf</a></li>
+</ul>
+<h2> TTPs动态</h2>
+<h3> 赛门铁克威胁狩猎团队在数百个应用程序中找到的内置 AWS 凭证</h3>
+<p>我们确定了 1859 个公开可用的应用程序，包括 Android 和 iOS，它们都包含硬编码的 AWS 凭证。几乎所有都是iOS应用程序（98%），这是我们多年来一直在跟踪的平台之间的趋势和差异，可能与不同的应用程序商店审查实践和政策有关。无论如何，我们检查了在应用程序内发现 AWS 凭证嵌入时所涉及的风险的范围和程度。我们发现以下内容：</p>
+<ul>
+<li>超过四分之三 （77%） 的应用程序包含有效的 AWS 访问令牌，允许访问私有 AWS 云服务</li>
+<li>这些应用程序中有近一半（47%）包含有效的AWS令牌，这些令牌还通过亚马逊简单存储服务（Amazon S3）完全访问了大量（通常是数百万个）私有文件。</li>
+</ul>
+<h4> 参考资料</h4>
+<ul>
+<li><a href="https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/mobile-supply-chain-aws" target="_blank" rel="noopener noreferrer">https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/mobile-supply-chain-aws</a></li>
+</ul>
+<h3> 三分之一的 PyPI 包在下载时触发代码执行</h3>
+<p>Python 包索引 （PyPI） 中近三分之一的包在下载后自动执行代码。Checkmarx研究工程师Yehuda Gelb写道：“当安装python软件包时，python的软件包管理器pip会尝试收集和处理该软件包的元数据，例如其版本和正常工作所需的依赖项。这个过程在后台自动发生，通过运行作为包结构一部分的主 <a href="http://setup.py/" target="_blank" rel="noopener noreferrer">setup.py</a> 脚本。攻击者可能会将恶意代码放入 <a href="http://setup.py/" target="_blank" rel="noopener noreferrer">setup.py</a> 文件中。</p>
+<h4> 参考资料</h4>
+<ul>
+<li><a href="https://thehackernews.com/2022/09/warning-pypi-feature-executes-code.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2022/09/warning-pypi-feature-executes-code.html</a></li>
+</ul>
+<h2> Bug Bounty</h2>
+<h3> GitHub 环境注入漏洞影响两个开源项目</h3>
+<p>谷歌和Apache的安全研究人员在开源项目的GitHub环境中发现了持续集成/持续交付（CI / CD）漏洞。可以利用这些漏洞来控制项目的 GitHub 操作 CI/CD 管道，修改源代码、窃取数据以及在组织内横向移动。</p>
+<ol>
+<li>“workflow_run”事件是一个独特的 GitHub 操作管道触发器，用于执行特权管道，如果不谨慎使用，可能会导致重大安全问题。</li>
+<li>数以千计的存储库使用“workflow_run”触发器。我们发现各种常见的易受攻击的工作流配置代码模式容易受到权限提升攻击，即可能使攻击者能够在 CI/CD 管道内运行高特权代码。</li>
+<li>一旦“workflow_run”权限提升漏洞被利用，攻击者就可以使用提升的权限，通过修改存储库资源（例如标签、工件、版本等）来触发供应链攻击。</li>
+<li>攻击者可以窃取存储库机密和潜在的一些组织机密，从而允许在组织内横向移动并进一步增加其攻击的影响半径。</li>
+</ol>
+<h4> 参考资料</h4>
+<ul>
+<li><a href="https://www.legitsecurity.com/blog/github-privilege-escalation-vulnerability-0" target="_blank" rel="noopener noreferrer">https://www.legitsecurity.com/blog/github-privilege-escalation-vulnerability-0</a></li>
+</ul>
+<h2> 友商动态</h2>
+<h3> 微软将于2022年10月正式弃用Exchange Online基本身份验证</h3>
+<p>Exchange Online 团队本周表示“今天，我们宣布，自 2022 年 10 月 1 日起，我们将永久关闭所有租户的基本身份验证，无论使用情况如何(SMTP 身份验证除外，此后仍可重新启用)。”</p>
+<h4> 为什么基本身份验证被禁用?</h4>
+<p>虽然微软没有具体说明本周决定发布此公告的具体原因，但据推测原因可能是因为一份来自网络安全公司Guardicore的报告，该报告揭示了数十万个 Windows 域凭证泄露。Guardicore 副总裁 Amit Serper 还披露了一种名为“The ol” switcheroo 的攻击，包括向客户端发送请求以降级到较弱的身份验证方案(即HTTP 基本身份验证)，而不是像 OAuth 或 NTLM 这样的安全方法，提示电子邮件应用程序已明文形式发送域凭据。
+虽然它极大地简化了身份验证过程，但基本身份验证还使攻击者在未使用传输层安全 (TLS) 加密协议保护连接时更容易窃取凭据。更糟糕的是，在使用基本身份验证时启用多因素身份验证 (MFA) 并不容易;因此，通常它根本不被使用。
+现代身份验证(Active Directory 身份验证库 (ADAL) 和基于 OAuth 2.0 令牌的身份验证)允许应用程序使用 OAuth 访问的生命周期是有限的，并且不能重复用于为其提供的资源之外的其他资源进行身份验证。
+开启现代身份验证后，启用和强制执行 MFA 将变得更加简单，直接快速是提高 Exchange Online 中的数据安全性。</p>
+<h4> 参考资料</h4>
+<ul>
+<li><a href="https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-september/ba-p/3609437" target="_blank" rel="noopener noreferrer">https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-september/ba-p/3609437</a></li>
+</ul>
+]]></content:encoded>
+      <enclosure url="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/MkMY9o.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Security.News@202302</title>
+      <link>https://mars.run/newsletter/Security.News@202302.html</link>
+      <guid>https://mars.run/newsletter/Security.News@202302.html</guid>
+      <source url="https://mars.run/rss.xml">Security.News@202302</source>
+      <description>安全事件 GoDaddy 披露了存在多年的安全漏洞，导致客户和员工登录凭证泄漏、服务器被安装恶意软件、并有源代码被盗窃 2023年2月16日，网络托管巨头 GoDaddy 表示其遭受了黑客攻击，在多年的攻击中，cPanel被拿下，导致客户和员工登录凭证泄漏、服务器被安装恶意软件、并有源代码被盗窃；GoDaddy早在2022年12月就被客户告知他们的网站会重定向到随机域名，在调查中发现，攻击者在2019年到2022年中有四次被发现，但一直没有失去访问权限。 “根据我们的调查，我们认为这些事件是一个复杂的威胁行为者组织多年活动的一部分，该组织除其他外，在我们的系统上安装了恶意软件并获取了与 GoDaddy 内某些服务相关的代码片段，”托管公司在提交给美国证券交易委员会的文件中说。 Twitter上有人爆料说是内鬼导致的：</description>
+      <category>安全通讯 Newsletter</category>
+      <pubDate>Sun, 05 Feb 2023 16:23:41 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 安全事件</h2>
+<h3> GoDaddy 披露了存在多年的安全漏洞，导致客户和员工登录凭证泄漏、服务器被安装恶意软件、并有源代码被盗窃</h3>
+<p>2023年2月16日，网络托管巨头 GoDaddy 表示其遭受了黑客攻击，在多年的攻击中，cPanel被拿下，导致客户和员工登录凭证泄漏、服务器被安装恶意软件、并有源代码被盗窃；GoDaddy早在2022年12月就被客户告知他们的网站会重定向到随机域名，在调查中发现，攻击者在2019年到2022年中有四次被发现，但一直没有失去访问权限。
+“根据我们的调查，我们认为这些事件是一个复杂的威胁行为者组织多年活动的一部分，该组织除其他外，在我们的系统上安装了恶意软件并获取了与 GoDaddy 内某些服务相关的代码片段，”托管公司在提交给美国证券交易委员会的<a href="https://d18rn0p25nwr6d.cloudfront.net/CIK-0001609711/e4736ddb-b4c7-485b-a8fc-1827691692c9.pdf" target="_blank" rel="noopener noreferrer">文件</a>中说。
+Twitter上有人爆料说是内鬼导致的：</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/SiNKd9.png" alt="Twitter传闻" tabindex="0" loading="lazy"><figcaption>Twitter传闻</figcaption></figure>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/Vobcnx.png" alt="Twitter传闻" tabindex="0" loading="lazy"><figcaption>Twitter传闻</figcaption></figure>
+<p>而攻击者的目的，可能是<strong>利用Godaddy作为跳板，以进行网络钓鱼活动、恶意软件分发和其他恶意活动。</strong></p>
+<h4> 附：Godaddy安全事件时间线</h4>
+<ul>
+<li>
+<p>2020年3月，攻击者获得了登录凭据并访问了数量有限的员工账户和属于大约 28000 名客户的托管账户。</p>
+</li>
+<li>
+<p>2020年4月，GoDaddy 的一名员工被黑客控制，导致Escrow.com被入侵。</p>
+</li>
+<li>
+<p>2020年1月，GoDaddy 的员工被黑客诱骗修改了至少两个加密货币网站的 DNS 设置。</p>
+</li>
+<li>
+<p>2021年9月，攻击者获得了 120 万个当前不活跃的托管 WordPress 用户的 WordPress 管理员帐户、电子邮件地址和 FTP 帐户的登录凭据。 GoDaddy 于 2021 年 11 月正式披露了该漏洞。</p>
+</li>
+<li>
+<p>2021年11月，攻击者获得了可以访问 GoDaddy 的托管 WordPress 服务源代码。</p>
+</li>
+<li>
+<p>2022年12月，攻击者获得了 cPanel 托管服务器的权限。</p>
+</li>
+</ul>
+<h4> 一些感悟</h4>
+<blockquote>
+<p>攻击者有一定的反侦查能力，比如：有客户反馈GoDaddy的网站会重定向到随机域名，但Godaddy自己能难复现该问题
+2020年就发现了系统被入侵，直到2023年还未解决（攻击者一直有权限），是APT的手法高级/隐蔽，还是Godaddy的安全能力不足呢？</p>
+</blockquote>
+<h4> 参考资料</h4>
+<ul>
+<li><a href="https://www.computing.co.uk/news/4074669/godaddy-realised-security-breach" target="_blank" rel="noopener noreferrer">https://www.computing.co.uk/news/4074669/godaddy-realised-security-breach</a></li>
+<li><a href="https://www.hackread.com/hackers-godaddy-source-code-data-breach/" target="_blank" rel="noopener noreferrer">https://www.hackread.com/hackers-godaddy-source-code-data-breach/</a></li>
+<li><a href="https://aboutus.godaddy.net/newsroom/company-news/news-details/2023/Statement-on-recent-website-redirect-issues/default.aspx" target="_blank" rel="noopener noreferrer">https://aboutus.godaddy.net/newsroom/company-news/news-details/2023/Statement-on-recent-website-redirect-issues/default.aspx</a></li>
+</ul>
+]]></content:encoded>
+      <enclosure url="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/SiNKd9.png" type="image/png"/>
+    </item>
     <item>
       <title>Security.News@202207</title>
       <link>https://mars.run/newsletter/Security.News@202207.html</link>
@@ -38,6 +249,7 @@
 <li>第二天演习的安全事件进一步升级为欧盟范围内。有<strong>攻击者威胁将发布个人医疗数据</strong>，而另一个团伙则<strong>在网上散布植入式医疗设备存在漏洞的谣言</strong>。</li>
 <li>此次演习测试了各参与方的事件响应能力，以及欧盟各机构与欧洲计算机应急响应小组（CERT-EU）、欧盟网络与信息安全局（ENISA）合作提高态势感知能力的成效。此次演习中吸取的经验教训，将在ENISA发布的事后报告中正式公布。</li>
 </ul>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>因为疫情原因，2020年的演习延期到2022年才进行，这种涉及29个国家的网络战演习组织难度一定很大，可以期待下2022年的事后报告公布。
 2018年的事后报告可以看<a href="https://www.enisa.europa.eu/publications/cyber-europe-2018-after-action-report/at_download/fullReport#:~:text=Cyber%20Europe%202018%20was%20the,and%20Information%20Security%20(ENISA)." target="_blank" rel="noopener noreferrer">这里</a>，有空的话我也会进行解读。</p>
@@ -50,6 +262,7 @@
 <h2> 供应链安全</h2>
 <h3> 针对工业系统的恶意密码破解软件</h3>
 <p>恶意攻击者正在使用含有木马程序的可编程序控制器密码破解工具来感染工业系统。来自 Dragos 的研究人员分析了一个恶意密码破解工具，其中包含恶意软件 Sality，它将被感染的系统集中成僵尸网络的一部分。</p>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>从未经审查的来源下载软件并运行可能很危险，谁知道有没有鬼在里面呢？比如：网上的各种破解软件……</p>
 </blockquote>
@@ -71,6 +284,7 @@ GitHub 上用户活动的一个重要衡量标准是在用户个人资料页面�
 正如几周前 Aqua 所显示的，NPM 包管理器允许包所有者在他们的包中添加任何他们想要的贡献者，并通过这样做来提高他们的项目声誉和可信度。
 通过欺骗提交者的身份，GitHub 存储库也可以做到这一点。为了使他们的项目看起来可靠，攻击者可以使用这种技术一次或多次，并用已知的可靠贡献者填充存储库的贡献者部分，这反过来又使项目看起来可靠。</li>
 </ol>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>GitHub 提供了一个安全特性来解决这个问题，允许开发人员在提交代码时验证他们的身份，但这更依赖于开发人员的安全意识和积极参与。</p>
 </blockquote>
@@ -157,6 +371,7 @@ GitHub 上用户活动的一个重要衡量标准是在用户个人资料页面�
 <h3> LastPass入侵事件</h3>
 <p>据 LastPass 方面表示，黑客透过盗取一个开发者帐户，取得了 LastPass 开发环境的部分权限，有部分源代码和一些专有技术资料因此遭到泄漏，不过客户的资料包括密码则未受影响。
 很值得学习的一点如下，设计之初在架构上就考虑了隐私&amp;安全</p>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>我们从不存储或了解您的主密码。我们利用行业标准的零知识架构， 确保 LastPass 永远无法知道或访问我们客户的主密码.您可以在此处阅读有关零知识的技术实现<a href="https://www.lastpass.com/security/zero-knowledge-security" target="_blank" rel="noopener noreferrer">的信息</a></p>
 </blockquote>
@@ -240,6 +455,7 @@ GitHub 上用户活动的一个重要衡量标准是在用户个人资料页面�
 <p>本月早些时候，Mandiant 公司发布了一份报告，称网络犯罪团伙“邪恶公司”(Evil Corp) 转用 LockBit 2.0勒索软件来逃避制裁；之后，LockBit 勒索软件团伙将网络安全公司 Mandiant 列入其黑网泄露网站公布的受害者名单。Mandiant 正在调查勒索软件团伙的说法，这个网络犯罪团伙宣称从该公司盗取了356841文件，并计划在网上泄露这些文件。
 Mandiant 公司迅速回应了记者的置评请求，并发表声明称: “ Mandiant 公司知道这些与 lockbit 相关的声明。在这一点上，我们没有任何证据支持他们的说法。我们将继续密切关注事态发展。”</p>
 <figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/JLtatI.jpg" alt="JLtatI" tabindex="0" loading="lazy"><figcaption>JLtatI</figcaption></figure>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>等待更多细节披露，持续跟进中</p>
 </blockquote>
@@ -250,6 +466,7 @@ Mandiant 公司迅速回应了记者的置评请求，并发表声明称: “ Ma
 <h3> 一个网络罪犯团队在4个月内偷走了100万 Facebook 账户凭证</h3>
 <p>2021年底，防网络钓鱼公司 Pixm 的安全研究人员发现，这项钓鱼攻击事件从去年Q4才开始，但已经证明非常成功。在 Pixm 发现的大约400个登陆页面中，仅仅一个在2021年就有270万的访问量，并且在2022年已经骗取了850万的访问量。
 Pixm 确定了大约400个独特的钓鱼页面; 对其中17个页面的随机分析显示，平均浏览量为985,228页。推算到400页，你会得到399,017,673次访问。“我们估计，迄今为止确定的400个用户名，以及他们所有独特的钓鱼网页，只代表了这个活动的一小部分,”Pixm 说。</p>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>攻击者使用合法的站点托管网站（例如 <a href="http://glitch.me" target="_blank" rel="noopener noreferrer">glitch.me</a>、 <a href="http://Famous.co" target="_blank" rel="noopener noreferrer">Famous.co</a>、<a href="http://amaze.co" target="_blank" rel="noopener noreferrer">amaze.co</a>、<a href="http://funnel-preview.com" target="_blank" rel="noopener noreferrer">funnel-preview.com</a> 等）来绕过Facebook的检测，通过Facebook Messager传播，这种模式对于基于URL信誉度的传统解决方案是毁灭性打击的，而基于内容的检测可能是因为成本过大而无法大规模应用。这种模式的攻击已经非常成熟了，历史上经典的案例包括：Github Page、Google Translate、Azure Blob 存储、Amazon&nbsp;Cloudfront等。</p>
 </blockquote>
@@ -262,6 +479,7 @@ Pixm 确定了大约400个独特的钓鱼页面; 对其中17个页面的随机�
 <h3> AMD服务的450GB数据被窃取</h3>
 <p>勒索集团 RansomHouse 声称，AMD 员工使用的“123456”等简单密码使窃取数据变得容易。
 根据 <a href="https://techcrunch.com/2022/06/28/amd-extortion-ransomhouse/" target="_blank" rel="noopener noreferrer">TechCrunch</a> 的报道，他们已经看到了一些被盗的数据，RansomHouse不是在开玩笑，密码很简单。AMD 的员工显然是依靠密码，如“password”，“123456”和“Welcome1”来保护他们的帐户。我们都知道这不是个好主意。</p>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>弱口令是老生常谈的话题了，没想到2022年了，AMD居然还在使用这些密码。
 简单统计了下RansomHouse公开的数据，共xx条记录，其中password 89条，P@ssw0rd 72条，Amd!23 31条，Welcome1 21条，p@ssw0rd1 9条。
@@ -275,6 +493,7 @@ Pixm 确定了大约400个独特的钓鱼页面; 对其中17个页面的随机�
 <h3> 以色列网络安全创业公司 Talon 在 RSA 大会上被评为“最具创新力”</h3>
 <p>RSA 公司周二宣布，信息安全事件 RSA 会议已经将以色列的 Talon Cybersecurity 评为年度 RSAC 创新沙盒大赛的获胜者。
 Talon 被评为“最具创新性的初创企业”，由一组评委选出，创造了业内第一个安全的企业浏览器，使企业能够简化其安全程序，同时提供安全和改进的混合工作体验。</p>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>云上安全一般可以分为两类：保护企业云上自有业务，以及保护员工安全的访问云上业务。考虑到国外企业大量使用Web服务或SaaS服务，各类业务事实上就是Web服务或SaaS形态，所以后者的场景可以泛化为保护员工访问各类外部服务。
 从Talon的白皮书可以看出，它已经将自己定位成一款Web应用和SaaS的网关类产品，同时提供了运行时隔离、零信任、数据防泄露等能力。
@@ -287,6 +506,7 @@ Talon 被评为“最具创新性的初创企业”，由一组评委选出，�
 </ul>
 <h3> 美国 HHS 安全风险评估工具发布3.3版本</h3>
 <p>美国卫生与公众服务部(HHS)民权办公室(OCR)和国家卫生信息技术协调员(ONC)发布了安全风险评估(SRA)工具3.3版。SRA“旨在帮助医疗保健提供者按照 HIPAA 安全规则和医疗保险和医疗补助服务中心(CMS)电子健康记录(EHR)激励计划的要求进行安全风险评估。”</p>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>民权办公室 (OCR) 和国家卫生信息技术协调员办公室 (ONC)开发了 SRA 工具，以帮助 HIPAA 涵盖的实体根据HIPAA 安全规则导航风险评估要求。
 SRA 工具的受众主要包括中小型供应商，可能不适用于较大的组织；内容主要为政策和合规为主，做起来比实际的安全防御/控制能力建设要简单许多。</p>
@@ -300,6 +520,7 @@ SRA 工具的受众主要包括中小型供应商，可能不适用于较大的�
 <h3> 黑客组织Gallium使用新的难以检测的远程访问木马</h3>
 <p>Unit 42最近发现了一种新的、难以检测的远程访问木马程序，名为 PingPull，正在被一个叫做进阶持续性渗透攻击(APT)的组织 GALLIUM 使用。
 PingPull 具有利用三种协议(ICMP、 HTTP (S)和原始 TCP)进行命令和控制(C2)的能力。尽管使用 ICMP 隧道并不是一种新技术，PingPull 使用 ICMP 使得检测其 C2通信变得更加困难，因为很少有组织在其网络上实现对 ICMP 流量的检查。</p>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>之前就有人使用ICMP/DNS隧道来免费上网，就是利用运营商/网管无法对这些协议进行计费认证，且难以禁止使用的空子来实现的。作为防守方，我们不光要监控常用的TCP/UDP，更应该对ICMP/DNS的使用额外关注，这里往往会成为检测盲点。</p>
 </blockquote>
@@ -311,6 +532,7 @@ PingPull 具有利用三种协议(ICMP、 HTTP (S)和原始 TCP)进行命令和�
 <h2> TTPs动态</h2>
 <h3> 使用悬挂 iframe 绕过 CSP</h3>
 <p>CSP 将about:blank URL 视为同源（同源策略），当攻击者将跨域 iframe 设置为 about:blank 时，它就变得可以被攻击者读取；虽然Chrome之前针对<strong><strong>Dangling markup injection</strong></strong>的缓解措施有一定的用处，但通过滥用浏览器特性，可以绕过这些缓解措施，并通过注入获得跨域信息——即使在你的 CSP 中禁用了 JavaScript。</p>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>portswigger真的是把web安全玩透了，一直可以从他们这里学到各种新姿势、新思路。</p>
 </blockquote>
@@ -321,6 +543,7 @@ PingPull 具有利用三种协议(ICMP、 HTTP (S)和原始 TCP)进行命令和�
 <h2> 学习资源</h2>
 <h2> Google chronicle提供的一些学习资源</h2>
 <p>探索 Chronicle 资源，包括白皮书、网络研讨会、案例研究和数据表。</p>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>值得仔细看看，竞品分析必备良器。</p>
 </blockquote>
@@ -518,6 +741,7 @@ so actually there is same ZEND_MM_NUMBER_BUCKET buckets stored in the free_bucke
 8. 数据共享: 协调整个行业的数据共享，以改进有助于确定最关键 OSS 组件的研究。
 9. 软件物料清单(SBOMs) : 到处改进 SBOM 的工具和培训，以推动采用。
 10. 改进的供应链: 通过更好的供应链安全工具和最佳实践，加强10个最关键的供应链/开源软件构建系统、包管理器和分销系统。</p>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>从Strust2、Heartbleed、Solarwinds到Log4j，可以看到供应链/开源软件的漏洞影响是多么深远，现在越来越多的科技巨头加入治理，希望能改善供应链/开源软件这块“金三角”；对应国内类似的相关治理建议，可以参考CNCERT的《2021 年开源软件供应链安全风险研究报告》。</p>
 </blockquote>
@@ -535,6 +759,7 @@ so actually there is same ZEND_MM_NUMBER_BUCKET buckets stored in the free_bucke
 我们已经看到社区在预防漏洞方面的强有力的参与，尤其是在安全记分卡项目中。<a href="https://securityscorecards.dev/" target="_blank" rel="noopener noreferrer">Scorecards</a> 评估项目遵守安全最佳实践的情况，并为开发人员在使用依赖项之前可以参考的评分进行分配。
 3. 修复：为了帮助用户理解他们的选择，以消除漏洞，使通知能够帮助加速修复，并修复受影响软件的广泛使用的版本，而不仅仅是最新的版本。
 Google去年为开源项目提供了1500万美元。这包括750万美元，用于供应链安全、模糊、内核安全和关键基础设施安全等领域的定向安全工作。</p>
+<h4> 一些感悟</h4>
 <blockquote>
 <p>谷歌是开源的最大商业用户之一，如果没有开源软件，Google的大部分服务都不会存在。
 其实整个互联网行业都是开源软件的最大受益者，但它们已经白嫖习惯了……</p>
