@@ -61,13 +61,14 @@ jobs:
           dst_branch: main
           src_branch: gh-pages
           clean: true
+    
     # 执行algolia
-      - name: Run DocSearch Scraper
-        env:
-          APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
-          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-        run: |
-          docker run \
-          -e APPLICATION_ID -e API_KEY \
-          -e CONFIG="$(cat .github/workflows/scrapeConfig/docusaurus-v2.json)" \
-          algolia/docsearch-scraper
+    #  - name: Run DocSearch Scraper
+    #    env:
+    #      APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+    #      API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+    #    run: |
+    v      docker run \
+    #      -e APPLICATION_ID -e API_KEY \
+    #      -e CONFIG="$(cat .github/workflows/scrapeConfig/docusaurus-v2.json)" \
+    #      algolia/docsearch-scraper
