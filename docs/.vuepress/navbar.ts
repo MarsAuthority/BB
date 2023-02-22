@@ -8,16 +8,15 @@ export default navbar([
     icon: "note",
     prefix: "/cybersecurity/",
     children: [
-      "newsletter",
       "安全工具库",
     ],
   },
   {
     text: "知识管理",
-    icon: "book",
+    icon: "study",
     prefix: "/km/",
     children: [
-      "km/阅读学习工作流",
+      "阅读学习工作流",
     ],
   },
   {
@@ -25,7 +24,7 @@ export default navbar([
     icon: "emmet",
     prefix: "/family/",
     children: [
-      "km/阅读学习工作流",
+      "摄影作品",
     ],
   },
   { text: "RSS信息流", icon: "rss", link: "https://mars0run.notion.site/5ccdf71345c2440da2ccd385e98dd71d?v=edfc490b781d435ba1e066a4d1b2dd48" },
