@@ -1,7 +1,6 @@
 import { defineUserConfig } from "vuepress";
 // import { webpackBundler } from "@vuepress/bundler-webpack";
 // import { defineUserConfig } from "@vuepress/cli";
-import { photoSwipePlugin } from "vuepress-plugin-photo-swipe";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
@@ -51,13 +50,6 @@ export default defineUserConfig({
     // 谷歌分析 ID
     googleAnalyticsPlugin({
       id: "G-W0X4TZ1NJ7",
-    }),
-    photoSwipePlugin({
-      locales: {
-        "/": {
-          lang: "zh-CN",
-        },
-      },
     }),
   ],
 });
