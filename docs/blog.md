@@ -1,14 +1,14 @@
 ---
 #博客首页设置：https://theme-hope.vuejs.press/zh/guide/blog/home.html
 home: true
-layout: BlogType
+layout: BlogHome
 icon: home
 title: Hello
 #heroImage: /logo.svg
 heroText: Hello
 tagline: 学习学习再学习
 bgImage: https://images.unsplash.com/photo-1602808165003-bb94af11c7eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8
-heroFullScreen: false
+heroFullScreen: true
 #projects:
 #  - icon: project
 #    name: 项目名称
