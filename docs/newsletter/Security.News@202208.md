@@ -22,6 +22,7 @@ order: 9997
 
 ## 行业动态
 ### CNCERT发布《**勒索软件防范指南**》
+
 感概CNCERT终于不土了，做出来这么互联网范儿的指南
 
 ![勒索软件防范指南](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/o6MFMh.jpg)
@@ -32,6 +33,7 @@ order: 9997
 ### 新工具检查移动应用的浏览器是否存在隐私风险，Instagram/facebook等app中招
 
 8月19日报道，一个名为“InAppBrowser”的新在线工具可让您分析嵌入在移动应用程序中的应用内浏览器的行为，并确定它们是否将威胁隐私的JavaScript注入您访问的网站。
+
 该工具由开发人员Felix Krause创建，他在本月早些时候警告过这种潜在的风险行为，并解释了应用内浏览器通过在用户访问的每个网页上注入JavaScript跟踪器来跟踪用户在线看到和做的任何事情是多么容易。
 
 ![相关twitter](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/8bHtpb.jpg)
@@ -50,7 +52,9 @@ order: 9997
 ### 利用 PHP-FPM 做内存马的方法
 
 属于旧壶装旧酒，最近看到很多人在讨论，就在这里也列一下
+
 核心原理是：
+
 1. php-fpm可通过某种方式（绑定外网、SSRF）直接访问
 2. Web 服务器中间件会将用户请求设置成环境变量（Fastcgi→php-fpm）,强大的 PHP 中有两个有趣的配置项：
     1. `auto_prepend_file`：告诉PHP，在执行目标文件之前，先包含 `auto_prepend_file` 中指定的文件。
@@ -66,6 +70,7 @@ order: 9997
 ### Cisco 被Lapsus$入侵
 
 Cisco在2022年8月3日承认，该公司在2022年5月24日遭到入侵，并由思科安全事件应急响应小组（CSIRT）与旗下资安公司Cisco Talos携手补救，起因是一名员工的个人Google帐号遭到骇客入侵。虽然思科并未发现系统被部署勒索木马，但勒索软体集团Yanluowang宣称已取得2.8GB的思科资料。
+
 用户通过Google Chrome启用了密码同步，并将其Cisco凭据存储在浏览器中，使该信息能够同步到其Google帐户。在获取用户的凭据后，攻击者试图使用各种技术绕过多因素身份验证（MFA），包括语音网络钓鱼（也称为“vishing”）和MFA疲劳，即向目标的移动设备发送大量推送请求的过程，直到用户意外或只是试图使他们正在接收的重复推送通知静音。网络钓鱼是一种越来越常见的社交工程技术，攻击者试图诱骗员工通过电话泄露敏感信息。在这种情况下，一名员工报告说，他们在几天内接到了多个电话，其中呼叫者 - 他们用各种国际口音和方言的英语交谈 - 据称与用户信任的支持组织相关联。
 
 #### 参考资料
@@ -89,6 +94,7 @@ https://www.qianxin.com/support/productDetails?pid=423&product_name=aaa
 ### LastPass入侵事件
 
 据 LastPass 方面表示，黑客透过盗取一个开发者帐户，取得了 LastPass 开发环境的部分权限，有部分源代码和一些专有技术资料因此遭到泄漏，不过客户的资料包括密码则未受影响。
+
 很值得学习的一点如下，设计之初在架构上就考虑了隐私&安全
 
 #### 一些感悟
