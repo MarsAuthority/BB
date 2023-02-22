@@ -40,7 +40,7 @@ order: 9996
 
 ![GcunMN](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/GcunMN.jpg)
 
-1. 攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus入侵微软是一样的。
+1. 攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus$入侵微软是一样的。
 
 ![epLMva](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/epLMva.jpg)
 2. 攻击者进入内网后，发现内网存在一个网络共享文件（powershell），包含Thycotic（PAM系统）的管理员账号密码，而从Thycotic中，可以找到DA, DUO, Onelogin, AWS, GSuite之类系统的凭据。
@@ -128,7 +128,7 @@ HudsonRock的产品 - Cavalier和Bayonet - 由我们不断增强的网络犯罪�
 
 不确定他们数据来源是不是黑市，类似Uber入侵事件中提到的：
 
-> 1. 攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus入侵微软是一样的。
+> 1. 攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus$入侵微软是一样的。
 
 #### 产品截图
 
