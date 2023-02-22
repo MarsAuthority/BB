@@ -6,8 +6,8 @@
     <link>https://mars.run/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 22 Feb 2023 11:46:11 GMT</pubDate>
-    <lastBuildDate>Wed, 22 Feb 2023 11:46:11 GMT</lastBuildDate>
+    <pubDate>Wed, 22 Feb 2023 15:12:01 GMT</pubDate>
+    <lastBuildDate>Wed, 22 Feb 2023 15:12:01 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Mars</copyright>
@@ -46,7 +46,7 @@
 <h4> 攻击路径分析</h4>
 <figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/GcunMN.jpg" alt="GcunMN" tabindex="0" loading="lazy"><figcaption>GcunMN</figcaption></figure>
 <ol>
-<li>攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus入侵微软是一样的。</li>
+<li>攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus$入侵微软是一样的。</li>
 </ol>
 <p><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/epLMva.jpg" alt="epLMva" loading="lazy">
 2. 攻击者进入内网后，发现内网存在一个网络共享文件（powershell），包含Thycotic（PAM系统）的管理员账号密码，而从Thycotic中，可以找到DA, DUO, Onelogin, AWS, GSuite之类系统的凭据。</p>
@@ -120,7 +120,7 @@
 <p>不确定他们数据来源是不是黑市，类似Uber入侵事件中提到的：</p>
 <blockquote>
 <ol>
-<li>攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus入侵微软是一样的。</li>
+<li>攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus$入侵微软是一样的。</li>
 </ol>
 </blockquote>
 <h4> 产品截图</h4>

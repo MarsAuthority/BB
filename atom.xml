@@ -9,7 +9,7 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-02-22T11:46:11.616Z</updated>
+  <updated>2023-02-22T15:12:01.918Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
@@ -27,7 +27,7 @@
     <title type="text">Security.News@202209</title>
     <id>https://mars.run/newsletter/Security.News@202209.html</id>
     <link href="https://mars.run/newsletter/Security.News@202209.html"/>
-    <updated>2023-02-22T11:44:59.000Z</updated>
+    <updated>2023-02-22T15:10:43.000Z</updated>
     <summary type="html"><![CDATA[<h2> 安全事件</h2>
 <h3> REvil 宣布对 Midea美的集团勒索攻击事件负责，并在暗网公开了被盗的数据</h3>
 <p>8月11日，全网都在疯传Midea美的集团被勒索攻击的事件；就在事件发生20天后，9月1日，REvil 勒索软件组织正式公布，对美的集团的勒索攻击事件负责，并在暗网公开了美的集团被盗的数据。这表明美的集团与REvil谈判破裂，并未支付1000万美元勒索赎金。</p>
@@ -48,7 +48,7 @@
 <h4> 攻击路径分析</h4>
 <figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/GcunMN.jpg" alt="GcunMN" tabindex="0" loading="lazy"><figcaption>GcunMN</figcaption></figure>
 <ol>
-<li>攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus入侵微软是一样的。</li>
+<li>攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus$入侵微软是一样的。</li>
 </ol>
 <p><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/epLMva.jpg" alt="epLMva" loading="lazy">
 2. 攻击者进入内网后，发现内网存在一个网络共享文件（powershell），包含Thycotic（PAM系统）的管理员账号密码，而从Thycotic中，可以找到DA, DUO, Onelogin, AWS, GSuite之类系统的凭据。</p>
@@ -122,7 +122,7 @@
 <p>不确定他们数据来源是不是黑市，类似Uber入侵事件中提到的：</p>
 <blockquote>
 <ol>
-<li>攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus入侵微软是一样的。</li>
+<li>攻击者通过在黑市购买的凭据信息（基于Racoon恶意软件）获得了Uber员工的凭据，这点和当初Lapsus$入侵微软是一样的。</li>
 </ol>
 </blockquote>
 <h4> 产品截图</h4>

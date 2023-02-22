@@ -1,0 +1,1 @@
+import{i as t}from"./app-77f8df1c.js";import"./framework-0d2eacdd.js";const n=()=>t({serverURL:"https://waline.mars.run"});export{n as updatePageview};
