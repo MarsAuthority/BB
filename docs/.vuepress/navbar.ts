@@ -12,6 +12,14 @@ export default navbar([
     ],
   },
   {
+    text: "安全通讯",
+    icon: "box",
+    prefix: "/newsletter/",
+    children: [
+      "Security.News@202205",
+    ],
+  },
+  {
     text: "知识管理",
     icon: "study",
     prefix: "/km/",
