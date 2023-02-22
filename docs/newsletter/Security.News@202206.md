@@ -30,6 +30,7 @@ order: 9999
 
 本月早些时候，Mandiant 公司发布了一份报告，称网络犯罪团伙“邪恶公司”(Evil Corp) 转用 LockBit 2.0勒索软件来逃避制裁；之后，LockBit 勒索软件团伙将网络安全公司 Mandiant 列入其黑网泄露网站公布的受害者名单。Mandiant 正在调查勒索软件团伙的说法，这个网络犯罪团伙宣称从该公司盗取了356841文件，并计划在网上泄露这些文件。
 Mandiant 公司迅速回应了记者的置评请求，并发表声明称: “ Mandiant 公司知道这些与 lockbit 相关的声明。在这一点上，我们没有任何证据支持他们的说法。我们将继续密切关注事态发展。”
+
 ![JLtatI](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/JLtatI.jpg)
 
 > 等待更多细节披露，持续跟进中
