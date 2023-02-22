@@ -23,6 +23,7 @@ order: 9997
 ## 行业动态
 ### CNCERT发布《**勒索软件防范指南**》
 感概CNCERT终于不土了，做出来这么互联网范儿的指南
+
 ![勒索软件防范指南](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/o6MFMh.jpg)
 
 #### 参考资料
@@ -32,9 +33,11 @@ order: 9997
 
 8月19日报道，一个名为“InAppBrowser”的新在线工具可让您分析嵌入在移动应用程序中的应用内浏览器的行为，并确定它们是否将威胁隐私的JavaScript注入您访问的网站。
 该工具由开发人员Felix Krause创建，他在本月早些时候警告过这种潜在的风险行为，并解释了应用内浏览器通过在用户访问的每个网页上注入JavaScript跟踪器来跟踪用户在线看到和做的任何事情是多么容易。
+
 ![相关twitter](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/8bHtpb.jpg)
 
 以Instagram为例，可以看到插入的js做了哪些事情：
+
 ![aOe2oK](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/aOe2oK.jpg)
 
 ## TTPs动态
@@ -71,6 +74,7 @@ Cisco在2022年8月3日承认，该公司在2022年5月24日遭到入侵，并�
 ### Twilio 钓鱼入侵事件
 
 云端通讯平台Twilio在8月7日坦承遭到黑客入侵，黑客通过钓鱼短信取得了Twilio员工的登陆凭证，并窃取了客户数据，而采用Twilio服务进行电话号码认证的Signal则表示，约有1900名用户受到Twilio黑客事件的波及。
+
 ![网传的钓鱼短信](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/6I57MD.jpg)
 
 #### 参考资料
