@@ -4,6 +4,11 @@ date: 2022-06-05 16:23:41
 category:
   - 安全通讯 Newsletter
 tag:
+  - 行业动态
+  - 安全事件
+  - 行业报告
+  - TTPs动态
+  - 学习资源
   - Mandiant
   - RSAC
   - 创新沙盒
