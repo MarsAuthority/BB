@@ -51,9 +51,5 @@ export default defineUserConfig({
     googleAnalyticsPlugin({
       id: "G-W0X4TZ1NJ7",
     }),
-    mdEnhance({
-      // 添加选项卡支持
-      tabs: true,
-    }),
   ],
 });

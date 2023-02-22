@@ -141,7 +141,7 @@ export default hopeTheme({
       // flowchart: true,
       gfm: true,
       imgLazyload: true,
-      // imgMark: true,
+      imgMark: true,
       imgSize: true,
       figure: true,
       include: true, //导入文件
@@ -152,7 +152,7 @@ export default hopeTheme({
       tasklist: true,
       sub: true, // 上下角标
       sup: true,
-      // tabs: true, // 选项卡
+      tabs: true, // 选项卡
       // vpre: true,
       // vuePlayground: true, // Vue 交互演示
     },
