@@ -91,6 +91,7 @@ https://www.qianxin.com/support/productDetails?pid=423&product_name=aaa
 据 LastPass 方面表示，黑客透过盗取一个开发者帐户，取得了 LastPass 开发环境的部分权限，有部分源代码和一些专有技术资料因此遭到泄漏，不过客户的资料包括密码则未受影响。
 很值得学习的一点如下，设计之初在架构上就考虑了隐私&安全
 
+#### 一些感悟
 > 我们从不存储或了解您的主密码。我们利用行业标准的零知识架构， 确保 LastPass 永远无法知道或访问我们客户的主密码.您可以在此处阅读有关零知识的技术实现[的信息](https://www.lastpass.com/security/zero-knowledge-security)
 
 #### 参考资料
