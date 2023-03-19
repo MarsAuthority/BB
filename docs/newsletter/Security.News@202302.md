@@ -7,6 +7,8 @@ tag:
   - 安全事件
   - 安全可视化
   - 安全框架
+  - 最佳实践
+  - NSA
   - MITRE
   - netscout
   - Coinbase遭受钓鱼攻击，但被成功阻止
@@ -34,7 +36,23 @@ MITRE也发布了可视化的CREF工具，并与ATT&CK关联起来了，链接�
 - https://www.darkreading.com/dr-tech/mitre-releases-tool-to-design-cyber-resilient-systems
 - https://crefnavigator.mitre.org/navigator
 
-## 
+## 最佳实践
+### NSA 分享有关如何保护您的家庭网络的最佳实践指南
+美国国家安全局 (NSA) 已发布指南，以帮助远程工作者保护他们的家庭网络并保护他们的设备免受攻击。
+
+国防部情报机构周三发布的指南包括一长串建议，其中包括一小段要点，敦促远程工作人员确保他们的设备和软件是最新的。
+
+还建议远程工作人员定期备份他们的数据以防止数据丢失，并断开他们不使用的设备，如果它们不需要始终保持活跃的互联网连接的话。
+
+要在您的其中一台设备被感染时删除非持久性恶意软件，您还应该经常重新启动它们或安排重新启动以进一步降低这种风险。
+
+“至少，你应该安排每周重新启动你的路由设备、智能手机和计算机。定期重新启动有助于移除植入物并确保安全，”美国国家安全局说。
+
+其他最佳做法包括在您的计算机上使用非特权用户帐户，尽可能启用自动更新，以及在不使用网络摄像头和麦克风时禁用它们以阻止通过受损设备或恶意软件进行的窃听企图。
+
+![cXrd4s](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/cXrd4s.jpg)
+#### 参考资料
+- https://media.defense.gov/2023/Feb/22/2003165170/-1/-1/0/CSI_BEST_PRACTICES_FOR_SECURING_YOUR_HOME_NETWORK.PDF
 
 ## 安全可视化
 ### netscout的DDoS攻击向量可视化挺有意思
