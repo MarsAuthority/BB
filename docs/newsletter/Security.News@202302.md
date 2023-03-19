@@ -8,12 +8,15 @@ tag:
   - 安全可视化
   - 安全框架
   - 最佳实践
+  - 安全报告
   - NSA
   - MITRE
   - netscout
   - Coinbase遭受钓鱼攻击，但被成功阻止
   - Godaddy
   - Lastpass
+  - 开源
+  - Synopsys
 star: true
 order: 9995
 ---
@@ -65,6 +68,7 @@ MITRE也发布了可视化的CREF工具，并与ATT&CK关联起来了，链接�
 #### 参考资料
 - https://www.netscout.com/threatreport/ddos-attack-vectors/
 - https://twitter.com/fr0gger_/status/1627203918412537857
+
 
 ## 安全事件
 ### GoDaddy 披露了存在多年的安全漏洞，导致客户和员工登录凭证泄漏、服务器被安装恶意软件、并有源代码被盗窃
@@ -194,3 +198,24 @@ LastPass还发布一份题为“安全事件更新与建议操作”的PDF文档
 
 #### 参考资料
 - https://www.coinbase.com/blog/social-engineering-a-coinbase-case-study
+
+## 安全报告
+### Synopsys 2023 开源安全与风险分析报告
+
+> 存在漏洞的开源代码库比例继续保持近两年水平，但存在高危漏洞的应用数量已降至四年来的最低水平。
+
+这是根据 Synopsys 于 2 月 22 日发布的“2023 开源安全和风险分析”(OSSRA) 报告得出的结论。该年度研究基于对 1,700 多个应用程序的审核，发现几乎每个软件程序 (96%) 都包含某种开源软件组件，平均代码库包含 76% 的开源代码。虽然至少存在一个漏洞的代码库数量在过去三年中基本保持稳定，略高于 80%（2022 年为 84%），但具有高风险漏洞的应用程序数量已下降至约一半 (48%)测试的应用程序，从 2020 年约 60% 的峰值开始。
+
+Synopsys Software Integrity Group 的高级软件解决方案经理 Mike McGuire 表示，总体而言，数据显示了在与易受攻击的依赖项的斗争中的一些亮点，其中平均每个应用程序有 595 个，但没有提高应用程序安全性的广泛趋势。
+
+![gqIKuR](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/gqIKuR.jpg)
+
+开源组件以及流行应用程序框架所依赖的依赖项继续为软件制造商和应用程序开发人员带来安全问题。一些组件的普遍存在——例如 Java 生态系统中的 Log4j——继续导致许多基于开源框架的应用程序出现安全问题。
+
+包含大量组件（以及这些组件的依赖项）的应用程序可能具有很深的依赖关系树，这使得很难找到每个漏洞。例如，几乎所有应用程序 (91%) 都包含至少一个在过去两年内没有开发的开源组件，这可能表明该项目不再维护，因此存在安全风险。
+
+报告称，其他行业已经减少了对开源软件的使用，可能是通过将更少的项目整合为依赖项。互联网和软件基础设施部门以及电信和无线部门都已将开源软件对其代码库的贡献减少到 60% 以下。这两个行业的高危漏洞也较少。
+
+#### 参考资料
+- https://news.synopsys.com/2023-02-22-Synopsys-Study-Underscores-Need-for-Comprehensive-SBOM-as-Best-Defense-in-Software-Supply-Chain-Security
+- https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html?cmp=pr-sig&utm_medium=referral
