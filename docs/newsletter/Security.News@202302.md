@@ -6,6 +6,8 @@ category:
 tag:
   - 安全事件
   - 安全可视化
+  - 安全框架
+  - MITRE
   - netscout
   - Coinbase遭受钓鱼攻击，但被成功阻止
   - Godaddy
@@ -13,6 +15,24 @@ tag:
 star: true
 order: 9995
 ---
+
+## 安全框架
+### MITRE 发布网络弹性工程（Cyber Resiliency Engineering Framework）框架导航器
+2021年的RSAC大会的主题是“Resilience”，想讨论的概念是：实现100%的防护不仅不现实，还会导致错误的安全感。必须考虑在防护失效的情况下如何确保系统安全并快速恢复。 
+
+2011年MITRE就提出了Cyber Resiliency Engineering Framework的概念，整个框架以风险管理为导向，明确网络弹性的目的（goal），并逐层分解为一系列目标（object）、子目标、活动/能力。然后在战略设计原则和落地的结构设计原则的指引下，针对每个活动/能力选取相适应的技巧（technique）及其配套的方法（approch）。最后对每个活动/能力的实现效果按照选定的指标集合进行有效性度量（MOE）和评分。
+
+其中的指标设计也有点意思，提出了一个基于攻防对抗的可观测对象（功能项和性能项）时序图（如下），图中红色是攻击视角，采用了攻击链模型；蓝色是防守视角，分为了PDRR四个环节，在数据破坏这个场景下，功能和性能会显著下降，而在数据外泄下就没什么变化。
+
+![AWpoDz](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/AWpoDz.jpg)
+
+基于时序图，可以帮助我们针对CREF中的每个活动设计出相应的网络弹性指标。
+
+MITRE也发布了可视化的CREF工具，并与ATT&CK关联起来了，链接见参考资料二。
+
+#### 参考资料
+- https://www.darkreading.com/dr-tech/mitre-releases-tool-to-design-cyber-resilient-systems
+- https://crefnavigator.mitre.org/navigator
 
 ## 安全可视化
 ### netscout的DDoS攻击向量可视化挺有意思
@@ -25,8 +45,6 @@ order: 9995
 #### 参考资料
 - https://www.netscout.com/threatreport/ddos-attack-vectors/
 - https://twitter.com/fr0gger_/status/1627203918412537857
-
-
 
 ## 安全事件
 ### GoDaddy 披露了存在多年的安全漏洞，导致客户和员工登录凭证泄漏、服务器被安装恶意软件、并有源代码被盗窃
