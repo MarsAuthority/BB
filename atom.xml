@@ -9,20 +9,99 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-03-19T06:43:49.995Z</updated>
+  <updated>2023-03-19T15:30:50.734Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
+  <category term="工具"/>
   <category term="安全通讯 Newsletter"/>
   <category term="日常折腾"/>
   <category term="代码学习"/>
   <category term="网络安全"/>
   <category term="知识管理"/>
-  <category term="工具"/>
   <contributor>
     <name>Mars</name>
     <uri>https://mars.run</uri>
   </contributor>
+  <entry>
+    <title type="text">ChatGPT来临，未来我们可能只需要Prompt工程师：如何制作清晰有效的Prompt</title>
+    <id>https://mars.run/posts/2023-03-18-chatgpt_prompt.html</id>
+    <link href="https://mars.run/posts/2023-03-18-chatgpt_prompt.html"/>
+    <updated>2023-03-19T15:29:35.000Z</updated>
+    <summary type="html"><![CDATA[<h1> 背景</h1>
+<p>ChatGPT 的主要优点之一是它能够理解和响应自然语言输入。这意味着用户可以使用与人类交谈时使用的相同语言和语法与 ChatGPT 进行通信。ChatGPT 还能够理解和响应上下文，使其能够对用户输入生成更合适和更相关的响应。
+除了自然语言处理功能外，ChatGPT 还具有许多其他特性和功能，使其成为推动对话的强大工具。其中包括：</p>
+<ul>
+<li>**定制：**ChatGPT可以定制以满足用户的需求和偏好。这可以包括自定义 ChatGPT 回复的语气和风格，以及它能够讨论的信息和主题类型。</li>
+<li>**个性化：**ChatGPT 可以使用机器学习算法根据用户过去的交互和偏好个性化其响应。这可以使对话感觉更自然，并根据用户的需求和兴趣量身定制。</li>
+<li>**多语言支持：**ChatGPT能够理解和响应多种语言的输入，使其成为国际用户或想要用多种语言交流的用户的有用工具。</li>
+<li>**可扩展性：**ChatGPT 能够处理大量流量，并可用于同时推动与多个用户的对话。这使其非常适合客户服务或在线社区等应用程序。</li>
+</ul>]]></summary>
+    <content type="html"><![CDATA[<h1> 背景</h1>
+<p>ChatGPT 的主要优点之一是它能够理解和响应自然语言输入。这意味着用户可以使用与人类交谈时使用的相同语言和语法与 ChatGPT 进行通信。ChatGPT 还能够理解和响应上下文，使其能够对用户输入生成更合适和更相关的响应。
+除了自然语言处理功能外，ChatGPT 还具有许多其他特性和功能，使其成为推动对话的强大工具。其中包括：</p>
+<ul>
+<li>**定制：**ChatGPT可以定制以满足用户的需求和偏好。这可以包括自定义 ChatGPT 回复的语气和风格，以及它能够讨论的信息和主题类型。</li>
+<li>**个性化：**ChatGPT 可以使用机器学习算法根据用户过去的交互和偏好个性化其响应。这可以使对话感觉更自然，并根据用户的需求和兴趣量身定制。</li>
+<li>**多语言支持：**ChatGPT能够理解和响应多种语言的输入，使其成为国际用户或想要用多种语言交流的用户的有用工具。</li>
+<li>**可扩展性：**ChatGPT 能够处理大量流量，并可用于同时推动与多个用户的对话。这使其非常适合客户服务或在线社区等应用程序。</li>
+</ul>
+<h1> 理论</h1>
+<h2> 什么是Prompt</h2>
+<blockquote>
+<p>在 ChatGPT 中，Prompt 指的是用户输入或提供给模型的初始文本或提示，它可以是一个问题、一个短语、一个句子或一整段文字。模型会根据这个 Prompt 来生成一个回复或者完成一个任务。Prompt 往往会对模型的生成结果产生重要的影响，因此在使用 ChatGPT 时，合理设计 Prompt 是非常重要的。</p>
+<p>—— by ChatGPT</p>
+</blockquote>
+<h2> Prompt在 Chat GPT 对话中的作用</h2>
+<p>正如我们前面提到的，ChatGPT 对话中使用的提示质量会显著影响对话的成功。定义明确的提示有助于确保对话保持正常并涵盖用户感兴趣的主题，从而提供更具吸引力和信息丰富的体验。
+那么，什么是好的 ChatGPT 提示，您如何制作有效的提示来推动引人入胜且信息丰富的对话？有几个关键原则需要牢记：</p>
+<ul>
+<li>**清晰：**清晰简洁的提示将有助于确保 ChatGPT 了解手头的主题或任务，并能够生成适当的响应。避免使用过于复杂或模棱两可的语言，并在提示中尽可能具体。</li>
+<li>**重点：**定义明确的提示应具有明确的目的和重点，有助于指导对话并保持对话正常进行。避免使用过于宽泛或开放式的提示，这可能会导致对话脱节或注意力不集中。</li>
+<li>**关联：**确保您的提示与用户和对话相关。避免引入不相关的话题或切线，以免分散对话的主要焦点。通过遵循这些原则，您可以制作有效的 ChatGPT 提示，以推动引人入胜且信息丰富的对话。</li>
+</ul>
+<h2> 有效和无效的 ChatGPT Prompt示例</h2>
+<p><strong>有效的聊天GPT提示：</strong></p>
+<ul>
+<li><strong>“你能总结一下'运动的好处'一文的要点吗？”</strong>——此提示重点突出且相关，使 ChatGPT 可以轻松提供请求的信息。</li>
+<li><strong>“巴黎最好的素食餐厅是什么？”</strong>——此提示是特定且相关的，允许 ChatGPT 提供有针对性和有用的响应。</li>
+</ul>
+<p><strong>无效的聊天GPT提示：</strong></p>
+<ul>
+<li><strong>"你能告诉我关于这个世界的什么？”</strong>——此提示过于宽泛和开放，使 ChatGPT 难以生成,重点突出或有用的响应。</li>
+<li><strong>“你能帮我做作业吗？”</strong>——虽然此提示清晰而具体，但它过于开放，无法让 ChatGPT 生成有用的响应。更有效的提示将指定手头的特定主题或任务。</li>
+<li><strong>“你怎么样？”</strong>——虽然这是一个常见的对话开始，但它不是一个定义明确的提示，也没有为对话提供明确的目的或重点。</li>
+</ul>
+<h2> 如何清晰地告诉ChatGPT需要做什么呢？</h2>
+<p>可以尝试以下包含以下的五个元素：</p>
+<ul>
+<li>背景，由于模型通用性很强，因此明确交流的背景很重要，从而让模型能够进入目标<strong>角色</strong>。</li>
+<li>任务，指定期望的<strong>结果</strong>或<strong>目标</strong>，让模型聚焦，防止其跑题或包含很多不相关内容。</li>
+<li>说明，概述任务之后，最好再提供详细的说明。如帖子的整体基调、长度、目标受众等。</li>
+<li>确认，确认模型是否理解了背景、任务和说明。</li>
+<li>调整，因为模型可以在一定范围内记住会话的上下文，所以当没有获得预期结果时，无需重写完整提示。</li>
+</ul>
+<h3> 案例</h3>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/HSLewu.jpg" alt="HSLewu" tabindex="0" loading="lazy"><figcaption>HSLewu</figcaption></figure>
+<h1> 参考资料</h1>
+<ul>
+<li><a href="https://juejin.cn/post/7204739332174102588" target="_blank" rel="noopener noreferrer">ChatGPT提问的艺术 - 掘金 (juejin.cn)</a></li>
+<li><a href="https://prompts.chat/" target="_blank" rel="noopener noreferrer">Awesome ChatGPT Prompts | This repo includes ChatGPT prompt curation to use ChatGPT better.</a></li>
+<li>[dair-ai/Prompt-Engineering-Guide: Guides, papers, lecture, and resources for prompt engineering (<a href="http://github.com" target="_blank" rel="noopener noreferrer">github.com</a>)](</li>
+</ul>
+]]></content>
+    <author>
+      <name>Mars</name>
+      <uri>https://mars.run</uri>
+    </author>
+    <category term="工具"/>
+    <contributor>
+      <name>Mars</name>
+      <uri>https://mars.run</uri>
+    </contributor>
+    <published>2023-03-18T00:00:00.000Z</published>
+    <rights>Copyright by Mars</rights>
+  </entry>
   <entry>
     <title type="text">Security.News@202209</title>
     <id>https://mars.run/newsletter/Security.News@202209.html</id>
@@ -2438,81 +2517,6 @@ P<span class="token punctuation">(</span>W5<span class="token operator">|</span>
       <uri>https://mars.run</uri>
     </contributor>
     <published>2015-02-10T12:19:00.000Z</published>
-    <rights>Copyright by Mars</rights>
-  </entry>
-  <entry>
-    <title type="text">我用白板墙贴，记录日常生活</title>
-    <id>https://mars.run/posts/2023-01-26-whiteboard_gtd.html</id>
-    <link href="https://mars.run/posts/2023-01-26-whiteboard_gtd.html"/>
-    <updated>2023-02-03T23:01:57.000Z</updated>
-    <summary type="html"><![CDATA[<blockquote>
-<p>摆脱数字性遗忘：白板墙贴的生活/工作清单，适用于居家办公的 GTD 补充记录方案。</p>
-</blockquote>
-<p>在数字化和网络化的时代，日常记录从纸质转移到电子存储，它带来了无限的容量和随时随地使用的便利。然而，这也带来了新的问题：如果没有打开应用程序，记录就无法提醒，容易忘记重要事情。即使设置了定时提醒，提醒时间也不一定是最佳处理时间，因此可能会延迟或取消，从而导致遗忘。为了解决这个问题，我使用白板墙贴来记录生活/工作清单。</p>
-<figure><img src="http://tc.seoipo.com/2023-01-27-05-13-50.png" alt="Website Creator Cartoon" tabindex="0" loading="lazy"><figcaption>源图：Storyset</figcaption></figure>]]></summary>
-    <content type="html"><![CDATA[<blockquote>
-<p>摆脱数字性遗忘：白板墙贴的生活/工作清单，适用于居家办公的 GTD 补充记录方案。</p>
-</blockquote>
-<p>在数字化和网络化的时代，日常记录从纸质转移到电子存储，它带来了无限的容量和随时随地使用的便利。然而，这也带来了新的问题：如果没有打开应用程序，记录就无法提醒，容易忘记重要事情。即使设置了定时提醒，提醒时间也不一定是最佳处理时间，因此可能会延迟或取消，从而导致遗忘。为了解决这个问题，我使用白板墙贴来记录生活/工作清单。</p>
-<figure><img src="http://tc.seoipo.com/2023-01-27-05-13-50.png" alt="Website Creator Cartoon" tabindex="0" loading="lazy"><figcaption>源图：Storyset</figcaption></figure>
-<h2> 为什么是白板？</h2>
-<p>在中学时，我没有电脑和手机，就曾把最初的 GTD 记录在玻璃桌面上，若记录失效或不再需要，只需擦掉即可。白板墙贴与当时的玻璃桌面效果类似，只是换到墙上了。我在书房和走廊各贴了一块白板，书房的墙贴用来提醒当天要做什么，走廊的墙贴用来提醒日常生活仪式。无论走到哪里，都不会错过重要提醒。特别是在不确定下一步该做什么时，我只要转身，就能看到工作清单，非常直观和便捷。</p>
-<figure><img src="http://tc.seoipo.com/2023-01-26-12-28-36.png" alt="" tabindex="0" loading="lazy"><figcaption>透明/白色静电墙贴</figcaption></figure>
-<p>与电子记录相比，白板没有软件框架限制。它可以用于绘制思维导图，帮助人们更清晰地组织思路；也可以用多种颜色的记号笔随意书写和涂鸦，以原始的方式表达自己的想法。因此，白板是记录、展示信息和思考的极佳工具。</p>
-<figure><img src="http://tc.seoipo.com/2023-01-25-19-21-12.png" alt="Scrum board" tabindex="0" loading="lazy"><figcaption>Scrum board</figcaption></figure>
-<h2> 白板类型</h2>
-<p>白板墙贴源自 @chen 在群里分享的一个很棒的主意：使用静电墙贴作为白板，可以随时记录。在尝试的过程中，我更换了三种材质：透明静电墙贴、白色静电墙贴和 PVC 墙贴（吸磁软白板贴）。</p>
-<table>
-  <tbody><tr>
-    <th>类型</th>
-    <th>透明/白板静电墙贴</th>
-    <th>PVC 墙贴（非静电）</th>
-    <th>支架式白板</th>
-  </tr>
-  <tr>
-    <td>优点</td>
-    <td>安装方便；轻松固定在墙上；费用低。</td>
-    <td>磁吸；字迹擦拭方便；<br>黑色、白色、绿色、黛灰等多种背景可供选择。</td>
-    <td>双面书写；易写易擦；可吸附性；可自由升降；可360°翻转；带刹车滑轮。</td>
-  </tr>
-  <tr>
-    <td>缺点</td>
-    <td>字迹在 24 小时后会在墙贴上留下凸起的痕迹；红色、蓝色等非黑色笔迹很难擦干净。</td>
-    <td>需要使用双面胶固定；难以将其平整地贴在墙上。</td>
-    <td>安装麻烦，无法贴上墙，占地方。</td>
-  </tr>
-  <tr>
-    <td>费用</td>
-    <td>20 元（120cm x 200cm）</td>
-    <td>160 元（120cm x 200cm）</td>
-    <td>280 元（100cm x 200cm）</td>
-  </tr>
-</tbody></table>
-<h2> 我的方案</h2>
-<p>在我的方案中，记录的想法分为日常仪式和生活/工作两类。日常仪式记录在走廊白板上，生活/工作记录则输出在书房白板上。下面我将简要介绍白板内容和思路。</p>
-<figure><img src="http://tc.seoipo.com/2023-02-03-20-58-05.png" alt="" tabindex="0" loading="lazy"><figcaption>记录输入流</figcaption></figure>
-<h3> 书房白板</h3>
-<p>我最常待的地方是书房，所以把日常记录都放在书房白板上，用来记录当日清单、锻炼进度、思维导图、项目跟进和临时安排。书房白板使用率较高，因此建议使用易写易擦的 PVC 墙贴（吸磁软白板贴）。</p>
-<figure><img src="http://tc.seoipo.com/2023-01-23-20-58-00.png" alt="" tabindex="0" loading="lazy"><figcaption>书房白板</figcaption></figure>
-<figure><img src="http://tc.seoipo.com/2023-01-28-10-42-47.png" alt="" tabindex="0" loading="lazy"><figcaption>PVC 墙贴（非静电）</figcaption></figure>
-<h3> 走廊白板</h3>
-<p>走廊白板是对书房白板的补充，可以在书房之外的区域提醒生活仪式等内容，例如：每天早上喝杯热水自测体脂，晚上进行当日回顾和睡前准备。走廊白板擦写频率较低，可以使用便宜的静电墙贴。如果需要修改走廊白板的提示，可以用纸巾沾水擦拭。</p>
-<figure><img src="http://tc.seoipo.com/2023-01-23-20-53-36.png" alt="" tabindex="0" loading="lazy"><figcaption>走廊白板</figcaption></figure>
-<h3> 电子记录</h3>
-<p>使用白板墙贴记录 GTD 并不意味着放弃数字化记录。相反，我可以将白板墙贴与电子记录结合起来，使用电子记录来存储详细信息，而使用白板墙贴来提醒重要事项。在「当日检视」的环节中，我会同步书房白板和电子 GTD，以确保两者的内容保持一致。这样，我就可以在保持良好的效率和组织性的同时，还可以提高记录的可靠性和可追溯性。</p>
-<h2> 更多</h2>
-<p>通过使用白板墙贴记录 GTD，我发现它不仅可以帮助我更好地管理时间和任务，还可以提高工作效率。因为白板墙贴是实体物品，我可以随时随地看到它，而且它是直观的，使我一目了然地了解自己的任务和进度。此外，白板墙贴可以随时更新和修改，让我可以随时调整计划和任务。白板工具填补了笔记/清单应用和个人定制需求之间的空隙。</p>
-]]></content>
-    <author>
-      <name>Mars</name>
-      <uri>https://mars.run</uri>
-    </author>
-    <category term="工具"/>
-    <contributor>
-      <name>Mars</name>
-      <uri>https://mars.run</uri>
-    </contributor>
-    <published>2023-01-22T00:00:00.000Z</published>
     <rights>Copyright by Mars</rights>
   </entry>
 </feed>
