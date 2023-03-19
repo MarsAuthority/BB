@@ -9,7 +9,7 @@
   </author>
   <logo>https://mars.run/logo.svg</logo>
   <rights>Copyright by Mars</rights>
-  <updated>2023-03-19T06:19:58.397Z</updated>
+  <updated>2023-03-19T06:30:11.721Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mars.run/atom.xml"/>
   <link rel="alternate" href="https://mars.run/"/>
@@ -203,14 +203,25 @@
     <title type="text">Security.News@202302</title>
     <id>https://mars.run/newsletter/Security.News@202302.html</id>
     <link href="https://mars.run/newsletter/Security.News@202302.html"/>
-    <updated>2023-03-19T06:18:41.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 安全可视化</h2>
-<h3> netscout的DDoS攻击向量可视化挺有意思</h3>
-<p>使用类似元素周期表的形式来做可视化，看起来还是比较清晰和舒服的，不过在中文环境可能有些水土不服，见：
-<img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/3TLCtg.jpg" alt="3TLCtg" loading="lazy"></p>
-<p>微软的威胁报告中也曾使用过类似的形式：
-<img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/Zyznvr.jpg" alt="Zyznvr" loading="lazy"></p>]]></summary>
-    <content type="html"><![CDATA[<h2> 安全可视化</h2>
+    <updated>2023-03-19T06:28:38.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 安全框架</h2>
+<h3> MITRE 发布网络弹性工程（Cyber Resiliency Engineering Framework）框架导航器</h3>
+<p>2021年的RSAC大会的主题是“Resilience”，想讨论的概念是：实现100%的防护不仅不现实，还会导致错误的安全感。必须考虑在防护失效的情况下如何确保系统安全并快速恢复。</p>
+<p>2011年MITRE就提出了Cyber Resiliency Engineering Framework的概念，整个框架以风险管理为导向，明确网络弹性的目的（goal），并逐层分解为一系列目标（object）、子目标、活动/能力。然后在战略设计原则和落地的结构设计原则的指引下，针对每个活动/能力选取相适应的技巧（technique）及其配套的方法（approch）。最后对每个活动/能力的实现效果按照选定的指标集合进行有效性度量（MOE）和评分。</p>]]></summary>
+    <content type="html"><![CDATA[<h2> 安全框架</h2>
+<h3> MITRE 发布网络弹性工程（Cyber Resiliency Engineering Framework）框架导航器</h3>
+<p>2021年的RSAC大会的主题是“Resilience”，想讨论的概念是：实现100%的防护不仅不现实，还会导致错误的安全感。必须考虑在防护失效的情况下如何确保系统安全并快速恢复。</p>
+<p>2011年MITRE就提出了Cyber Resiliency Engineering Framework的概念，整个框架以风险管理为导向，明确网络弹性的目的（goal），并逐层分解为一系列目标（object）、子目标、活动/能力。然后在战略设计原则和落地的结构设计原则的指引下，针对每个活动/能力选取相适应的技巧（technique）及其配套的方法（approch）。最后对每个活动/能力的实现效果按照选定的指标集合进行有效性度量（MOE）和评分。</p>
+<p>其中的指标设计也有点意思，提出了一个基于攻防对抗的可观测对象（功能项和性能项）时序图（如下），图中红色是攻击视角，采用了攻击链模型；蓝色是防守视角，分为了PDRR四个环节，在数据破坏这个场景下，功能和性能会显著下降，而在数据外泄下就没什么变化。</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/AWpoDz.jpg" alt="AWpoDz" tabindex="0" loading="lazy"><figcaption>AWpoDz</figcaption></figure>
+<p>基于时序图，可以帮助我们针对CREF中的每个活动设计出相应的网络弹性指标。</p>
+<p>MITRE也发布了可视化的CREF工具，并与ATT&amp;CK关联起来了，链接见参考资料二。</p>
+<h4> 参考资料</h4>
+<ul>
+<li><a href="https://www.darkreading.com/dr-tech/mitre-releases-tool-to-design-cyber-resilient-systems" target="_blank" rel="noopener noreferrer">https://www.darkreading.com/dr-tech/mitre-releases-tool-to-design-cyber-resilient-systems</a></li>
+<li><a href="https://crefnavigator.mitre.org/navigator" target="_blank" rel="noopener noreferrer">https://crefnavigator.mitre.org/navigator</a></li>
+</ul>
+<h2> 安全可视化</h2>
 <h3> netscout的DDoS攻击向量可视化挺有意思</h3>
 <p>使用类似元素周期表的形式来做可视化，看起来还是比较清晰和舒服的，不过在中文环境可能有些水土不服，见：
 <img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/3TLCtg.jpg" alt="3TLCtg" loading="lazy"></p>
