@@ -6,8 +6,8 @@
     <link>https://mars.run/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 19 Mar 2023 06:30:11 GMT</pubDate>
-    <lastBuildDate>Sun, 19 Mar 2023 06:30:11 GMT</lastBuildDate>
+    <pubDate>Sun, 19 Mar 2023 06:34:55 GMT</pubDate>
+    <lastBuildDate>Sun, 19 Mar 2023 06:34:55 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Mars</copyright>
@@ -208,6 +208,7 @@
 <li><a href="https://www.darkreading.com/dr-tech/mitre-releases-tool-to-design-cyber-resilient-systems" target="_blank" rel="noopener noreferrer">https://www.darkreading.com/dr-tech/mitre-releases-tool-to-design-cyber-resilient-systems</a></li>
 <li><a href="https://crefnavigator.mitre.org/navigator" target="_blank" rel="noopener noreferrer">https://crefnavigator.mitre.org/navigator</a></li>
 </ul>
+<h2> </h2>
 <h2> 安全可视化</h2>
 <h3> netscout的DDoS攻击向量可视化挺有意思</h3>
 <p>使用类似元素周期表的形式来做可视化，看起来还是比较清晰和舒服的，不过在中文环境可能有些水土不服，见：
