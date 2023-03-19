@@ -6,8 +6,8 @@
     <link>https://mars.run/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 19 Mar 2023 06:02:58 GMT</pubDate>
-    <lastBuildDate>Sun, 19 Mar 2023 06:02:58 GMT</lastBuildDate>
+    <pubDate>Sun, 19 Mar 2023 06:08:55 GMT</pubDate>
+    <lastBuildDate>Sun, 19 Mar 2023 06:08:55 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright by Mars</copyright>
@@ -192,10 +192,21 @@
       <link>https://mars.run/newsletter/Security.News@202302.html</link>
       <guid>https://mars.run/newsletter/Security.News@202302.html</guid>
       <source url="https://mars.run/rss.xml">Security.News@202302</source>
-      <description>安全事件 GoDaddy 披露了存在多年的安全漏洞，导致客户和员工登录凭证泄漏、服务器被安装恶意软件、并有源代码被盗窃 2023年2月16日，网络托管巨头 GoDaddy 表示其遭受了黑客攻击，在多年的攻击中，cPanel被拿下，导致客户和员工登录凭证泄漏、服务器被安装恶意软件、并有源代码被盗窃；GoDaddy早在2022年12月就被客户告知他们的网站会重定向到随机域名，在调查中发现，攻击者在2019年到2022年中有四次被发现，但一直没有失去访问权限。 “根据我们的调查，我们认为这些事件是一个复杂的威胁行为者组织多年活动的一部分，该组织除其他外，在我们的系统上安装了恶意软件并获取了与 GoDaddy 内某些服务相关的代码片段，”托管公司在提交给美国证券交易委员会的文件中说。</description>
+      <description>安全可视化 netscout的DDoS攻击向量可视化挺有意思 使用类似元素周期表的形式来做可视化，看起来还是比较清晰和舒服的，不过在中文环境可能有些水土不服，见： 微软的威胁报告中也曾使用过类似的形式：</description>
       <category>安全通讯 Newsletter</category>
       <pubDate>Sun, 05 Feb 2023 16:23:41 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 安全事件</h2>
+      <content:encoded><![CDATA[<h2> 安全可视化</h2>
+<h3> netscout的DDoS攻击向量可视化挺有意思</h3>
+<p>使用类似元素周期表的形式来做可视化，看起来还是比较清晰和舒服的，不过在中文环境可能有些水土不服，见：
+<img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/3TLCtg.jpg" alt="3TLCtg" loading="lazy"></p>
+<p>微软的威胁报告中也曾使用过类似的形式：
+<img src="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/Zyznvr.jpg" alt="Zyznvr" loading="lazy"></p>
+<h4> 参考资料</h4>
+<ul>
+<li><a href="https://www.netscout.com/threatreport/ddos-attack-vectors/" target="_blank" rel="noopener noreferrer">https://www.netscout.com/threatreport/ddos-attack-vectors/</a></li>
+<li><a href="https://twitter.com/fr0gger_/status/1627203918412537857" target="_blank" rel="noopener noreferrer">https://twitter.com/fr0gger_/status/1627203918412537857</a></li>
+</ul>
+<h2> 安全事件</h2>
 <h3> GoDaddy 披露了存在多年的安全漏洞，导致客户和员工登录凭证泄漏、服务器被安装恶意软件、并有源代码被盗窃</h3>
 <p>2023年2月16日，网络托管巨头 GoDaddy 表示其遭受了黑客攻击，在多年的攻击中，cPanel被拿下，导致客户和员工登录凭证泄漏、服务器被安装恶意软件、并有源代码被盗窃；GoDaddy早在2022年12月就被客户告知他们的网站会重定向到随机域名，在调查中发现，攻击者在2019年到2022年中有四次被发现，但一直没有失去访问权限。</p>
 <p>“根据我们的调查，我们认为这些事件是一个复杂的威胁行为者组织多年活动的一部分，该组织除其他外，在我们的系统上安装了恶意软件并获取了与 GoDaddy 内某些服务相关的代码片段，”托管公司在提交给美国证券交易委员会的<a href="https://d18rn0p25nwr6d.cloudfront.net/CIK-0001609711/e4736ddb-b4c7-485b-a8fc-1827691692c9.pdf" target="_blank" rel="noopener noreferrer">文件</a>中说。</p>
@@ -259,7 +270,7 @@
 <li><a href="https://blog.lastpass.com/2023/03/security-incident-update-recommended-actions/" target="_blank" rel="noopener noreferrer">https://blog.lastpass.com/2023/03/security-incident-update-recommended-actions/</a></li>
 </ul>
 ]]></content:encoded>
-      <enclosure url="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-02/SiNKd9.png" type="image/png"/>
+      <enclosure url="https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/3TLCtg.jpg" type="image/jpeg"/>
     </item>
     <item>
       <title>Security.News@202207</title>
