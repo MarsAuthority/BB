@@ -7,6 +7,7 @@ tag:
   - 安全事件
   - 安全可视化
   - netscout
+  - Coinbase遭受钓鱼攻击，但被成功阻止
   - Godaddy
   - Lastpass
 star: true
@@ -113,3 +114,45 @@ LastPass还发布一份题为“安全事件更新与建议操作”的PDF文档
 - https://mp.weixin.qq.com/s/zvrwVei6Jy-zEDTkks7Ptg
 - https://arstechnica.com/information-technology/2023/02/lastpass-hackers-infected-employees-home-computer-and-stole-corporate-vault/
 - https://blog.lastpass.com/2023/03/security-incident-update-recommended-actions/
+
+
+### Coinbase遭受钓鱼攻击，但被成功阻止
+
+我们的故事开始于 2023 年 2 月 5 日星期日的深夜。几位员工的手机开始提醒短信，表明他们需要通过提供的链接紧急登录以接收重要消息。虽然大多数人会忽略这条自发的消息 - 一名员工认为这是一条重要且合法的消息，点击链接并输入他们的用户名和密码。 “登录”后，系统会提示员工忽略该消息并感谢遵守。
+
+接下来发生的事情是，攻击者配备了合法的 Coinbase 员工用户名和密码，反复尝试远程访问 Coinbase。幸运的是，我们的网络控制已经准备就绪。攻击者无法提供所需的多因素身份验证 (MFA) 凭据，因此无法获得访问权限。在许多情况下，这将是故事的结局。但这不仅仅是任何攻击者。我们认为此人与自去年以来一直以数十家公司为目标的高度持久和复杂的攻击活动有关。
+
+大约 20 分钟后，我们员工的手机响了。攻击者自称来自 Coinbase 公司信息技术 (IT)，他们需要该员工的帮助。该员工认为他们正在与合法的 Coinbase IT 员工交谈，因此登录到他们的工作站并开始按照攻击者的指示进行操作。这开始了攻击者和一名越来越可疑的员工之间的来回。随着谈话的进行，这些要求变得越来越可疑。幸运的是，没有资金被盗用，也没有客户信息被访问或查看，但我们员工的一些有限联系信息被盗用，特别是员工姓名、电子邮件地址和一些电话号码。
+
+幸运的是，我们的计算机安全事件响应小组 (CSIRT) 在攻击发生后的前 10 分钟内就解决了这个问题。我们的 CSIRT 收到安全事件和事件管理 (SIEM) 系统的异常活动警报。此后不久，我们的一名事件响应人员通过我们的内部 Coinbase 消息系统联系了受害者，询问与他们的账户相关的一些异常行为和使用模式。意识到事情严重错误后，该员工终止了与攻击者的所有通信。
+
+我们的 CSIRT 团队立即暂停受害员工的所有访问权限并展开全面调查。由于我们的分层控制环境，没有资金损失，也没有客户信息被泄露。清理工作相对较快，但仍然——这里有很多教训要吸取。
+
+#### 披露的一些TTPs
+
+**钓鱼站点域名：**
+- sso-*.com
+- *-sso.com
+- login.*-sso.com
+- dashboard-*.com
+- *-dashboard.com
+
+**来自以下厂商的来电/短信：**
+- Google Voice
+- Skype
+- Vonage/Nexmo
+- Bandwidth.com
+
+**使用了以下浏览器扩展：**
+- [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=en)
+
+**从第三方 VPN 提供商（特别是 Mullvad VPN）访问您的组织的任何尝试。**
+
+**使用第三方服务riseup[.]net来复制粘贴数据（可用于数据外传）**
+
+**以下远程桌面工具：**
+- AnyDesk (anydesk.com)
+- ISL 在线 (islonline.com)
+
+#### 参考资料
+- https://www.coinbase.com/blog/social-engineering-a-coinbase-case-study
