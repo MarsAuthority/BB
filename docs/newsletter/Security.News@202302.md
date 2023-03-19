@@ -5,9 +5,27 @@ category:
   - 安全通讯 Newsletter
 tag:
   - 安全事件
+  - 安全可视化
+  - netscout
+  - Godaddy
+  - Lastpass
 star: true
 order: 9995
 ---
+
+## 安全可视化
+### netscout的DDoS攻击向量可视化挺有意思
+使用类似元素周期表的形式来做可视化，看起来还是比较清晰和舒服的，不过在中文环境可能有些水土不服，见：
+![3TLCtg](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/3TLCtg.jpg)
+
+微软的威胁报告中也曾使用过类似的形式：
+![Zyznvr](https://cdn.jsdelivr.net/gh/MarsAuthority/sec_pic@master/uPic/2023-03/Zyznvr.jpg)
+
+#### 参考资料
+- https://www.netscout.com/threatreport/ddos-attack-vectors/
+- https://twitter.com/fr0gger_/status/1627203918412537857
+
+
 
 ## 安全事件
 ### GoDaddy 披露了存在多年的安全漏洞，导致客户和员工登录凭证泄漏、服务器被安装恶意软件、并有源代码被盗窃
